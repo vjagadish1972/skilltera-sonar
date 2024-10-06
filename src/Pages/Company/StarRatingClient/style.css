@@ -1,0 +1,17 @@
+
+.st__star-rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0;
+}
+.st__star {
+    display: inline-block;
+    font-size: 18px;
+    color: #d9d9d9;
+    cursor: pointer;
+}
+.st__star.active {
+    color: #ffa412;
+}

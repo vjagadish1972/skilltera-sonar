@@ -1,0 +1,16 @@
+.adminSignin {
+  padding: 15px;
+  width: 50%;
+  position: relative;
+  top: 12rem;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 480px) {
+  .adminSignin {
+    width: 100%;
+    padding-left: 2rem;
+  }
+}

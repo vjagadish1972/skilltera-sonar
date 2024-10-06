@@ -1,0 +1,355 @@
+@media (max-width: 575.98px) {
+    .client-section-one {
+        background: #ffffff;
+    }
+    .client-section-left {
+        text-align: center;
+    }
+    .client-section-first-half {
+        padding-top: 40px;
+    }
+    .client-best-talent {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        color: #444444;
+    }
+    .client-skilltera-text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        color: #246da2;
+    }
+    .client-section-one-banner {
+        order: 2;
+    }
+    .client-login-signup-button {
+        padding-top: 40px;
+    }
+    .client-group-btn {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    .client-btn {
+        width: 150px;
+        height: 48px;
+        color: var(--list-item-color);
+        border: 1px solid var(--list-item-color);
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .active-client-btn {
+        width: 150px;
+        height: 48px;
+        background: var(--list-item-color);
+        border: 1px solid var(--list-item-color);
+        border-radius: 4px;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .client-login-section {
+        padding-top: 25px;
+    }
+    .cilent-founded {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .client-founded-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 180%;
+        letter-spacing: 0.04em;
+        color: #272727;
+    }
+    .cilent-global-skilltera {
+        color: var(--list-item-color);
+    }
+
+    .client-section-globally {
+        background: #ffffff;
+    }
+
+    .client-section-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .client-text-section-globally {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
+    .client-text-section {
+        text-align: center;
+    }
+    .client-section-heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        color: #3c3c3c;
+    }
+    .client-section-subheading {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 160%;
+        letter-spacing: 0.04em;
+        color: #444444;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .client-section-one {
+        background: #fbfcff;
+    }
+
+    .client-section-first-half {
+        padding-top: 40px;
+    }
+    .client-best-talent {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 60px;
+        letter-spacing: 0.04em;
+        color: #444444;
+    }
+    .client-skilltera-text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 33px;
+        letter-spacing: 0.04em;
+        color: #246da2;
+    }
+    .client-login-signup-button {
+        padding-top: 60px;
+    }
+    .client-group-btn {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    .client-btn {
+        width: 140px;
+        height: 48px;
+        color: var(--list-item-color);
+        border: 1px solid var(--list-item-color);
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .active-client-btn {
+        width: 140px;
+        height: 48px;
+        background: var(--list-item-color);
+        border: 1px solid var(--list-item-color);
+        border-radius: 4px;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .client-login-section {
+        padding-top: 20px;
+    }
+    .cilent-founded {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .client-founded-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 180%;
+        color: #272727;
+        
+    }
+    .cilent-global-skilltera {
+        color: var(--list-item-color);
+    }
+
+    .client-section-globally {
+        background: #fbfcff;
+    }
+
+    .client-section-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .client-text-section-globally {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-text-section {
+        text-align: center;
+    }
+    .client-section-heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.04em;
+        color: #000000;
+    }
+    .client-section-subheading {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0.04em;
+        color: #222222;
+    }
+}
+
+@media (min-width: 992px) {
+    .client-section-one {
+        background: #fbfcff;
+    }
+    .client-section-first-half {
+        padding-top: 40px;
+    }
+    .client-best-talent {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 60px;
+        letter-spacing: 0.04em;
+        color: #444444;
+    }
+    .client-skilltera-text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 60px;
+        letter-spacing: 0.04em;
+        color: #246da2;
+    }
+    .login__container{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+    }
+    .client-login-signup-button {
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .client_toggle_btn__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        border: 1px solid #95bbd7;
+        border-radius: 4px;
+    }
+    .client_toggle_btn {
+        width: 180px;
+        height: 48px;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color:#6F6F6F;
+        font-family: 'Inter';
+    }
+    .client_toggle_btn.client_toggle_btn__active {
+        color: #ffffff;
+        background: var(--list-item-color);
+        border: 1px solid var(--list-item-color);
+    }
+
+    .client-login-section {
+       /*  padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 40px; */
+        max-width: 360px;
+        width: 360px;
+    }
+    .cilent-founded {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .client-founded-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 180%;
+        letter-spacing: 0.04em;
+        color: #272727;
+    }
+    .cilent-global-skilltera {
+        color: var(--list-item-color);
+    }
+    .client-section-globally {
+        background: #fbfcff;
+    }
+
+    .client-section-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .client-text-section-globally {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-text-section {
+        text-align: center;
+    }
+    .client-section-heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.04em;
+        color: #000000;
+    }
+    .client-section-subheading {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.04em;
+        color: #222222;
+    }
+}

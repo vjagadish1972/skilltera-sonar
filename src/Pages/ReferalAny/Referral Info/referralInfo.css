@@ -1,0 +1,131 @@
+@media (max-width: 575.98px) {
+  .main-referral-section {
+    /* margin-left: 10px;
+    margin-right: 10px; */
+  }
+  .refer-candidate-section {
+    margin-top: 20px;
+    margin-bottom: 11px;
+  }
+  .refer-candidate-section span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #444444;
+  }
+  .skilltera-referral-program span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+  }
+  .info-list-referral-candidate {
+    margin-top: 11px;
+    margin-bottom: 34px;
+  }
+  .info-list-referral-candidate ul li {
+  }
+  .faq-referral-program {
+    text-align: center;
+  }
+  .faq-referral-program span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #222222;
+  }
+  .faq-list {
+    margin-top: 30px;
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .main-referral-section {
+    /* margin-left: 20px;
+    margin-left: 20px; */
+  }
+  .refer-candidate-section {
+    margin-top: 30px;
+    margin-bottom: 22px;
+  }
+  .refer-candidate-section span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: capitalize;
+    color: #444444;
+  }
+  .skilltera-referral-program span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #444444;
+  }
+  .info-list-referral-candidate {
+    margin-top: 11px;
+    margin-bottom: 34px;
+  }
+  .info-list-referral-candidate ul li {
+  }
+  .faq-referral-program {
+    text-align: center;
+  }
+  .faq-referral-program span {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #222222;
+  }
+  .faq-list {
+    margin-top: 30px;
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-referral-section {
+    /* margin-left: 65px;
+    margin-right: 65px; */
+  }
+  .refer-candidate-section {
+    margin-top: 30px;
+    margin-bottom: 22px;
+  }
+  .refer-candidate-section span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: capitalize;
+    color: #444444;
+  }
+  .skilltera-referral-program span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #444444;
+  }
+  .info-list-referral-candidate {
+    margin-top: 22px;
+    margin-bottom: 68px;
+  }
+  .info-list-referral-candidate ul li {
+  }
+  .faq-referral-program {
+    text-align: center;
+  }
+  .faq-referral-program span {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #222222;
+  }
+  .faq-list {
+    margin-top: 60px;
+    margin-bottom: 190px;
+  }
+}

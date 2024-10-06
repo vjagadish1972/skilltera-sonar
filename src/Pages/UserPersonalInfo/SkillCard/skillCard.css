@@ -1,0 +1,211 @@
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .filter-box {
+    width: 325px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  .filter {
+    margin-left: 16px;
+    margin-top: 20px;
+  }
+  .same-formating {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #444444;
+  }
+  .clear-all {
+    margin-right: 16px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    color: #6e4dcd;
+  }
+
+  .filter-border {
+    margin-top: 12px;
+    border: 1px solid #efebf9;
+    transform: rotate(0.06deg);
+  }
+
+  .filter-search-box {
+    margin-top: 25px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .has-search-for-filter .form-control {
+    padding-left: 2.375rem;
+  }
+
+  .has-search-for-filter .form-control-feedback-for-filter {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+
+  .filter-skill {
+    margin-top: 32px;
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .filter-searched-skill {
+    margin-left: 14px;
+  }
+  .filter-experience {
+    margin-top: 21px;
+    margin-left: 16px;
+  }
+  .filter-option {
+    margin-top: 12px;
+  }
+  .filter-button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+  }
+  .show-result {
+    background: #6e4dcd;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    width: 101px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .candidate-global-section {
+    background: #fdfdfd;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+  }
+  .filter-box {
+    width: 325px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  .filter {
+    margin-left: 16px;
+    margin-top: 20px;
+  }
+  .same-formating {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #444444;
+  }
+  .clear-all {
+    margin-right: 16px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    color: #6e4dcd;
+  }
+
+  .filter-border {
+    margin-top: 12px;
+    border: 1px solid #efebf9;
+    transform: rotate(0.06deg);
+  }
+
+  .filter-search-box {
+    margin-top: 25px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .has-search-for-filter .form-control {
+    padding-left: 2.375rem;
+  }
+
+  .has-search-for-filter .form-control-feedback-for-filter {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+
+  .filter-skill {
+    margin-top: 32px;
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .filter-searched-skill {
+    margin-left: 14px;
+  }
+  .filter-experience {
+    margin-top: 21px;
+    margin-left: 16px;
+  }
+  .filter-option {
+    margin-top: 12px;
+  }
+  .filter-button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+  }
+  .show-result {
+    background: #6e4dcd;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    width: 101px;
+    height: 30px;
+  }
+  .edit-button {
+    display: flex;
+    justify-content: end;
+  }
+  .updDel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .filled-icons {
+    color: var(--list-item-color) !important;
+  }
+  .addSkillBtn {
+    background: var(--list-item-color) !important;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: var(--list-item-color);
+}
+.off {
+  color: #ccc;
+}

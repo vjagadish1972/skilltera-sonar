@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "sonarsource.sonarlint-vscode",
+        "thekalinga.bootstrap4-vscode",
+        "zaczero.bootstrap-v4-snippets"
+    ]
+}

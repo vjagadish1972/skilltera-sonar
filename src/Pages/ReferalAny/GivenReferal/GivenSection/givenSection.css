@@ -1,0 +1,28 @@
+.referDetail{
+    margin-left: 4.6%;
+}
+
+.skill{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.description{
+    margin-left: 6%;
+}
+
+@media (max-width: 480px) {
+
+    .referDetail{
+        margin-left:-3%;
+    }
+    
+    .skill{
+        margin-left: -3%;
+    }
+    .description{
+        margin-left:-3%;
+    }
+
+
+}

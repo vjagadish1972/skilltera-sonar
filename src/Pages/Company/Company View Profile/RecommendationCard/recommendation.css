@@ -1,0 +1,11 @@
+.status:hover{
+
+    color: blue;
+    
+}
+
+@media (max-width:480px) {
+    .searchIcon{
+        display:none;
+    }
+}

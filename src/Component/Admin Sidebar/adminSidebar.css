@@ -1,0 +1,41 @@
+.admin-sidebar-font {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #666666;
+}
+.admin-sidebar-font:hover {
+  cursor: pointer;
+  height: 40px;
+  background: linear-gradient(90deg, #2a0956 0%, #812fee 100%);
+  border-radius: 8px;
+  color: white;
+}
+.list-view-onCLick {
+  cursor: pointer;
+  height: 40px;
+  background: linear-gradient(90deg, #2a0956 0%, #812fee 100%);
+  border-radius: 8px;
+  color: white;
+}
+.offcanvas-header {
+  margin-left: 32px;
+  margin-right: 24px;
+}
+/* li {
+  margin-bottom: 8px;
+} */
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) {
+  .offcanvas-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: #444444;
+  }
+}

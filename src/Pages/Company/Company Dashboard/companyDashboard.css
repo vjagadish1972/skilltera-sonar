@@ -1,0 +1,16 @@
+@media (max-width: 575.98px) {
+  .no-data {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .company_sidebar {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+}

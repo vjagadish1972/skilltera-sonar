@@ -1,0 +1,282 @@
+@media (max-width: 575.98px) {
+  .company-card {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 24px;
+  }
+  .company-info {
+    width: 100%;
+  }
+  .company-heading {
+    display: flex;
+    flex-direction: space-around;
+    justify-content: space-between;
+  }
+  .company-job-role {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #444444;
+  }
+  .company-address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* display: flex;
+    align-items: center; */
+    color: #444444;
+  }
+  .company-skill {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .company-skill-req {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8f8f8f;
+    padding-top: 5px;
+  }
+  .skill-group {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .company-skill-names {
+    width: auto;
+    height: 28px;
+    background: #fff6ec;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .company-job-type {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .company-job-type-req {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8f8f8f;
+    padding-top: 5px;
+  }
+  .company-job-type-names {
+    width: auto;
+    height: 28px;
+    background: #fff6ec;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .company-job-posted {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #a0a0a0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .company-card {
+    width: auto;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .company-info {
+    width: 100%;
+  }
+  .company-heading {
+    display: flex;
+    flex-direction: space-around;
+    justify-content: space-between;
+  }
+  .company-job-role {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #444444;
+  }
+  .company-address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* display: flex;
+    align-items: center; */
+    color: #444444;
+  }
+  .company-skill {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .company-skill-req {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8f8f8f;
+    padding-top: 5px;
+  }
+  .skill-group {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .company-skill-names {
+    width: auto;
+    height: 28px;
+    background: #fff6ec;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .company-job-type {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .company-job-type-req {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8f8f8f;
+    padding-top: 5px;
+  }
+  .company-job-type-names {
+    width: auto;
+    height: 28px;
+    background: #fff6ec;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .company-job-posted {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #a0a0a0;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-job-cand {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  .company-card {
+    width: auto;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .company-info {
+    width: 100%;
+  }
+  .company-heading {
+    display: flex;
+    flex-direction: space-around;
+    justify-content: space-between;
+  }
+  .company-job-role {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #444444;
+  }
+  .company-address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* display: flex;
+    align-items: center; */
+    color: #444444;
+  }
+  .company-skill {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .company-skill-req {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8f8f8f;
+    padding-top: 5px;
+  }
+  .skill-group {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .company-skill-names {
+    width: auto;
+    height: 28px;
+    background: #fff6ec;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .company-job-type {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .company-job-type-req {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8f8f8f;
+    padding-top: 5px;
+  }
+  .company-job-type-names {
+    width: auto;
+    height: 28px;
+    background: #fff6ec;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .company-job-posted {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #a0a0a0;
+  }
+}

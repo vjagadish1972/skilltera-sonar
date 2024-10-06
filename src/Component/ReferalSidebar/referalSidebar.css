@@ -1,0 +1,41 @@
+.sidebarBtn {
+    width: 8.4vw;
+    height: 8vh;
+  }
+  
+  @media (max-width: 480px) {
+    .sidebarBtn {
+      height: 4.2rem;
+      width: 4.1rem;
+    }
+    .offcanvas-start {
+      width: 300px;
+    }
+  }
+  
+  
+  .btnSidebar{
+   
+    border-radius: 8px;
+    height: 2.5rem;
+    width: 12rem;
+    border: 1px solid black ;
+  
+   }
+  
+  
+   .btnSidebar:hover{
+     
+  
+     background-color: #6e4dcd;
+  
+   }
+  
+   .btnSidebar:hover .BsFillPersonFill{
+     
+    color: white;
+  
+  }
+   
+  
+   

@@ -1,0 +1,26 @@
+@media (max-width: 575.98px) {
+  .skill-box-candidate {
+    height: auto;
+    border: 1px solid #e0e0e0;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .skill-box-candidate {
+    width: 345px;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    padding: 7px 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .skill-box-candidate {
+    width: 345px;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    padding: 7px 10px;
+  }
+}

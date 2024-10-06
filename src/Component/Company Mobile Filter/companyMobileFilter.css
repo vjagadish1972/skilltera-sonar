@@ -1,0 +1,48 @@
+.filter-search-mobile-box {
+  margin-top: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.has-search-mobile-for-filter .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search-mobile-for-filter .form-control-feedback-mobile-for-filter {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.filter-skill-mobile {
+  margin-top: 32px;
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.filter-searched-skill-mobile {
+  margin-left: 14px;
+}
+.filter-experience-mobile {
+  margin-top: 21px;
+  margin-left: 16px;
+}
+.filter-option-mobile {
+  margin-top: 12px;
+}
+.filter-button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+.filter-border-mobile {
+  margin-top: 12px;
+  border: 1px solid #efebf9;
+  transform: rotate(0.06deg);
+}

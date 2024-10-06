@@ -1,0 +1,39 @@
+.login {
+  padding: 15px;
+  width: 50%;
+  position: relative;
+  top: 18rem;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 1px solid #6f6f6f;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.informationalMess {
+  margin-top: 7%;
+}
+
+@media (max-width: 480px) {
+  .login {
+    width: 96%;
+    /* padding-left: 2rem; */
+  }
+
+  .informationalMess {
+    margin-top: 22%;
+    padding-left: 4%;
+  }
+}
+
+.showHint {
+  border: none;
+  margin-top: 0.5rem;
+  background-color: transparent;
+}
+
+.loginFoot {
+  margin-top: 25%;
+}

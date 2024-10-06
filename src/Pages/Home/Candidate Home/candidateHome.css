@@ -1,0 +1,532 @@
+@media (max-width: 575.98px) {
+  .candidate-section-one {
+    background: #ffffff;
+  }
+  .candidate-section-left {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .candidate-section-first-half {
+    padding-top: 40px;
+  }
+  .candidate-section-one-banner {
+    order: 2;
+  }
+  .candidate-section-rise-and-shine {
+    margin-bottom: 0px;
+    order: 1;
+  }
+  .rise-and-shine {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+
+    color: #ff6e04;
+  }
+  .make-it-easy {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .candidate-section-rise-and-shine-easy {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: #ff6e04;
+  }
+  .make-our-profile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    color: #6f6f6f;
+  }
+
+  .candidate-login-signup-button {
+    padding-top: 40px;
+  }
+  .candidate-group-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .candidate-btn {
+    width: 150px;
+    height: 48px;
+    color: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .active-candidate-btn {
+    width: 150px;
+    height: 48px;
+    background: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .candidate-login-section {
+    padding-top: 25px;
+  }
+  .candidate-refer-section-one {
+    background-image: url("../../../Assets/dollarImage1.png"),
+      url("../../../Assets/dollarImage2.png"),
+      url("../../../Assets/dollarImage3.png");
+    background-repeat: no-repeat;
+    background-position: left bottom, top center, right bottom;
+    padding-top: 20px;
+  }
+  .candidate-refer {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 53px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #444444;
+    text-align: center;
+  }
+  .dollar {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 53px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background: #750887;
+    border-radius: 8px;
+  }
+  .candidate-refer-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .candidate-know-more {
+    width: 195px;
+    height: 48px;
+    background: #fbfcff;
+    border: 1px solid #750887;
+    box-shadow: 0px 4px 10px rgba(117, 8, 135, 0.3);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: capitalize;
+    color: #750887;
+  }
+  .candidate-section-globally {
+    background: #ffffff;
+  }
+
+  .candidate-section-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .candidate-text-section-globally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .candidate-text-section {
+    text-align: center;
+  }
+  .candidate-section-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #3c3c3c;
+  }
+  .candidate-section-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .candidate-section-one {
+    background: #fbfcff;
+  }
+
+  .candidate-section-first-half {
+    padding-top: 40px;
+  }
+
+  .candidate-section-rise-and-shine {
+    margin-bottom: 0px;
+  }
+  .rise-and-shine {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+
+    color: #ff6e04;
+  }
+  .make-it-easy {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .candidate-section-rise-and-shine-easy {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: #ff6e04;
+  }
+  .make-our-profile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    color: #6f6f6f;
+  }
+  .candidate-login-signup-button {
+    padding-top: 60px;
+  }
+  .candidate-group-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .candidate-btn {
+    width: 140px;
+    height: 48px;
+    color: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .active-candidate-btn {
+    width: 140px;
+    height: 48px;
+    background: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .candidate-login-section {
+    padding-top: 20px;
+  }
+  .candidate-refer-section-one {
+    background-image: url("../../../Assets/dollarImage1.png"),
+      url("../../../Assets/dollarImage2.png"),
+      url("../../../Assets/dollarImage3.png");
+    background-repeat: no-repeat;
+    background-position: left bottom, top center, right bottom;
+    padding-top: 20px;
+    justify-content: end;
+  }
+  .candidate-refer {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 53px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .dollar {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 53px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background: #750887;
+    border-radius: 8px;
+  }
+  .candidate-refer-button {
+    display: flex;
+    justify-content: end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .candidate-know-more {
+    width: 195px;
+    height: 48px;
+    background: #fbfcff;
+    border: 1px solid #750887;
+    box-shadow: 0px 4px 10px rgba(117, 8, 135, 0.3);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: capitalize;
+    color: #750887;
+  }
+  .candidate-section-globally {
+    background: #ffffff;
+  }
+
+  .candidate-section-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .candidate-text-section-globally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .candidate-text-section {
+    text-align: center;
+  }
+  .candidate-section-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+  .candidate-section-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #222222;
+  }
+}
+
+@media (min-width: 992px) {
+  .candidate-section-one {
+    background: #fbfcff;
+  }
+  .candidate-section-first-half {
+    padding-top: 40px;
+  }
+  .candidate-section-rise-and-shine {
+    margin-top: 28px;
+  }
+  .rise-and-shine {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 53px;
+    letter-spacing: 0.04em;
+    color: #ff6e04;
+  }
+  .make-it-easy {
+    font-family: "Fredoka";
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 51px;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .candidate-section-rise-and-shine-easy {
+    font-family: "Fredoka";
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+    letter-spacing: 0.04em;
+    color: #ff6e04;
+  }
+  .make-our-profile {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #6f6f6f;
+  }
+
+  .candidate-login-signup-button {
+    padding-top: 60px;
+  }
+  .candidate-group-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .candidate-btn {
+    width: 180px;
+    height: 48px;
+    color: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .active-candidate-btn {
+    width: 180px;
+    height: 48px;
+    background: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .candidate-login-section {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 40px;
+  }
+  .candidate-refer-section-one {
+    background-image: url("../../../Assets/dollarImage1.png"),
+      url("../../../Assets/dollarImage2.png"),
+      url("../../../Assets/dollarImage3.png");
+    background-repeat: no-repeat;
+    background-position: left bottom, top center, right bottom;
+    padding-top: 60px;
+    justify-content: end;
+  }
+  .candidate-refer {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 53px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .dollar {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 53px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background: #750887;
+    border-radius: 8px;
+  }
+  .candidate-refer-button {
+    display: flex;
+    justify-content: end;
+    padding-top: 20px;
+  }
+  .candidate-know-more {
+    width: 195px;
+    height: 48px;
+    background: #fbfcff;
+    border: 1px solid #750887;
+    box-shadow: 0px 4px 10px rgba(117, 8, 135, 0.3);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: capitalize;
+    color: #750887;
+  }
+  .candidate-section-globally {
+    background: #ffffff;
+  }
+
+  .candidate-section-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .candidate-text-section-globally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .candidate-text-section {
+    text-align: center;
+    /* padding-top: 170px; */
+  }
+  .candidate-section-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+  .candidate-section-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #222222;
+  }
+  .candidate-refer-section {
+    text-align: center;
+    padding-top: 170px;
+  }
+}

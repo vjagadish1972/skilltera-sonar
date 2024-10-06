@@ -1,0 +1,28 @@
+.jobcard{
+border: 1px solid #FF8C04;
+
+background: #FFFFFF;
+border: 1px solid #FF8B02;
+box-shadow: 0px 4px 10px rgba(132, 185, 223, 0.2);
+border-radius: 4px;
+margin-left: 0%;
+
+}
+
+.skillBox{
+color:#FF8B02;
+height: fit-content;
+background: #FFF6EC;
+border-radius: 4px;
+margin-right: 5px;
+margin-left: 5px;
+margin-bottom: 3px;
+font-size: 0.8em;
+padding: 0.3rem
+
+}
+
+
+.imgContainer{
+    margin-top: 1.2rem;
+}

@@ -1,0 +1,275 @@
+@media (max-width: 575.98px) {
+    .toggle-bar-new {
+        position: relative;
+        left: 1%;
+    }
+    .class_li {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #444444 !important;
+    }
+    .itemActive span {
+        color: var(--list-item-color) !important;
+    }
+    .itemActive {
+        border-radius: 2px;
+        color: var(--list-item-color) !important;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .class_li a {
+        text-decoration: none;
+    }
+    .class_li .nav-link {
+        color: #444444;
+    }
+    .class_li .nav-link:hover {
+        color: var(--list-item-color) !important;
+        cursor: pointer;
+    }
+    .font-styling {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 23px;
+        color: black;
+        padding-top: 10px;
+    }
+    .font-styling:hover {
+        color: var(--list-item-color);
+    }
+    .dropdown-menu {
+        width: 10%;
+        opacity: 0.8;
+        border-radius: 7px 7px 0px 0px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) {
+    .company_navbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 6rem;
+        width: 100%;
+        height: 64px;
+
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.06);
+        background-color: #fff;
+    }
+    .logo_container {
+        height: 2rem;
+        width: 10rem;
+        position: relative;
+        cursor: pointer;
+    }
+
+    /* .nagivatorigation */
+    .nagivator > ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, max-content));
+        gap: 2rem;
+        list-style: none;
+        padding-left: 0;
+        margin: 0 2rem;
+        height: 64px;
+    }
+    .nagivator > ul > li {
+        height: 64px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: #444444;
+        font-weight: 400;
+    }
+    .nagivator ul li a {
+        width: max-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: inherit;
+        font-weight: inherit;
+        font-size: var(--font-small);
+        text-decoration: none;
+        white-space: nowrap;
+        outline: none;
+        list-style: 2;
+        line-height: 21px;
+        cursor: pointer;
+    }
+
+    .nagivator ul li a:focus {
+        outline: none;
+        color: #246da2 !important;
+    }
+    .nagivator ul li:hover a {
+        cursor: pointer;
+        color: #246da2 !important;
+    }
+
+    .control_icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+
+        margin-left: auto;
+    }
+    :is(.notification_icon, .message_icon) > svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+        color: #444;
+    }
+    :is(.notification_icon, .message_icon) > svg:hover:not(:focus) {
+        color: #246da2;
+    }
+
+    .userdropdowncontainer {
+        z-index: var(--user-dropdown);
+        margin: 0;
+        color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        text-align: center;
+        outline: none !important;
+        font-weight: 500;
+        position: relative;
+        padding: 0.2rem;
+    }
+    .userdropdowncontainer > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #444;
+    }
+
+    .userdropdowncontainer > div > svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+        color: #444;
+    }
+    .userdropdowncontainer > div > svg:hover:not(:focus) {
+        color: #246da2;
+    }
+
+    .userdropdowncontainer ul {
+        position: absolute;
+        right: 0;
+        top: 105%;
+        width: max-content;
+        background: #f1f6f9;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        padding: 0.5rem 0.25rem;
+        margin: 0;
+        font-size: 0.85rem;
+        user-select: none;
+        font-weight: 500;
+        font-size: var(--font-smaller);
+        color: #7e919a;
+        padding: 0.5rem;
+
+        z-index: 1;
+    }
+
+    /* .userdropdowncontainer ul:after {
+        content: " ";
+        position: absolute;
+        right: -1%;
+        top: -20%;
+        border-top: none;
+        border-right: 0.9375rem solid transparent;
+        border-left: 0.9375rem solid transparent;
+        border-bottom: 0.9375rem solid #fff;
+    } */
+    .userdropdowncontainer ul:first-child {
+        padding-top: 0.3em;
+    }
+    .userdropdowncontainer ul li {
+        list-style: none;
+        color: var(--dark);
+        font-size: var(--font-smaller);
+        padding: 0.25rem 1rem;
+        cursor: pointer;
+        margin-bottom: 0;
+        text-align: right;
+        font-weight: 500;
+    }
+    .userdropdowncontainer ul li:hover {
+        color: var(--primary-blue);
+    }
+
+    /* .class_li {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #444444 !important;
+    }
+    .class_li > a {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+    }
+    .itemActive span {
+        color: var(--list-item-color) !important;
+    }
+    .itemActive {
+        border-radius: 2px;
+      color: var(--list-item-color) !important;
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    .class_li a {
+        text-decoration: none;
+    }
+    .class_li .nav-link {
+        color: #444444;
+    }
+    .class_li .nav-link:hover {
+        background: linear-gradient(
+            176.66deg,
+            rgba(255, 255, 255, 0) 59.81%,
+            var(--list-item-color) 99.03%
+        );
+        border-radius: 2px;
+        color: var(--list-item-color) !important;
+        cursor: pointer;
+    }
+ */
+    .font-styling {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 23px;
+        color: black;
+        padding-top: 10px;
+    }
+    .font-styling:hover {
+        background: linear-gradient(
+            176.66deg,
+            rgba(255, 255, 255, 0) 59.81%,
+            var(--list-item-color) 99.03%
+        ) !important;
+        color: var(--list-item-color);
+        border-radius: 2px;
+    }
+}

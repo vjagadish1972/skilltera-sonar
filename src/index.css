@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*   font-family: "Inter"; */
+}
+:root {
+    --list-item-color: #ff8c04;
+    --list-box-shadow: rgba(255, 110, 4, 0.18);
+
+    --client-primary-color: #246da2;
+    --client-secondary-color: #d8eaf7;
+}
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+body {
+    padding: 0;
+    margin: 0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    overflow: hidden;
+}
+/* fix for iframe overlay */
+body > iframe {
+    pointer-events: none;
+}
+
+@media (max-width: 575.98px) {
+    .no-data {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .buttonSend {
+        background-color: var(--list-item-color);
+        border: 0;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        width: 230px;
+        height: 40px;
+    }
+
+    .buttonCancel {
+        border: 1px solid black;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        width: 230px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .buttonSend {
+        background-color: var(--list-item-color);
+        border: 0;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        width: 230px;
+        height: 40px;
+    }
+
+    .buttonCancel {
+        border: 1px solid black;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        width: 230px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .buttonSend {
+        background-color: var(--list-item-color);
+        border: 0;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        width: 230px;
+        height: 40px;
+    }
+    .buttonCancel {
+        border: 1px solid black;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        width: 230px;
+        height: 40px;
+    }
+}
+
+.addSkillBtn {
+    background-color: var(--list-item-color);
+    color: #fff;
+}
+
+.deleteSkillBtn {
+    transition: 0.3s;
+}
+.deleteSkillBtn:hover {
+    transform: scale(1.4);
+}
+
+.modal-title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #444444;
+}
+
+/* professional Card header */
+
+.CardHeaderProf {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/* Professional card Body Element */
+
+.cardElementProf {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.labelPos {
+    margin-left: -0.5rem;
+}

@@ -1,0 +1,19 @@
+@media (max-width: 480px) {
+  .inputControle {
+    margin-top: 1rem;
+  }
+}
+.select-skill-referalCand .css-13cymwt-control {
+  border-top: 1px solid !important;
+  border-bottom: 1px solid !important;
+  border-left: 1px solid !important;
+  border-right: 1px solid !important;
+  border-color: hsl(0, 0%, 80%) !important;
+}
+.css-1jqq78o-placeholder {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+  color: #444444 !important;
+}

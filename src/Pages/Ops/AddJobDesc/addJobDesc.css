@@ -1,0 +1,11 @@
+.opsContainer{
+    margin-top: 5%;
+}
+
+
+
+  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }

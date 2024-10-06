@@ -1,0 +1,81 @@
+/* .sidebarBtnCand {
+  height: 7vh;
+  width: 14vw;
+}
+
+.sidebarBtnCand:hover {
+  background: linear-gradient(90deg, #2a0956 0%, #812fee 100%);
+}
+
+.sidebarBtnCand:hover * {
+  color: white;
+} */
+
+.sidebarResumeBtn {
+  width: 100%;
+  color: black;
+}
+
+.sidebarResumeBtn:hover {
+  border: 1px solid black;
+  background-color: linear-gradient(90deg, #2a0956 0%, #812fee 100%);
+}
+
+.profilePicEditBtn {
+  position: relative;
+  top: -1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #812fee;
+  width: 22px;
+  height: 22px;
+  background-color: #812fee;
+}
+
+.BsFillPencilFill {
+  color: white;
+}
+
+.BsFillPencilFill:hover {
+  color: black;
+}
+
+.profilePicEditBtn:hover {
+  border: 1px solid white;
+  background-color: white;
+}
+
+.badge{
+ 
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) {
+  .heading-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #444444;
+  }
+  .professional-candidate-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
+  }
+  .professional-candidate-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #444444;
+  }
+}

@@ -1,0 +1,24 @@
+@media (max-width: 575.98px) {
+  .skill-box {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .skill-box {
+    width: 370px;
+    height: 95px;
+    border: 1px solid #e0e0e0;
+    padding: 14px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .skill-box {
+    width: 370px;
+    height: 95px;
+    border: 1px solid #e0e0e0;
+    padding: 14px 20px;
+  }
+}

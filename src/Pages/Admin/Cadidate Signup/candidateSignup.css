@@ -1,0 +1,26 @@
+.main-box-admin-candidate {
+  padding: 15px;
+  width: 50%;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: block;
+  margin: 30px auto;
+}
+
+.main-box-admin-candidate button {
+  background: #6e4dcd;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 228px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .main-box-admin-candidate {
+    width: 100%;
+    padding-left: 1rem;
+    margin-top: 60px;
+  }
+}

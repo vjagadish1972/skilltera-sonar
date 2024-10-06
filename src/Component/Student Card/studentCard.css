@@ -1,0 +1,392 @@
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+  position: absolute;
+  font-family: FontAwesome;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #4b2dff;
+}
+
+@media (max-width: 575.98px) {
+  .card-box {
+    width: 100%;
+    height: auto;
+    background: #fff;
+  }
+  .patch-card {
+    background: #efebf9;
+    border: 1px solid #dadada;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .menu-item-box {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+    position: relative;
+    z-index: 1;
+  }
+  .menu-item-box-hover-feature {
+    position: relative;
+    z-index: 10;
+  }
+  .menu-item-box-hover-feature:hover {
+    color: #6e4dcd;
+    cursor: pointer;
+  }
+
+  .student-profile {
+    position: relative;
+    top: -39px;
+    left: 20px;
+  }
+  .student-profile-pic {
+    display: inline-block;
+    width: 114px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6e4dcd;
+  }
+  .for-border {
+    border-radius: 0px 0px 8px 8px;
+    border-style: solid;
+    border-color: #aeaeae;
+    border-width: 0px 1px 1px 1px;
+  }
+  .card-menu-items {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #6f6f6f;
+  }
+  .card-menu-items-data {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #444444;
+  }
+  .card-menu-items-data:hover {
+    color: #6e4dcd;
+  }
+  .education {
+    padding-left: 12px;
+    margin-top: 15px;
+  }
+  .college-degree {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
+  }
+  .sub-heading {
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6f6f6f;
+  }
+  .skills {
+    padding-left: 12px;
+  }
+  .dyanmic-size-changed {
+    font-size: 4.2vw;
+  }
+  .exprience {
+    padding-left: 12px;
+    margin-top: 15px;
+  }
+  .current-role {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #6f6f6f;
+  }
+  .client {
+    padding-left: 12px;
+    margin-top: 15px;
+  }
+
+  .patch-card-last {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  .view-full-profile {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6e4dcd;
+    padding-left: 22px;
+    cursor: pointer;
+  }
+  .start-chat {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6e4dcd;
+    cursor: pointer;
+    padding-right: 22px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .card-box {
+    width: 100%;
+    height: auto;
+    background: #fff;
+  }
+  .patch-card {
+    background: #efebf9;
+    border: 1px solid #dadada;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .menu-item-box {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+  }
+  .menu-item-box-hover-feature {
+    position: relative;
+    z-index: 10;
+  }
+  .menu-item-box-hover-feature:hover {
+    color: #6e4dcd;
+    cursor: pointer;
+  }
+
+  .student-profile {
+    position: relative;
+    top: -39px;
+    left: 20px;
+  }
+  .student-profile-pic {
+    display: inline-block;
+    width: 114px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6e4dcd;
+  }
+  .for-border {
+    border-radius: 0px 0px 8px 8px;
+    border-style: solid;
+    border-color: #aeaeae;
+    border-width: 0px 1px 1px 1px;
+  }
+  .card-menu-items {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #6f6f6f;
+  }
+  .card-menu-items-data {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #444444;
+  }
+  .card-menu-items-data:hover {
+    color: #6e4dcd;
+  }
+  .education {
+    padding-left: 28px;
+    margin-top: 15px;
+  }
+  .college-degree {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
+  }
+  .sub-heading {
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6f6f6f;
+  }
+  .skills {
+    padding-left: 28px;
+  }
+  .dyanmic-size-changed {
+    font-size: 2.2vw;
+  }
+  .exprience {
+    padding-left: 28px;
+    margin-top: 15px;
+  }
+  .current-role {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #6f6f6f;
+  }
+  .client {
+    padding-left: 28px;
+    margin-top: 15px;
+  }
+
+  .patch-card-last {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  .view-full-profile {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #6e4dcd;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .start-chat {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #6e4dcd;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-box {
+    width: 100%;
+    height: auto;
+    background: #fff;
+  }
+  .patch-card {
+    background: #efebf9;
+    border: 1px solid #dadada;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .menu-item-box {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+  }
+  .menu-item-box-hover-feature {
+    position: relative;
+    z-index: 10;
+  }
+  .menu-item-box-hover-feature:hover {
+    color: #6e4dcd;
+    cursor: pointer;
+  }
+
+  .student-profile {
+    position: relative;
+    top: -39px;
+    left: 20px;
+  }
+  .student-profile-pic {
+    display: inline-block;
+    width: 114px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6e4dcd;
+  }
+  .for-border {
+    border-radius: 0px 0px 8px 8px;
+    border-style: solid;
+    border-color: #aeaeae;
+    border-width: 0px 1px 1px 1px;
+  }
+  .card-menu-items {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #6f6f6f;
+  }
+  .card-menu-items-data {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #444444;
+  }
+  .card-menu-items-data:hover {
+    color: #6e4dcd;
+  }
+  .education {
+    padding-left: 28px;
+    margin-top: 25px;
+  }
+  .college-degree {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #444444;
+  }
+  .sub-heading {
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6f6f6f;
+  }
+  .skills {
+    padding-left: 28px;
+  }
+  .dyanmic-size-changed {
+    font-size: 1.2vw;
+  }
+  .exprience {
+    padding-left: 28px;
+    margin-top: 25px;
+  }
+  .current-role {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #6f6f6f;
+  }
+  .client {
+    padding-left: 28px;
+    margin-top: 25px;
+  }
+
+  .patch-card-last {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+  .view-full-profile {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #6e4dcd;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .start-chat {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #6e4dcd;
+    cursor: pointer;
+  }
+}

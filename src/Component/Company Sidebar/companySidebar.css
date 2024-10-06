@@ -1,0 +1,184 @@
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .sidebar-box {
+    width: 325px;
+    height: 740px;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  .edit-option {
+    padding-top: 26px;
+    padding-right: 26px;
+    text-align: right;
+    cursor: pointer;
+  }
+  .profile-box {
+    text-align: center;
+  }
+  .profile-pic {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6e4dcd;
+  }
+  .company-name {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .company-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000000;
+  }
+  .company-location {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .location {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .alignment-menu-global {
+    padding-top: 16px;
+  }
+
+  .list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #666666;
+  }
+  .list1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #ffffff;
+  }
+  .list-group-view {
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .list-view {
+    margin-top: 23px;
+    cursor: pointer;
+  }
+  .list-view:hover {
+    margin-top: 23px;
+    cursor: pointer;
+    width: 199px;
+    height: 40px;
+    opacity: 0.8;
+    border-radius: 8px;
+    color: #666666;
+    border: 2px solid #666666;
+    padding: 7px;
+  }
+  .icons-iconify-color {
+    font-size: 24px;
+    color: #666666;
+  }
+  .icons-iconify-color1 {
+    font-size: 24px;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar-box {
+    width: 325px;
+    height: 740px;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  .edit-option {
+    padding-top: 26px;
+    padding-right: 26px;
+    text-align: right;
+    cursor: pointer;
+  }
+  .profile-box {
+    text-align: center;
+  }
+  .profile-pic {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6e4dcd;
+  }
+  .company-name {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .company-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000000;
+  }
+  .company-location {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .location {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .alignment-menu-global {
+    padding-top: 16px;
+  }
+
+  .list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #666666;
+  }
+  .list1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #ffffff;
+  }
+  .list-group-view {
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .list-view {
+    margin-top: 23px;
+    cursor: pointer;
+  }
+  /* .list-view:hover {
+    margin-top: 23px;
+    cursor: pointer;
+    width: 199px;
+    height: 40px;
+    opacity: 0.8;
+    border-radius: 8px;
+    color: #666666;
+    border: 2px solid #666666;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  } */
+
+  .icons-iconify-color {
+    font-size: 24px;
+    color: #666666;
+  }
+  .icons-iconify-color1 {
+    font-size: 24px;
+    color: #ffffff;
+  }
+}

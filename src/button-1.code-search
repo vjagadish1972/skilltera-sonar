@@ -1,0 +1,218 @@
+# Query: button-1
+# Flags: CaseSensitive RegExp
+# ContextLines: 1
+
+44 results - 37 files
+
+package-lock.json:
+  3693        "version": "1.0.1",
+  3694:       "resolved": "https://registry.npmjs.org/@rpldy/upload-button/-/upload-button-1.0.1.tgz",
+  3695        "integrity": "sha512-HuJuWlI9xljD7rQAmL5kEf40sOLZs8KF4VQCaj0y8+ErnEblmvjh/pSuRp+QgXVPT5NYrCq2YXSqOK9UYTBdsA==",
+
+src\Component\EducationCard\EducationCard.js:
+  143                          <div className="d-flex justify-content-center mt-3">
+  144:                           <button type="submit" className="buttonSend me-md-2 ">
+  145                              Save
+
+  277                            </button>
+  278:                           <button type="submit" className="buttonSend me-md-2 ">
+  279                              Save
+
+src\Component\ReferalSidebar\referalSidebar.js:
+  180                        type="submit"
+  181:                       className="buttonSend me-md-2 "
+  182                      >
+
+  316                            type="submit"
+  317:                           className="buttonSend me-md-2 "
+  318                          >
+
+src\Component\Sidebar\sidebar.js:
+  400                        type="submit"
+  401:                       className="buttonSend me-md-2 "
+  402                      >
+
+  580                            type="submit"
+  581:                           className="buttonSend me-md-2 "
+  582                          >
+
+src\Pages\Company\Company Login\companyLogin.js:
+  164                type="submit"
+  165:               className="buttonSend me-md-2"
+  166                onClick={handleClick}
+
+src\Pages\Company\Company View Profile\Personal\ReferalCand\referalCand.js:
+  380                            type="submit"
+  381:                           className="buttonSend me-md-2 "
+  382                            onClick={saveSkill}
+
+src\Pages\Company\Company View Profile\Professional\RecommendationCard\recommendationCard.js:
+  352                            type="submit"
+  353:                           className="buttonSend me-md-2 "
+  354                          >
+
+src\Pages\Forget Password\forgetpassword.js:
+  169                  type="submit"
+  170:                 className="buttonSend me-md-2 shadow mt-3"
+  171                  onClick={handleClick}
+
+  270  
+  271:               <button className="buttonSend me-md-2 shadow"
+  272                 type="submit"
+
+src\Pages\Home\home.css:
+   10  /* CSS */
+   11: .buttonSend {
+   12    background-color: #6e4dcd;
+
+  273    }
+  274:   .button-1 {
+  275      background-color: #6e4dcd;
+
+src\Pages\Home\home.js:
+   56              <div className="button-talent">
+   57:               <button className="button-1 me-md-4 shadow" onClick={moveToLogin} type="button">Find Talent</button>
+   58                <button className="button-2 button-margin shadow" onClick={moveToLogin} type="button">Talent Studio</button>
+
+  145                <div className="employer-button">
+  146:                 <button className="button-1 button-margin shadow" onClick={moveToLogin} type="button">Get Started</button>
+  147                </div>
+
+src\Pages\Login\login.css:
+  43  
+  44: /* .button-1 {
+  45    background-color: #6e4dcd;
+
+src\Pages\Login\login.js:
+  161  
+  162:            <button className="buttonSend me-md-2 shadow" type="submit"
+  163              disabled={disable}>
+
+src\Pages\Recommendation\recommendation.js:
+  187  
+  188:               <button className="buttonSend me-md-2 shadow" type="submit">
+  189                  Submit
+
+src\Pages\ReferalAny\ForgotPassRef\forgotPassRef.js:
+  174                  type="submit"
+  175:                 className="buttonSend me-md-2 shadow mt-3"
+  176                  onClick={handleClick}
+
+  275  
+  276:               <button className="buttonSend me-md-2 shadow"
+  277                 type="submit"
+
+src\Pages\ReferalAny\LoginRef\loginRef.js:
+  149  
+  150:            <button className="buttonSend me-md-2 shadow" type="submit"
+  151              disabled={disable}>
+
+src\Pages\ReferalAny\ReferOther\referOther.js:
+  409                            type="submit"
+  410:                           className="buttonSend me-md-2 "
+  411                            onClick={saveSkill}
+
+src\Pages\ReferalAny\SignupRef\signupRef.js:
+  173                  type="submit"
+  174:                 className="buttonSend me-md-2 shadow"
+  175                  onClick={handleClick}
+
+src\Pages\Signup\signup.js:
+  190                  type="submit"
+  191:                 className="buttonSend me-md-2 shadow"
+  192                  onClick={handleClick}
+
+src\Pages\UserPersonalInfo\AboutCard\aboutCard.js:
+  188                          <div className="d-flex justify-content-center mt-3 mb-3">
+  189:                           <button type="submit" className="buttonSend me-md-2 ">
+  190                              Save
+
+src\Pages\UserPersonalInfo\CertificateCard\certificateCard.js:
+  230                        <div className="d-flex justify-content-center mt-3 mb-3">
+  231:                         <button type="submit" className="buttonSend me-md-2 ">
+  232                            Save
+
+src\Pages\UserPersonalInfo\CertificateCard\UpdDelCertif\updDelCertif.js:
+  262                          </button>
+  263:                         <button type="submit" className="buttonSend me-md-2 ">
+  264                            Save
+
+src\Pages\UserPersonalInfo\EducationCard\educationCard.js:
+  352                          <div className="d-flex justify-content-center mt-3">
+  353:                           <button type="submit" className="buttonSend me-md-2 ">
+  354                              Save
+
+src\Pages\UserPersonalInfo\EducationCard\UpdateEducation\updateEducation.js:
+  291                            </button>
+  292:                         <button type="submit" className="buttonSend me-md-2 ">
+  293                              Save
+
+src\Pages\UserPersonalInfo\ReferalCand\referalCand.js:
+  385                            type="submit"
+  386:                           className="buttonSend me-md-2 "
+  387                            onClick={saveSkill}
+
+src\Pages\UserPersonalInfo\SkillCard\skillCard.js:
+  296                        <div className="d-flex justify-content-center mt-3 mb-3">
+  297:                         <button type="submit" onClick={saveSkill} className="buttonSend me-md-2 ">
+  298                            Save
+
+src\Pages\UserProfessionalInfo\CurrentRoleCard\currentRoleCard.js:
+  141                        type="submit"
+  142:                       className="buttonSend me-md-2 "
+  143                        >
+
+src\Pages\UserProfessionalInfo\ExpectedRateCard\expectedRateCard.js:
+  151                          type="submit"
+  152:                         className="buttonSend me-md-2 "
+  153                        >
+
+src\Pages\UserProfessionalInfo\ExperienceCard\experienceCard.js:
+  216                            type="submit"
+  217:                           className="buttonSend me-md-2 "
+  218                          >
+
+src\Pages\UserProfessionalInfo\ExperienceCard\UpdDelExp\updDelExp.js:
+  223                            </button>
+  224:                           <button type="submit" className="buttonSend me-md-2 ">
+  225                              Save
+
+src\Pages\UserProfessionalInfo\JobWantCard\jobWantCard.js:
+  143                        type="submit"
+  144:                       className="buttonSend me-md-2 "
+  145                        >
+
+src\Pages\UserProfessionalInfo\JoinCard\joinCard.js:
+  159                          type="submit"
+  160:                         className="buttonSend me-md-2 "
+  161                        >
+
+src\Pages\UserProfessionalInfo\OverAllExpCard\overAllExpCard.js:
+  144                          type="submit"
+  145:                         className="buttonSend me-md-2 "
+  146                        >
+
+src\Pages\UserProfessionalInfo\RecommendationCard\recommendationCard.js:
+  352                            type="submit"
+  353:                           className="buttonSend me-md-2 "
+  354                          >
+
+src\Pages\UserProfessionalInfo\RelocationCard\relocationCard.js:
+  156                          type="submit"
+  157:                         className="buttonSend me-md-2 "
+  158                        >
+
+src\Pages\UserProfessionalInfo\TechnologyCard\technologyCard.js:
+  144                        type="submit"
+  145:                       className="buttonSend me-md-2 "
+  146                        >
+
+src\Pages\UserProfessionalInfo\VisaCard\visaCard.js:
+  158                          type="submit"
+  159:                         className="buttonSend me-md-2 "
+  160                        >
+
+src\Pages\UserProfile\userProfile.js:
+  537            <div class="d-flex justify-content-center mt-4">
+  538:             <button className="buttonSend me-md-2 shadow "
+  539                type="submit"

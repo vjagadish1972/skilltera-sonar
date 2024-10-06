@@ -1,0 +1,66 @@
+@media (max-width: 575.98px) {
+  .company-form-control {
+    border-top: 0px;
+    border-bottom: 1px solid var(--list-item-color);
+    border-left: 0px;
+    border-right: 0px;
+    box-shadow: none;
+    background: #ffffff;
+    color: var(--list-item-color);
+  }
+  .company-form-control::placeholder {
+    color: var(--list-item-color);
+  }
+  .company-buttonSend {
+    width: 300px;
+    height: 48px;
+    background: var(--list-item-color);
+    color: #ffffff;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .company-form-control {
+    border-top: 0px;
+    border-bottom: 1px solid var(--list-item-color);
+    border-left: 0px;
+    border-right: 0px;
+    box-shadow: none;
+    background: #fbfcff;
+    color: var(--list-item-color);
+  }
+  .company-form-control::placeholder {
+    color: var(--list-item-color);
+  }
+  .company-buttonSend {
+    width: 300px;
+    height: 48px;
+    background: var(--list-item-color);
+    color: #ffffff;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 992px) {
+  .company-form-control {
+    padding-left: 20px;
+    border-top: 0px;
+    border-bottom: 1px solid var(--list-item-color);
+    border-left: 0px;
+    border-right: 0px;
+    box-shadow: none;
+    background: #fbfcff;
+    color: var(--list-item-color);
+  }
+  .company-form-control::placeholder {
+    color: var(--list-item-color);
+  }
+  .company-buttonSend {
+    width: 300px;
+    height: 48px;
+    background: var(--list-item-color);
+    color: #ffffff;
+    border-radius: 4px;
+  }
+}

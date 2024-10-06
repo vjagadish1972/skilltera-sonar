@@ -1,0 +1,229 @@
+@media (max-width: 575.98px) {
+  .contact-section {
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .contact-blue-patch {
+    background: linear-gradient(77.39deg, #6e4dcd -30.86%, #390c55 103.98%);
+    border-radius: 10px 0px 0px 10px;
+    text-align: center;
+  }
+  .contactus {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 59px;
+    padding-top: 68px;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: none;
+  }
+
+  .contact-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+  }
+  .form-section {
+    background: #ffffff;
+    border: 1px solid #d1c3fe;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+  }
+  .get-in-touch {
+    padding-top: 32px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #4d3194;
+  }
+  .feel-free {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 20px;
+    color: #8a75c0;
+  }
+  .contact-form {
+    padding-top: 52px;
+  }
+  .captch {
+    padding-top: 24px;
+  }
+  .button-send-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 0px;
+  }
+  .button-send {
+    background-color: #6e4dcd;
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    width: 192px;
+    height: 40px;
+    margin-bottom: 52px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .contact-section {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+  }
+  .contact-blue-patch {
+    background: linear-gradient(77.39deg, #6e4dcd -30.86%, #390c55 103.98%);
+    border-radius: 10px 0px 0px 10px;
+    text-align: center;
+  }
+  .contactus {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 59px;
+    padding-top: 68px;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: none;
+  }
+  .contact-image {
+    padding-top: 128px;
+  }
+
+  .form-section {
+    background: #ffffff;
+    border: 1px solid #d1c3fe;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+  }
+  .get-in-touch {
+    padding-top: 52px;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 59px;
+    text-transform: capitalize;
+    color: #4d3194;
+  }
+  .feel-free {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 20px;
+    color: #8a75c0;
+  }
+  .contact-form {
+    padding-top: 52px;
+  }
+  .captch {
+    padding-top: 40px;
+  }
+  .button-send-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 52px;
+    padding-bottom: 40px;
+  }
+  .button-send {
+    background-color: #6e4dcd;
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    width: 207px;
+    height: 63px;
+    margin-bottom: 52px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-section { 
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+  }
+  .contact-blue-patch {
+    background: linear-gradient(77.39deg, #6e4dcd -30.86%, #390c55 103.98%);
+    border-radius: 10px 0px 0px 10px;
+  }
+  .contactus {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    padding-top: 68px;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 128px;
+  }
+
+  .form-section {
+    background: #ffffff;
+    border: 1px solid #d1c3fe;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .get-in-touch {
+    padding-left: 60px;
+    padding-top: 52px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: #4d3194;
+  }
+  .feel-free {
+    padding-left: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 20px;
+    color: #8a75c0;
+  }
+  .contact-form {
+    padding-left: 60px;
+    padding-top: 52px;
+    padding-right: 60px;
+  }
+  .captch {
+    padding-top: 36px;
+  }
+  .button-send-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 36px;
+  }
+  .button-send {
+    background-color: #6e4dcd;
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    width: 202px;
+    height: 52px;
+    margin-bottom: 52px;
+  }
+}
+
+.footer {
+  margin-top: 11rem !important;
+}

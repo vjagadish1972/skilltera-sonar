@@ -1,0 +1,25 @@
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) {
+  .button-inside {
+    width: auto;
+    height: 38px;
+    background: #ffffff;
+    border: 1px solid #b8b8b8;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px !important;
+    display: flex;
+    align-items: center;
+    color: #666666;
+  }
+  .job-status-clicked {
+    border: 1px solid var(--list-item-color);
+    color: var(--list-item-color);
+  }
+}

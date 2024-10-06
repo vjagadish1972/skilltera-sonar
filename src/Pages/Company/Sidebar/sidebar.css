@@ -1,0 +1,124 @@
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .company_container {
+        min-width: 960px;
+    }
+}
+
+@media (min-width: 992px) {
+    .company_sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        height: 660px;
+        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid #d8eaf7;
+        border-radius: 4px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .company_sidebar__jobs_col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        width: 100%;
+        height: 100%;
+    }
+    .company__job_card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        height: max-content;
+        padding: 1rem;
+
+        background: #ffffff;
+
+        border: 1px solid #aeaeae;
+
+        border-radius: 4px;
+    }
+    .company__job_card.selected {
+        border: 1px solid #246da2;
+        box-shadow: 0px 4px 10px rgba(132, 185, 223, 0.2);
+    }
+    .company__job_card > p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.675rem;
+        color: #8f8f8f;
+    }
+    .company__job_card__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2px;
+    }
+    .company__job_card__header > p:first-child {
+        margin: 0;
+        padding: 0;
+        color: #444;
+        font-weight: 500;
+
+        word-wrap: break-word;
+
+        max-width: 18rem;
+    }
+    .company__job_card__header > p:last-child {
+        margin: 0;
+        padding: 0;
+        color: #444;
+        font-size: 0.875rem;
+        font-weight: 500;
+
+        word-wrap: break-word;
+    }
+    .company__job_card__skill_section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2px;
+    }
+    .company__job_card__skill_section > p {
+        margin: 0;
+        font-style: italic;
+        font-size: 0.675rem;
+        color: #8f8f8f;
+    }
+    .skill_section__skills_chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .skill_section__skills_chip {
+        display: grid;
+        place-items: center;
+        padding: 0.5rem;
+
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 0.675rem;
+        color: var(--client-primary-color);
+
+        background-color: var(--client-secondary-color);
+        max-width: 10rem;
+        word-wrap: break-word;
+    }
+    .skill_section__skills_chip > p {
+        margin: 0;
+    }
+    .chip_star{
+        display: flex;
+        align-items: center;
+        font-size: 0.675rem;
+    }
+}

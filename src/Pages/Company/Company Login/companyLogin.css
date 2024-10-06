@@ -1,0 +1,27 @@
+.company-login {
+  padding: 15px;
+  width: 50%;
+  position: relative;
+  top: 17rem;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+@media (max-width: 480px) {
+  .company-login {   
+    width: 96%;
+    padding-left: 1rem;
+  }
+
+  
+}
+
+
+.companyLoginFoot{
+
+  margin-top: 15%;
+}

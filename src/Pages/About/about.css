@@ -1,0 +1,89 @@
+img {
+  padding-left: 0px !important;
+}
+.img-fluid-banner {
+  width: 100%;
+  height: 60vh;
+}
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  font-size: 50px;
+}
+.section-one {
+  margin-top: 20px;
+  overflow-x: hidden;
+}
+.heading-one {
+  padding-top: 35px;
+}
+.para-one {
+  padding-top: 25px;
+  padding-right: 50px;
+}
+.section-two {
+  margin-top: 20px;
+  overflow-x: hidden;
+}
+ol {
+  margin-bottom: 0 !important;
+}
+.heading-two {
+  padding-top: 100px;
+  padding-left: 50px;
+}
+.order-two {
+  padding-left: 65px;
+}
+.para-two {
+  padding-top: 30px;
+  padding-left: 50px;
+}
+.about-patch {
+  background-image: linear-gradient(
+    to right,
+    #ada996,
+    #f2f2f2,
+    #dbdbdb,
+    #eaeaea
+  );
+}
+@media (max-width: 480px) {
+  .img-fluid-banner {
+    height: auto;
+  }
+  .hero-text {
+    top: 21%;
+    left: 5%;
+    color: white;
+    font-size: 28px;
+  }
+  .heading-one {
+    padding-top: 25px;
+    text-align: center;
+  }
+  .para-one {
+    padding-top: 20px;
+    padding-right: 0px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .heading-two {
+    padding-top: 25px;
+    text-align: center;
+    padding-left: 0px;
+  }
+  .order-two {
+    padding-left: 5px;
+    text-align: center;
+  }
+  .para-two {
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
+}

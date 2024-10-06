@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*Input Field*/
+.input-box {
+  width: 100%;
+/*   position: relative; */
+  margin: 0.89rem 0;
+
+  --text: #000;
+  --label-color: #7e919a;
+  --label-error: #ff5858;
+  --placeholder-color: #b7c3c9;
+
+  --bg: #fff;
+  --bg-disabled: var(--grey-1);
+  --bg-error: #fdf2f2;
+
+  --border: #b7c3c9;
+  --border-disabled: var(--grey-2);
+  --focus: #0481fe;
+}
+.input-box > label {
+  font-weight: 500;
+  color: var(--label-color);
+  padding: 0.02rem 0.5rem;
+  font-size: var(--font-smaller);
+}
+.input-box > input {
+  background: var(--bg);
+  border: none;
+  border-bottom: 2px solid #DAE7F1;
+  border-radius: 0;
+  height: auto;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  font-weight: "Inter";
+}
+
+.input-box > input:placeholder-shown {
+  color: var(--placeholder-color);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+}
+.input-box > input[type="date" i]:placeholder-shown {
+  color: var(--placeholder-color);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.input-box > input[type="number"]::-webkit-outer-spin-button,
+.input-box > input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.input-box > label:focus-visible {
+  color: var(--focus);
+}
+.input-box > input:focus-visible {
+  outline: none;
+  border-bottom: 2px solid var(--focus);
+}
+/* .input-box > input:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+} */
+.input-box > input:disabled {
+  background-color: var(--bg-disabled);
+  border: 1px solid var(--border-disabled);
+  cursor: not-allowed;
+}

@@ -1,0 +1,771 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.home_page__wrapper{
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+  overflow-y: auto;
+}
+.test {
+  background-color: pink;
+  overflow-x: hidden;
+}
+/* CSS */
+.button-1 {
+  background-color: #6e4dcd;
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  height: 62px;
+  width: 225px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.button-2 {
+  background-color: #ffffff;
+  border: 1px solid #6e4dcd;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  color: #6e4dcd;
+  cursor: pointer;
+  font-size: 100%;
+  height: 62px;
+  width: 225px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.button-3 {
+  border: 1px solid #c1c1c1;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  color: #404040;
+  cursor: pointer;
+  font-size: 100%;
+  height: 101px;
+  width: 293px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.button-4 {
+  background-color: #ffffff;
+  border: 1px solid #6e4dcd;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  color: #6e4dcd;
+  cursor: pointer;
+  font-size: 100%;
+  height: 62px;
+  width: 225px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.logo {
+  transition: 0.3s;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 575.98px) {
+  .hiring-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #230847;
+  }
+  .fix-padding-hero {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .block-left {
+    padding-top: 50px;
+  }
+  .hiring-banner {
+    padding-top: 87px;
+  }
+
+  .employers {
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 26px;
+  }
+
+  .button-talent {
+    padding-top: 37px;
+  }
+
+  .button-margin {
+    margin-top: 16px;
+  }
+  .refer-box {
+    background: #ffffff;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+  .refer-people {
+    padding-top: 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #6e4dcd;
+    text-align: center;
+  }
+  .refer-content {
+    padding-top: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444444;
+  }
+  .button-refer {
+    padding-top: 25px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .explore-talent {
+    padding-top: 33px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .choose-categories {
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 56px;
+    text-align: center;
+  }
+  .engineering-field {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0px;
+    text-align: center;
+  }
+  .employers-section {
+    height: auto;
+    background: #ffffff;
+    margin-top: 50px;
+  }
+  .employer-section-left {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .current-job-left {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    padding-top: 38px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .employer-button {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    text-align: center;
+    padding-bottom: 38px;
+  }
+  .employer-banner-image {
+    padding-top: 23.5px;
+    text-align: center;
+  }
+  .makes-different-section {
+    height: auto;
+  }
+  .makes-different {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #262626;
+    padding-top: 20px;
+  }
+  .cards-section {
+    padding-top: 27px;
+  }
+  .for-mobile-spacing {
+    display: flex;
+    justify-content: center;
+  }
+  .cards-body {
+    width: 320px;
+    height: 300px;
+    background: #ffffff;
+    box-shadow: 0px 8px 20px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  .cards-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    padding-top: 32px;
+    padding-left: 26px;
+  }
+  .cards-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 24px;
+    padding-left: 26px;
+    padding-right: 26px;
+    color: #11203f;
+  }
+  .last-section {
+    height: auto;
+    background: #ffffff;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .human-image-left {
+    padding-top: 35px;
+  }
+  .for-talent {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+    color: #444444;
+    padding-top: 21px;
+    text-align: center;
+  }
+  .find-your {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 56px;
+    color: #444444;
+    padding-top: 0px;
+    text-align: center;
+  }
+  .profile-is {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 12px;
+    text-align: center;
+    color: #444444;
+  }
+  .button-get {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 30px;
+  }
+  .button-1 {
+    background-color: #6e4dcd;
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    height: 40px;
+    width: 192px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .button-2 {
+    background-color: #ffffff;
+    border: 1px solid #6e4dcd;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    color: #6e4dcd;
+    cursor: pointer;
+    font-size: 100%;
+    height: 40px;
+    width: 192px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .button-3 {
+    border: 1px solid #c1c1c1;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    color: #404040;
+    cursor: pointer;
+    font-size: 100%;
+    height: 40px;
+    width: 192px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .button-4 {
+    background-color: #ffffff;
+    border: 1px solid #6e4dcd;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    color: #6e4dcd;
+    cursor: pointer;
+    font-size: 100%;
+    height: 40px;
+    width: 192px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    box-shadow: 0 4px 7px #d0d0d0;
+  }
+  .button-5 {
+    border: 1px solid #c1c1c1;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    color: #404040;
+    cursor: pointer;
+    font-size: 100%;
+    height: 52px;
+    width: 320px;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hiring-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 47px;
+    color: #230847;
+  }
+  .fix-padding-hero {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .block-left {
+    padding-top: 50px;
+  }
+  .hiring-banner {
+    padding-top: 87px;
+  }
+
+  .employers {
+    max-width: 100%;
+    font-weight: 350;
+    font-size: 28px;
+    line-height: 34px;
+    padding-top: 26px;
+  }
+
+  .button-talent {
+    padding-top: 37px;
+  }
+
+  .button-margin {
+    margin-top: 15px;
+  }
+  .refer-box {
+    background: #ffffff;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .refer-people {
+    padding-top: 0px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    color: #6e4dcd;
+    text-align: center;
+  }
+  .refer-content {
+    padding-top: 25px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #444444;
+    text-align: center;
+  }
+  .button-refer {
+    padding-top: 25px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .explore-talent {
+    padding-top: 33px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .choose-categories {
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+  }
+  .engineering-field {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 26px;
+    text-align: center;
+  }
+  .employers-section {
+    height: 100vh;
+    background: #ffffff;
+    margin-top: 100px;
+  }
+  .employer-section-left {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 48px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 82px;
+    text-align: center;
+  }
+  .current-job-left {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 38px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .employer-button {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 38px;
+    text-align: center;
+  }
+  .employer-banner-image {
+    padding-top: 23.5px;
+    text-align: center;
+  }
+
+  .makes-different-section {
+    height: auto;
+  }
+  .makes-different {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    padding-top: 36.14px;
+  }
+  .cards-section {
+    padding-top: 54.9px;
+    padding-left: 40px;
+  }
+  .for-mobile-spacing {
+    display: 0;
+    justify-content: 0;
+    padding-bottom: 20px;
+  }
+  .cards-body {
+    width: 320px;
+    height: 371px;
+    background: #ffffff;
+    box-shadow: 0px 8px 20px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  .cards-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding-top: 60px;
+    padding-left: 26px;
+  }
+  .cards-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 42px;
+    padding-left: 26px;
+    color: #11203f;
+  }
+  .last-section {
+    height: auto;
+    background: #e5eeff;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+  }
+  .human-image-left {
+    padding-top: 71px;
+  }
+
+  .for-talent {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #444444;
+    padding-top: 42px;
+    text-align: center;
+  }
+  .find-your {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    color: #444444;
+    padding-top: 28px;
+    text-align: center;
+  }
+  .profile-is {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 60px;
+    text-align: center;
+    color: #444444;
+  }
+  .button-get {
+    padding-top: 60px;
+    text-align: center;
+  }
+  .button-5 {
+    border: 1px solid #c1c1c1;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    color: #404040;
+    cursor: pointer;
+    font-size: 100%;
+    height: 80px;
+    width: 313px;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hiring-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 68px;
+    color: #230847;
+  }
+  .fix-padding-hero {
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-bottom: 60px;
+  }
+  .block-left {
+    padding-top: 100px;
+  }
+
+  .hiring-banner {
+    padding-top: 174px;
+  }
+
+  .employers {
+    max-width: 66%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    padding-top: 52px;
+  }
+
+  .button-talent {
+    padding-top: 60px;
+  }
+
+  .refer-box {
+    background: #ffffff;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .refer-people {
+    padding-top: 35px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56px;
+    color: #6e4dcd;
+  }
+  .refer-content {
+    padding-top: 50px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #444444;
+  }
+  .button-refer {
+    padding-top: 50px;
+  }
+
+  .explore-talent {
+    padding-top: 66px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .choose-categories {
+    padding-top: 24px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  .engineering-field {
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 52px;
+  }
+  .button-spacing {
+    margin-top: 36px;
+  }
+  .employers-section {
+    height: 580px;
+    background: #ffffff;
+    margin-top: 100px;
+  }
+  .employer-section-left {
+    padding-left: 100px;
+    padding-top: 48px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 82px;
+  }
+  .current-job-left {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 32px;
+    padding-left: 100px;
+  }
+  .employer-button {
+    padding-left: 100px;
+    padding-top: 106px;
+  }
+  .employer-banner-image {
+    padding-top: 47px;
+    position: absolute;
+  }
+
+  .makes-different-section {
+    height: 620px;
+  }
+  .makes-different {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    padding-left: 65px;
+    padding-top: 36.14px;
+    color: #262626;
+    text-transform: uppercase;
+  }
+  .cards-section {
+    padding-top: 54.9px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .cards-body {
+    width: 312px;
+    height: 370px;
+    background: #ffffff;
+    box-shadow: 0px 8px 20px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  .cards-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    padding-top: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .cards-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 24px;
+    padding-left: 24px;
+    color: #11203f;
+    padding-right: 24px;
+  }
+  .last-section {
+    height: auto;
+    background-color: #ffffff;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-bottom: 60px;
+  }
+  .human-image-left {
+    padding-top: 71px;
+  }
+
+  .for-talent {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #444444;
+    padding-top: 42px;
+    padding-left: 60px;
+  }
+  .find-your {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56px;
+    color: hsl(0, 0%, 27%);
+    padding-top: 20px;
+    padding-left: 60px;
+  }
+  .profile-is {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #444444;
+  }
+  .button-get {
+    padding-left: 60px;
+    padding-top: 60px;
+  }
+  .button-5 {
+    border: 1px solid #c1c1c1;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    color: #404040;
+    cursor: pointer;
+    font-size: 100%;
+    height: 80px;
+    width: 313px;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

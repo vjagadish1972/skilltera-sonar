@@ -1,0 +1,356 @@
+@media (max-width: 575.98px) {
+  .refer-section-one {
+    background: #ffffff;
+  }
+  .refer-section-left {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .refer-section-first-half {
+    padding-top: 40px;
+  }
+  .refer-section-one-banner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .refer-main-text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .refer-main-heading {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .refer-main-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    color: #3c3c3c;
+  }
+  .refer-login-signup-button {
+    padding-top: 40px;
+  }
+  .refer-group-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .refer-btn {
+    width: 150px;
+    height: 48px;
+    color: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .active-refer-btn {
+    width: 150px;
+    height: 48px;
+    background: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .refer-login-section {
+    padding-top: 25px;
+  }
+  .refer-points {
+    padding-top: 20px;
+  }
+  .refer-points ul li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    color: #444444;
+  }
+  .refer-section-globally {
+    background: #ffffff;
+  }
+
+  .refer-section-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .refer-text-section-globally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .refer-text-section {
+    text-align: center;
+  }
+  .refer-section-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #3c3c3c;
+  }
+  .refer-section-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .refer-section-one {
+    background: #ffffff;
+  }
+
+  .refer-section-first-half {
+    padding-top: 60px;
+  }
+  .refer-main-text {
+    text-align: center;
+  }
+  .refer-main-heading {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 51px;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .refer-main-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 32px;
+    color: #3c3c3c;
+  }
+  .refer-section-one-banner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .refer-login-signup-button {
+    padding-top: 60px;
+  }
+  .refer-group-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .refer-btn {
+    width: 140px;
+    height: 48px;
+    color: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .active-refer-btn {
+    width: 140px;
+    height: 48px;
+    background: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .refer-login-section {
+    padding-top: 20px;
+  }
+  .refer-points {
+    padding-top: 20px;
+  }
+  .refer-points ul li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+  }
+
+  .refer-section-globally {
+    background: #fcfcfc;
+  }
+
+  .refer-section-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .refer-text-section-globally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .refer-text-section {
+    text-align: center;
+  }
+  .refer-section-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+  .refer-section-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #222222;
+  }
+}
+
+@media (min-width: 992px) {
+  .refer-section-one {
+    background: #ffffff;
+  }
+  .refer-section-first-half {
+    padding-top: 60px;
+  }
+  .refer-main-text {
+    text-align: center;
+  }
+  .refer-main-heading {
+    font-family: "Fredoka";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+    letter-spacing: 0.04em;
+    color: #444444;
+  }
+  .refer-main-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: #3c3c3c;
+  }
+  .refer-section-one-banner {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .refer-login-signup-button {
+    padding-top: 60px;
+  }
+  .refer-group-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .refer-btn {
+    width: 180px;
+    height: 48px;
+    color: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .active-refer-btn {
+    width: 180px;
+    height: 48px;
+    background: var(--list-item-color);
+    border: 1px solid var(--list-item-color);
+    border-radius: 4px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .refer-login-section {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 40px;
+  }
+  .refer-points {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+  }
+  .refer-points ul li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+  }
+
+  .refer-section-globally {
+    background: #fcfcfc;
+  }
+
+  .refer-section-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .refer-text-section-globally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .refer-text-section {
+    text-align: center;
+  }
+  .refer-section-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+  .refer-section-subheading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #222222;
+  }
+}
