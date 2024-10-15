@@ -14,7 +14,7 @@ export default function Footer() {
                                 <div className='col-md-4 col-lg-4 order-2 order-md-1 order-lg-1'>
                                     <div className='row'>
                                         <div className='col-12 image-padding'>
-                                            <img src={Logo} className="img-fluid" />
+                                            <img src={Logo} className="img-fluid" alt="logo"/>
                                         </div>
                                         <div className='col-12'>
                                             <div className='social-icons'>

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './jobCard.css'
 import { Rating } from 'react-simple-star-rating';
 

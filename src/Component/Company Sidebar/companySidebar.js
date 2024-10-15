@@ -109,7 +109,6 @@ export default function CompanySidebar() {
 
 
   return (
-    <>
       <div className="sidebar-box">
         <div className="edit-option">
           <span className="iconify" data-icon="fa6-solid:pen"></span>
@@ -197,34 +196,18 @@ export default function CompanySidebar() {
 
           <div className="saved alignment-menu-global" onClick={() => menuSelection('saved')}>
             <div className={menuSelectionRedux.menuSelection == 'saved' ? menuSelectionRedux.css : "list-view"}>
-              {/* <Icon className={"me-3 " + (menuSelectionRedux.menuSelection == 'saved' ? "icons-iconify-color1" : "icons-iconify-color")} icon="dashicons:cloud-saved" /> */}
+             
               <span className={menuSelectionRedux.menuSelection == 'saved' ? "list1" : "list"}>Saved</span>
             </div>
           </div>
 
           <div className="saved alignment-menu-global" onClick={() => menuSelection('message')}>
             <div className={menuSelectionRedux.menuSelection == 'message' ? menuSelectionRedux.css : "list-view"}>
-              {/* <Icon className={"me-3 " + (menuSelectionRedux.menuSelection == 'message' ? "icons-iconify-color1" : "icons-iconify-color")} icon="ic:round-message" /> */}
+             
               <span className={menuSelectionRedux.menuSelection == 'message' ? "list1" : "list"}>Messages</span>
             </div>
           </div>
-
-          {/* <div className="dashboard alignment-menu-global" onClick={() => menuSelection('dashboard')}>
-            <div className={menuSelectionRedux.menuSelection == 'dashboard' ? menuSelectionRedux.css : "list-view"}>
-              <Icon className={"iconify me-3 " + (menuSelectionRedux.menuSelection == 'dashboard' ? "icons-iconify-color1" : "icons-iconify-color")} icon="bxs:dashboard" />
-              <span className=className={menuSelectionRedux.menuSelection == 'dashboard' ? "list1" : "list"}>Dashboard</span>
-            </div>
-          </div> */}
-
-
-          {/* <div className="message alignment-menu-global" onClick={() => menuSelection('message')}>
-            <div className={menuSelectionRedux.menuSelection == 'message' ? menuSelectionRedux.css : "list-view"}>
-              <Icon className={"iconify me-3 " + (menuSelectionRedux.menuSelection == 'message' ? "icons-iconify-color1" : "icons-iconify-color")} icon="bxs:message" />
-              <span className=className={menuSelectionRedux.menuSelection == 'message' ? "list1" : "list"}>Message</span>
-            </div>
-          </div> */}
         </div>
       </div>
-    </>
   );
 }

@@ -1,18 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux'
 import Modal from 'react-bootstrap/Modal'
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import ApiConstants from "../../Services/apiconstants";
-import { NavLink } from "react-router-dom";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
-import Footer from "../../Component/Footer/footer";
 import Loading from "../../Component/Loading/loading";
 import "./forgetPasswordModal.css";
 import { Interceptor } from "../../ErrorStatus/errorStatus";
 import Swal from 'sweetalert2';
-import { useEffect } from 'react';
 
 export default function ForgetPasswordModal({ disableModal, onClose }) {
 
@@ -40,7 +36,6 @@ export default function ForgetPasswordModal({ disableModal, onClose }) {
 
     const [email, setemail] = useState("");
     const [getOtp, setgetOtp] = useState(false);
-    const [newPasswordInput, setnewPasswordInput] = useState(false);
     const [otpButtonDisabled, setotpButtonDisabled] = useState(true);
 
     const [emailErrorMessage, setEmailErrorMessage] = useState("");
@@ -114,11 +109,11 @@ export default function ForgetPasswordModal({ disableModal, onClose }) {
        
     };
 
-    // ............clearInputFiled after filldata.....
+    // ...clearInputFiled after filldata...
 
     const formRef = useRef();
 
-    //.......
+    
     const handleError = () => {
         setEmailErrorMessage("");
     };
