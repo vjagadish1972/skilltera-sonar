@@ -11,7 +11,6 @@ import { MdLockReset, MdOutlineLogout } from 'react-icons/md'
 export default function AdminSidebar() {
 
   const dispatch = useDispatch();
-  const [menuCollapse, setMenuCollapse] = useState(false);
 
   const titleSelection = useSelector(
     (state) => state.sidebarMenuSelectionReducer
