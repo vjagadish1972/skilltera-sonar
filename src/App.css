@@ -41,7 +41,6 @@
 /*Input Field*/
 .input-box {
   width: 100%;
-/*   position: relative; */
   margin: 0.89rem 0;
 
   --text: #000;
@@ -74,7 +73,6 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--text);
-  font-weight: "Inter";
 }
 
 .input-box > input:placeholder-shown {
@@ -102,9 +100,7 @@
   outline: none;
   border-bottom: 2px solid var(--focus);
 }
-/* .input-box > input:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
-} */
+
 .input-box > input:disabled {
   background-color: var(--bg-disabled);
   border: 1px solid var(--border-disabled);
