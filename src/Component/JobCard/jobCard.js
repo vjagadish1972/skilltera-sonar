@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './jobCard.css'
 import { Rating } from 'react-simple-star-rating';
 
@@ -25,8 +24,6 @@ const JobCard = (props) => {
   }
 
   return (
-    <>
-
       <div className="container jobcard m-1" style={boxStyle}
         onClick={handleClick}
       >
@@ -55,8 +52,6 @@ const JobCard = (props) => {
 
         </div>
       </div>
-
-    </>
   )
 }
 

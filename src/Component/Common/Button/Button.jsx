@@ -1,19 +1,5 @@
 import "./button.css";
-/*
- * Components : Button
- * Props :
- *      type:string,
- *      text:string,
- *      disabled:boolen,
- *      theme:string,
- *      padding:string,
- *      fontSize:string,
- *      fontWeight:string,
- *      bgcolor:string,
- * Button Types : Primary, Secondary and tertiary
- * Button Variants : contained, outlined and text
- *
- */
+
 export const Button = ({
     buttonType,
     buttonVariant,

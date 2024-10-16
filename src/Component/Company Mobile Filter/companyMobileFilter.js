@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 import './companyMobileFilter.css'
 
 export default function CompanyMobileFilter() {
@@ -34,7 +34,6 @@ export default function CompanyMobileFilter() {
                     <div className="modal-body">
                         <div className="filter-search-mobile-box">
                             <div className="form-group has-search-mobile-for-filter">
-                                {/* <span className="fa fa-search form-control-feedback-mobile-for-filter"></span> */}
                                 <select className="form-control" placeholder="Search" onChange={skilladding}>
                                     <option selected>Search Skill</option>
                                     {test.map(s => {
