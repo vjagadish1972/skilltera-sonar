@@ -98,11 +98,10 @@ export default function NavBarNew() {
 
   };
 
-  const [activeItem, setActiveItem] = useState("");
-  const { profilePic, notificationStatus } = useContext(userContext);
+  const {  notificationStatus } = useContext(userContext);
 
   const [candidateData, setCandidateData] = useState(false);
-  const [adminData, setAdminData] = useState(false);
+  const [ setAdminData] = useState(false);
   const [companyData, setCompanyData] = useState(false);
   const [candidateDataRef, setCandidateDataRef] = useState(false);
   const [candidateAndReferal, setCandidateAndReferal] = useState(false);
