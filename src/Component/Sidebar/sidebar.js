@@ -8,12 +8,9 @@ import {
   BsArrowDown,
   BsFillFileEarmarkMinusFill,
   BsFillPencilFill,
-  BsFillPersonFill,
   BsLinkedin,
   BsPencil,
 } from "react-icons/bs";
-
-import { FaUserTie } from "react-icons/fa";
 import { MdCall, MdEmail, MdLibraryAdd, MdMessage } from "react-icons/md";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 import { useDispatch } from "react-redux";
@@ -39,10 +36,8 @@ import {calculateProfileStrength}  from "../../UtilitiesFunctions/utilitiesFunct
 const Sidebar = () => {
 
   const [ProfileStrength , setProfileStrength] = useState(0)
-
   const {
     userData,
-    getData,
     profilePic,
     setProfilePic,
     resumeData,
@@ -51,7 +46,6 @@ const Sidebar = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -59,7 +53,6 @@ const Sidebar = () => {
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -114,16 +107,6 @@ const Sidebar = () => {
     formData.append("image", file);
     formData.append("imageName", file.name);
 
-    // if (file) {
-    //   const reader = new FileReader();
-    //   const { current } = uploadedImage;
-    //   current.file = file;
-    //   reader.onload = e => {
-    //     current.src = e.target.result;
-    //   };
-    //   reader.readAsDataURL(file);
-    // }
-
     if (picSizeValidate(file.size)) {
       trackPromise(
         axios
@@ -161,9 +144,7 @@ const Sidebar = () => {
   };
 
   //upload image end
-
   const dispatch = useDispatch();
-
   const menuSelection = (data) => {
     dispatch(selectSidebarMenuSelection(data));
   };
@@ -177,7 +158,6 @@ const Sidebar = () => {
   } = useForm();
 
   // get candidate data by id SECTION END
-
   //Address axios section start
 
   const [successMessageAddress, setSuccessMessageAddress] = useState("");

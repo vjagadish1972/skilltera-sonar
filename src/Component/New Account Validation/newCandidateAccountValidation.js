@@ -1,12 +1,8 @@
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import react from 'react'
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { BsFileBreakFill } from 'react-icons/bs';
 import { trackPromise, usePromiseTracker } from 'react-promise-tracker';
 import { useParams } from 'react-router-dom';
 import ApiConstants from '../../Services/apiconstants';
-import Footer from '../Footer/footer';
 import Loading from '../Loading/loading';
 import './newAccountValidation.css'
 import { Interceptor } from '../../ErrorStatus/errorStatus';
@@ -49,7 +45,8 @@ export default function NewCandidateAccountValidation() {
 
 
 
-    return (<>
+    return (
+    <>
         <NavBarNew />
         {promiseInProgress === true ? <Loading /> : <div className='verification mt-5 mb-5'>
             <span className='main-heading-account'>{message}</span>

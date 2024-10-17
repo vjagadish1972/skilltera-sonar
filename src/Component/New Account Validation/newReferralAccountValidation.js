@@ -1,20 +1,15 @@
 import axios from 'axios';
-import react from 'react'
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { BsFileBreakFill } from 'react-icons/bs';
+import { useState, useEffect } from 'react';
 import { trackPromise, usePromiseTracker } from 'react-promise-tracker';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import ApiConstants from '../../Services/apiconstants';
 import Footer from '../Footer/footer';
 import Loading from '../Loading/loading';
 import './newAccountValidation.css'
-import { Interceptor } from '../../ErrorStatus/errorStatus';
 import NavBarNew from '../NavBar New/navBarNew';
 import { useDispatch } from 'react-redux';
 import { selectHomeItemSelection } from '../../Redux/Reducer/homeItemSelectionSlice';
-import { useNavigate } from 'react-router-dom';
-//chaged
+
 
 export default function NewReferralAccountValidation() {
     const { id } = useParams();

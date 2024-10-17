@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './navbarMobile.css'
@@ -30,7 +29,7 @@ export default function NavbarMobile() {
         }
     }
     return (
-        <>
+        
             <div className='mobile-navbar'>
 
 
@@ -48,7 +47,5 @@ export default function NavbarMobile() {
                 </div>
 
             </div>
-
-        </>
     );
 }
