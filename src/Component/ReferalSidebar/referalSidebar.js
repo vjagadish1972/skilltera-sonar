@@ -4,7 +4,7 @@ import react, { useContext, useEffect, useState } from "react";
 import uesrImageDefault from "../../Assets/profilePic.png";
 import { useForm } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { BsFillPencilFill, BsPencil } from "react-icons/bs";
+import { BsFillPencilFill } from "react-icons/bs";
 import { MdLibraryAdd } from "react-icons/md";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 import { useDispatch } from "react-redux";
@@ -33,10 +33,9 @@ const ReferalSidebar = () => {
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
 
   }
 
@@ -50,10 +49,7 @@ const ReferalSidebar = () => {
 
   const { promiseInProgress } = usePromiseTracker();
   const {
-    register,
-    handleSubmit,
     formState: { errors },
-    setValue,
   } = useForm();
 
 
@@ -68,18 +64,6 @@ const ReferalSidebar = () => {
     const formData = new FormData();
     formData.append('image', file);
     formData.append('imageName', file.name)
-
-    // if (file) {
-    //   const reader = new FileReader();
-    //   const { current } = uploadedImage;
-    //   current.file = file;
-    //   reader.onload = e => {    
-    //     current.src = e.target.result
-    //   };
-    //   reader.readAsDataURL(file);
-    // }
-
-
 
     if (picSizeValidate(file.size)) {
 
@@ -132,21 +116,12 @@ const ReferalSidebar = () => {
   }
 
   //upload image end
-
-
-
-
-
   // Address axios section start
 
-  const [successMessageAddress, setSuccessMessageAddress] = useState("")
 
 
 
   // file upload
-
-  const [successMessageResumeUploaded, setSuccessMessageResumeUploaded] = useState("")
-
   const [formValue, setformValue] = useState({
     fullname: "",
   });
@@ -166,10 +141,6 @@ const ReferalSidebar = () => {
       <div className="card ">
         <div className="card-body">
           <div className="d-flex justify-content-end">
-
-            {/* <button type="button" className="btn edtBtn" data-toggle="modal" data-target="#photo">
-              <BsPencil />
-            </button> */}
 
             <div className="modal fade" id="photo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
