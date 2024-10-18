@@ -1,4 +1,3 @@
-import react, { useState } from "react";
 import "./adminSidebar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectSidebarMenuSelection } from "../../Redux/Reducer/sidebarMenuSelectionSlice";
@@ -46,19 +45,7 @@ export default function AdminSidebar() {
         </div>
         <div className="offcanvas-body">
           <ul className="list-group list-group-flush">
-            {/* <li className="list-group-item admin-sidebar-font" style={{ cursor: 'pointer' }}>
-                <button
-                  className="btn btn-primary  mr-1"
-                  active={true}
-                  data-bs-dismiss="offcanvas"
-                  onClick={() => menuSelection("Dashboard")}
-                >
-                  <FiHome />
-                </button>
-                <span> Dashboard</span>
-              </li> */
-            }
-
+          
             <li className={titleSelection.menuSelection == "Company Signup" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("Company Signup")}>
               <ImUserPlus className="me-3" size={20} color="black" />
 
