@@ -45,7 +45,6 @@ const ReferOther = () => {
 
   const [referalData, setReferalData] = useState([])
 
-  const [skillQuery, setSkillQuery] = useState('');
 
   const { promiseInProgress } = usePromiseTracker();
 
@@ -292,7 +291,7 @@ const ReferOther = () => {
             >
               <BsPlusCircle />
             </button>
-          </div>``
+          </div>
 
           {referalData.length === 0 ? <div>
             <div className="d-flex justify-content-center  mt-3">

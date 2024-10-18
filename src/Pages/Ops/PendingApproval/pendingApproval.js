@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, {useEffect, useState, useContext } from 'react'
 import JobCard from '../../../Component/JobCard/jobCard'
-import { Interceptor } from "../../../ErrorStatus/errorStatus"
 import { opsContext } from '../../../Context/opsContextState'
 import './pendingApproval.css'
 

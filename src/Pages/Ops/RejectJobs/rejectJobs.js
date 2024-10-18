@@ -7,10 +7,9 @@ import JobCard from '../../../Component/JobCard/jobCard'
 import { Rating } from 'react-simple-star-rating';
 import { MdDelete } from "react-icons/md";
 import ApiConstants from '../../../Services/apiconstants'
-import { Interceptor } from "../../../ErrorStatus/errorStatus"
 import axios from 'axios'
 import './rejectJobs.css'
-import $, { data } from "jquery";
+import $ from "jquery";
 import { opsContext } from '../../../Context/opsContextState';
 
 
@@ -22,10 +21,9 @@ const RejectedJob = () => {
     reset
   } = useForm();
 
-  const { rejectedJobs, getData, companiesList, skillList, updateSkillListData } = useContext(opsContext)
+  const { rejectedJobs, skillList, updateSkillListData } = useContext(opsContext)
 
   const [jobList, setJobList] = useState(rejectedJobs)
-  const [companies, setCompaniesList] = useState(companiesList)
 
   const [id, setId] = useState("");
   const [token, setToken] = useState()

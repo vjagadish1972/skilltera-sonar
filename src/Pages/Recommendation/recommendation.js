@@ -20,7 +20,7 @@ import { Rating } from 'react-simple-star-rating'
 const Recommendation = () => {
 
   const { uniqueId } = useParams();
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const [recommendedCandidate, setRecommendedCandidate] = useState([{}]);
   const [invalidPage, setInvalidPage] = useState(false);
   const [finalSkill, SetFinalSkill] = useState([{}]);

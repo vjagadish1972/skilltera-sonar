@@ -4,7 +4,6 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import axios from "axios";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 import ApiConstants from "../../../../Services/apiconstants";
-import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import Loading from "../../../../Component/Loading/loading";
 import $ from "jquery"

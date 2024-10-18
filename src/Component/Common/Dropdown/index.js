@@ -50,7 +50,6 @@ export function LinearDropdown({
 
     const onOptionClicked = (value, i) => {
         setSelectedOption(value);
-        
         setselected(value);
         setIsOpen(false);
     };
