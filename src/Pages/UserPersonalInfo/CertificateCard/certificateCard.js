@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { BsPencil, BsPlusCircle, BsStar } from "react-icons/bs";
-
+import { BsPlusCircle} from "react-icons/bs";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import axios from "axios";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";

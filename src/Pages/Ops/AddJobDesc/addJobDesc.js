@@ -6,7 +6,6 @@ import Swal from 'sweetalert2';
 import { Rating } from 'react-simple-star-rating';
 import ApiConstants from '../../../Services/apiconstants';
 import { MdDelete } from "react-icons/md";
-import $, { event } from "jquery";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { AiOutlineCloseCircle } from "react-icons/ai";
@@ -23,7 +22,7 @@ const AddJobDesc = () => {
 
   const { allJobRole, updateJobRole, companiesList, skillList, updateSkillListData } = useContext(opsContext)
 
-  const [companies, setCompaniesList] = useState([])
+  
 
   const [addSkill, SetAddSkill] = useState(new Map());
 

@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { useSelector } from "react-redux";
+import React from 'react';
+// import { useSelector } from "react-redux";
 import Footer from "../../Component/Footer/footer";
 import Sidebar from "../../Component/Sidebar/sidebar";
-import CandidateChat from '../Candidate Chat/candidateChat';
-import ReferalCand from "../UserPersonalInfo/ReferalCand/referalCand";
 import UserPersonalInfo from "../UserPersonalInfo/userPersonalInfo";
 import './userEditProfile.css'
 
 
 const UserEditProfile = () => {
 
-  const titleSelection = useSelector(
-    (state) => state.sidebarMenuSelectionReducer
-  );
+  // const titleSelection = useSelector(
+  //   (state) => state.sidebarMenuSelectionReducer
+  // );
 
   const referralProgram = () => {
     window.open("/referralInfo", "_blank");

@@ -5,11 +5,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import { FcAbout } from "react-icons/fc";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
-import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import Loading from "../../../Component/Loading/loading";
 import ApiConstants from "../../../Services/apiconstants";
-import Mixpanel from '../../../Services/mixpanel';
 
 export default function CandidateSignup() {
     const { promiseInProgress } = usePromiseTracker();
@@ -19,10 +17,8 @@ export default function CandidateSignup() {
         handleSubmit,
         formState: { errors },
         reset,
-        setValue,
     } = useForm();
     const [isSubmitting, setIsSubmitting] = useState(true);
-    const [isEmailVerified, setisEmailVerified] = useState(false);
     const [disable, setDisable] = useState(true);
     const [errorMessage, SetErrorMessage] = useState("")
 
