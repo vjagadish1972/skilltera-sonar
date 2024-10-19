@@ -10,7 +10,7 @@ import ApiConstants from "../../Services/apiconstants";
 import Mixpanel from "../../Services/mixpanel";
 import UserEditProfile from "../UserEditProfile/userEditProfile";
 import { fileSizeValidate } from '../../UtilitiesFunctions/utilitiesFunction'
-import "./userProfile.css";
+import './userProfile.css';
 import { Interceptor } from "../../ErrorStatus/errorStatus";
 import $ from "jquery";
 import { AiOutlineCloseCircle } from "react-icons/ai";

@@ -13,6 +13,8 @@ function Modal({ children, setModalClose }) {
             className="modalBackground"
             onClick={(e) => closeModal(e)}
             ref={modalRef}
+            role="dialog"
+            aria-modal="true"
         >
             {children}
         </div>

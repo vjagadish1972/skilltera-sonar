@@ -97,7 +97,7 @@ export function LinearDropdown({
                         localOptions.map((option, i) => (
                             <li
                                 onClick={() => onOptionClicked(option, i)}
-                                key={i}
+                                key={i} role="option"
                             >
                                 {option}
                             </li>
