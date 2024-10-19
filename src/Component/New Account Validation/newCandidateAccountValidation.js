@@ -34,14 +34,23 @@ export default function NewCandidateAccountValidation() {
                 }
             })
         )
-    }, [])
+    }, [id])
 
 
     useEffect(() => {
-        timer > 0 ? setTimeout(() => {
-            setTimer(timer - 1)
-        }, 1000) : window.location.href = (verify == 'Login' ? '/' : '/')
-    }, [timer])
+        const handleRedirect = () => {
+            window.location.href = (verify === 'Login' ? '/' : '/');
+        };
+
+        if (timer > 0) {
+            const timerId = setTimeout(() => {
+                setTimer(timer - 1);
+            }, 1000);
+            return () => clearTimeout(timerId); // Cleanup timer on unmount
+        } else {
+            handleRedirect();
+        }
+    }, [timer, verify]);
 
 
 

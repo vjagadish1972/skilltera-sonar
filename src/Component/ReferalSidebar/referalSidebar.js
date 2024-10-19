@@ -25,10 +25,10 @@ const ReferalSidebar = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
@@ -49,7 +49,7 @@ const ReferalSidebar = () => {
 
   const { promiseInProgress } = usePromiseTracker();
   const {
-    formState: { errors },
+    formState: {  },
   } = useForm();
 
 
@@ -160,7 +160,7 @@ const ReferalSidebar = () => {
                       {promiseInProgress === true ? <Loading /> : null}
 
                       <div className="row mt-3 mx-4  ">
-                        <label className="ml-0" style={{ marginLeft: "-0.5rem" }} > Name</label>
+                        <label className="ml-0" style={{ marginLeft: "-0.5rem" }} htmlFor="fullname"> Name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -203,7 +203,7 @@ const ReferalSidebar = () => {
               }}
             />
 
-            <div
+            <button
               className="rounded-circle profilePic"
               style={{
                 height: "100px",
@@ -211,6 +211,7 @@ const ReferalSidebar = () => {
                 border: "1px solid black",
               }}
               onClick={() => imageUploader.current.click()}
+              type="button"
             >
               <img
                 className="rounded-circle"
@@ -230,7 +231,7 @@ const ReferalSidebar = () => {
               <div className="profilePicEditBtn rounded-circle border-dark" > <BsFillPencilFill className="BsFillPencilFill" size={13} />
               </div>
 
-            </div>
+            </button>
 
             {/* Profile Image  end*/}
 

@@ -153,7 +153,7 @@ const Sidebar = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { },
     setValue,
   } = useForm();
 
