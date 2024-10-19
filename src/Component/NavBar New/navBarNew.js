@@ -1,5 +1,5 @@
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import React, { useContext, useEffect, useState } from "react";
 import { MdMessage } from "react-icons/md";
 import { TbMessageDown } from "react-icons/tb";
@@ -18,15 +18,14 @@ export default function NavBarNew() {
   });
   const dispatch = useDispatch();
 
-
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    
+
     if (newValue === 0) {
       dispatch(selectHomeItemSelection("candidate"));
-  
+
       document.documentElement.style.setProperty(
         "--list-item-color",
         "#FF8C04"
@@ -38,7 +37,7 @@ export default function NavBarNew() {
     }
     if (newValue === 1) {
       dispatch(selectHomeItemSelection("refer"));
-   
+
       document.documentElement.style.setProperty(
         "--list-item-color",
         "#750887"
@@ -50,7 +49,7 @@ export default function NavBarNew() {
     }
     if (newValue === 2) {
       dispatch(selectHomeItemSelection("client"));
-    
+
       document.documentElement.style.setProperty(
         "--list-item-color",
         "#246DA2"
@@ -60,7 +59,7 @@ export default function NavBarNew() {
         "rgba(36, 109, 162, 0.2)"
       );
     }
-    if (newValue === 3) { 
+    if (newValue === 3) {
       dispatch(selectHomeItemSelection("blog"));
       document.documentElement.style.setProperty(
         "--list-item-color",
@@ -72,7 +71,7 @@ export default function NavBarNew() {
       );
     }
 
-    if (newValue === 4) { 
+    if (newValue === 4) {
       dispatch(selectHomeItemSelection("all_Job"));
       document.documentElement.style.setProperty(
         "--list-item-color",
@@ -84,7 +83,7 @@ export default function NavBarNew() {
       );
     }
 
-    if (newValue === 5) { 
+    if (newValue === 5) {
       dispatch(selectHomeItemSelection("our-services"));
       document.documentElement.style.setProperty(
         "--list-item-color",
@@ -95,10 +94,9 @@ export default function NavBarNew() {
         "rgba(255, 110, 4, 0.18)"
       );
     }
-
   };
 
-  const { profilePic, notificationStatus } = useContext(userContext);
+  const { notificationStatus } = useContext(userContext);
 
   const [candidateData, setCandidateData] = useState(false);
   const [adminData, setAdminData] = useState(false);
@@ -172,12 +170,15 @@ export default function NavBarNew() {
                       }
                     >
                       <NavLink exact to="/userProfile">
-                        <span
+                        <button
                           className="nav-link"
                           onClick={() => activeClassName("profile")}
+                          onKeyDown={(e) => e.key === 'Enter' && activeClassName("profile")}
+                          role="button"
+                          tabIndex="0"
                         >
-                          Profile
-                        </span>
+                          Profile 
+                        </button>
                       </NavLink>
                     </li>
                     <li
@@ -188,12 +189,15 @@ export default function NavBarNew() {
                       }
                     >
                       <NavLink exact to="/userReferal">
-                        <span
+                      <button
                           className="nav-link"
                           onClick={() => activeClassName("referral")}
+                          onKeyDown={(e) => e.key === 'Enter' && activeClassName("referral")}
+                          role="button"
+                          tabIndex="0"
                         >
                           Referral
-                        </span>
+                        </button>
                       </NavLink>
                     </li>
                     <li
@@ -204,12 +208,15 @@ export default function NavBarNew() {
                       }
                     >
                       <NavLink exact to="/jobs">
-                        <span
+                      <button
                           className="nav-link"
                           onClick={() => activeClassName("all_jobs")}
+                          onKeyDown={(e) => e.key === 'Enter' && activeClassName("all_jobs")}
+                          role="button"
+                          tabIndex="0"
                         >
                           All Jobs
-                        </span>
+                        </button>
                       </NavLink>
                     </li>
                     <li
@@ -220,12 +227,15 @@ export default function NavBarNew() {
                       }
                     >
                       <NavLink exact to="/status">
-                        <span
+                      <button
                           className="nav-link"
                           onClick={() => activeClassName("jobStatus")}
+                          onKeyDown={(e) => e.key === 'Enter' && activeClassName("jobStatus")}
+                          role="button"
+                          tabIndex="0"
                         >
                           Status
-                        </span>
+                        </button>
                       </NavLink>
                     </li>
                   </ul>
@@ -241,12 +251,15 @@ export default function NavBarNew() {
                       }
                     >
                       <NavLink exact to="/refered">
-                        <span
+                      <button
                           className="nav-link"
                           onClick={() => activeClassName("referral")}
+                          onKeyDown={(e) => e.key === 'Enter' && activeClassName("referral")}
+                          role="button"
+                          tabIndex="0"
                         >
                           Referral
-                        </span>
+                        </button>
                       </NavLink>
                     </li>
                     {candidateAndReferal && (
@@ -258,12 +271,15 @@ export default function NavBarNew() {
                         }
                       >
                         <NavLink exact to="/userProfile">
-                          <span
+                        <button
                             className="nav-link"
                             onClick={() => activeClassName("profile")}
+                            onKeyDown={(e) => e.key === 'Enter' && activeClassName("profile")}
+                            role="button"
+                            tabIndex="0"
                           >
                             Profile
-                          </span>
+                          </button>
                         </NavLink>
                       </li>
                     )}
@@ -276,12 +292,15 @@ export default function NavBarNew() {
                             : "nav-item class_li"
                         }
                       >
-                        <span
+                         <button
                           className="nav-link"
                           onClick={() => activeClassName("all_jobs")}
+                          onKeyDown={(e) => e.key === 'Enter' && activeClassName("all_jobs")}
+                          role="button"
+                          tabIndex="0"
                         >
                           All Jobs
-                        </span>
+                        </button>
                       </li>
                     )}
                     {candidateAndReferal && (
@@ -292,12 +311,15 @@ export default function NavBarNew() {
                             : "nav-item class_li"
                         }
                       >
-                        <span
+                        <button
                           className="nav-link"
                           onClick={() => activeClassName("recommended_jobs")}
+                          onKeyDown={(e) => e.key === 'Enter' && activeClassName("recommended_jobs")}
+                          role="button"
+                          tabIndex="0"
                         >
                           Recommended Jobs
-                        </span>
+                        </button>
                       </li>
                     )}
                     {!candidateAndReferal && (
@@ -309,12 +331,15 @@ export default function NavBarNew() {
                         }
                       >
                         <Link exact to="/about">
-                          <span
+                        <button
                             className="nav-link"
                             onClick={() => activeClassName("about")}
+                            onKeyDown={(e) => e.key === 'Enter' && activeClassName("about")}
+                            role="button"
+                            tabIndex="0"
                           >
                             About Us
-                          </span>
+                          </button>
                         </Link>
                       </li>
                     )}
@@ -338,8 +363,8 @@ export default function NavBarNew() {
                     )}
                   </ul>
                 )}
-                
-                 <ul className="navbar-nav ms-auto">
+
+                <ul className="navbar-nav ms-auto">
                   {(candidateData || companyData || candidateAndReferal) && (
                     <li
                       className={
@@ -421,55 +446,130 @@ export default function NavBarNew() {
                 className="navbar-collapse justify-content-end"
                 id="navbarSupportedContent"
               >
-              
-                  <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    variant="scrollable"
-                    scrollButtons={false}
-                    aria-label="scrollable prevent tabs example"
-                    TabIndicatorProps={{
-                      style: { backgroundColor: value === 0 ? 'orange' : value === 1 ? 'purple' : value === 2 ? '#246DA2' : value === 3 ? 'orange' : '#6610f2' }
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  variant="scrollable"
+                  scrollButtons={false}
+                  aria-label="scrollable prevent tabs example"
+                  TabIndicatorProps={{
+                    style: {
+                      backgroundColor:
+                        value === 0
+                          ? "orange"
+                          : value === 1
+                          ? "purple"
+                          : value === 2
+                          ? "#246DA2"
+                          : value === 3
+                          ? "orange"
+                          : "#6610f2",
+                    },
+                  }}
+                >
+                  <Tab
+                    label="Rise and Shine"
+                    sx={{
+                      "&.Mui-selected": {
+                        color:
+                          value === 0
+                            ? "orange"
+                            : value === 1
+                            ? "purple"
+                            : value === 2
+                            ? "#246DA2"
+                            : value === 3
+                            ? "orange"
+                            : "#6610f2",
+                      },
                     }}
-                  >
-                    <Tab
-                      label="Rise and Shine"
-                      sx={{
-                        '&.Mui-selected': { color: value === 0 ? 'orange' : value === 1 ? 'purple' : value === 2 ? '#246DA2' : value === 3 ? 'orange' : '#6610f2' }
-                      }}
-                    />
-                    <Tab
-                      label="Refer and Earn"
-                      sx={{
-                        '&.Mui-selected': { color: value === 0 ? 'orange' : value === 1 ? 'purple' : value === 2 ? '#246DA2' : value === 3 ? 'orange' : '#6610f2' }
-                      }}
-                    />
-                    <Tab
-                      label="Client"
-                      sx={{
-                        '&.Mui-selected': { color: value === 0 ? 'orange' : value === 1 ? 'purple' : value === 2 ? '#246DA2' : value === 3 ? 'orange' : '#6610f2' }
-                      }}
-                    />
-                    <Tab
-                      label="Blog"
-                        sx={{
-                        '&.Mui-selected': { color: value === 0 ? 'orange' : value === 1 ? 'purple' : value === 2 ? '#246DA2' : value === 3 ? 'orange' : '#6610f2' }
-                      }}
-                    />
-                    <Tab
-                      label="All Jobs"
-                      sx={{
-                        '&.Mui-selected': { color: value === 0 ? 'orange' : value === 1 ? 'purple' : value === 2 ? '#246DA2' : value === 3 ? 'orange' : '#6610f2' }
-                      }}
-                    />
-                     <Tab
-                      label="Our Services"
-                      sx={{
-                        '&.Mui-selected': { color: value === 0 ? 'orange' : value === 1 ? 'purple' : value === 2 ? '#246DA2' : value === 3 ? 'orange' : '#6610f2' }
-                      }}
-                    />
-                  </Tabs>
-
+                  />
+                  <Tab
+                    label="Refer and Earn"
+                    sx={{
+                      "&.Mui-selected": {
+                        color:
+                          value === 0
+                            ? "orange"
+                            : value === 1
+                            ? "purple"
+                            : value === 2
+                            ? "#246DA2"
+                            : value === 3
+                            ? "orange"
+                            : "#6610f2",
+                      },
+                    }}
+                  />
+                  <Tab
+                    label="Client"
+                    sx={{
+                      "&.Mui-selected": {
+                        color:
+                          value === 0
+                            ? "orange"
+                            : value === 1
+                            ? "purple"
+                            : value === 2
+                            ? "#246DA2"
+                            : value === 3
+                            ? "orange"
+                            : "#6610f2",
+                      },
+                    }}
+                  />
+                  <Tab
+                    label="Blog"
+                    sx={{
+                      "&.Mui-selected": {
+                        color:
+                          value === 0
+                            ? "orange"
+                            : value === 1
+                            ? "purple"
+                            : value === 2
+                            ? "#246DA2"
+                            : value === 3
+                            ? "orange"
+                            : "#6610f2",
+                      },
+                    }}
+                  />
+                  <Tab
+                    label="All Jobs"
+                    sx={{
+                      "&.Mui-selected": {
+                        color:
+                          value === 0
+                            ? "orange"
+                            : value === 1
+                            ? "purple"
+                            : value === 2
+                            ? "#246DA2"
+                            : value === 3
+                            ? "orange"
+                            : "#6610f2",
+                      },
+                    }}
+                  />
+                  <Tab
+                    label="Our Services"
+                    sx={{
+                      "&.Mui-selected": {
+                        color:
+                          value === 0
+                            ? "orange"
+                            : value === 1
+                            ? "purple"
+                            : value === 2
+                            ? "#246DA2"
+                            : value === 3
+                            ? "orange"
+                            : "#6610f2",
+                      },
+                    }}
+                  />
+                </Tabs>
               </div>
             </div>
           </nav>
