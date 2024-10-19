@@ -1,5 +1,4 @@
 import axios from "axios";
-// import { EditorState } from "draft-js";
 import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
@@ -29,7 +28,6 @@ import { GetAllSkills } from "../../Redux/Reducer/skillReducerSlice";
 import { GetAllJobList } from "../../Redux/Reducer/jobRoleReducerSlice";
 import { RxCrossCircled } from 'react-icons/rx'
 import { GrAddCircle } from 'react-icons/gr';
-
 
 
 const Profile = () => {

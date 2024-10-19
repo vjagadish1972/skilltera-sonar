@@ -3,17 +3,14 @@ import "./login.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import ApiConstants from "../../Services/apiconstants";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
-import { NavLink } from "react-router-dom";
 import Mixpanel from "../../Services/mixpanel";
 import ReCAPTCHA from "react-google-recaptcha";
 import Footer from "../../Component/Footer/footer";
 import Loading from "../../Component/Loading/loading"
 import { ErrorContext } from "../../Context/errorContextState"
 import { userContext } from "../../Context/userContextState";
-import Swal from "sweetalert2";
-import ErrorPage from "../ErrorPage/errorPage"
 import { Interceptor } from "../../ErrorStatus/errorStatus";
 import NavBarNew from "../../Component/NavBar New/navBarNew";
 

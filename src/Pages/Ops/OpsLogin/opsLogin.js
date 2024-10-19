@@ -1,5 +1,4 @@
-import react, { useState, useEffect, useRef } from "react";
-
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import "./opsLogin.css";
 import { useForm } from "react-hook-form";
