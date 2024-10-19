@@ -3,12 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectSidebarMenuSelection } from "../../Redux/Reducer/sidebarMenuSelectionSlice";
 import { FaUsers } from "react-icons/fa";
 import { ImUserPlus } from "react-icons/im";
-import { BsBuildingFillAdd, BsDatabaseFillAdd } from 'react-icons/bs'
-import { MdLockReset, MdOutlineLogout } from 'react-icons/md'
-
+import { BsBuildingFillAdd, BsDatabaseFillAdd } from "react-icons/bs";
+import { MdLockReset, MdOutlineLogout } from "react-icons/md";
 
 export default function AdminSidebar() {
-
   const dispatch = useDispatch();
 
   const titleSelection = useSelector(
@@ -45,47 +43,145 @@ export default function AdminSidebar() {
         </div>
         <div className="offcanvas-body">
           <ul className="list-group list-group-flush">
-          
-            <li className={titleSelection.menuSelection == "Company Signup" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("Company Signup")}>
+            <li
+              className={
+                titleSelection.menuSelection == "Company Signup"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Company Signup")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("Company Signup")}
+            >
               <ImUserPlus className="me-3" size={20} color="black" />
 
               <span>Company Signup</span>
             </li>
 
-            <li className={titleSelection.menuSelection == "Candidate Signup" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("Candidate Signup")}>
+            <li
+              className={
+                titleSelection.menuSelection == "Candidate Signup"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Candidate Signup")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("Candidate Signup")}
+            >
               <ImUserPlus className="me-3" size={20} color="black" />
               <span>Candidate Signup</span>
             </li>
 
-            <li className={titleSelection.menuSelection == "Reset Company Password" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("Reset Company Password")}>
+            <li
+              className={
+                titleSelection.menuSelection == "Reset Company Password"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Reset Company Password")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("Reset Company Password")}
+            >
               <MdLockReset className="me-3" size={20} color="black" />
               <span>Reset Company Password</span>
             </li>
 
-            <li className={titleSelection.menuSelection == "All Companies" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("All Companies")}>
+            <li
+              className={
+                titleSelection.menuSelection == "All Companies"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("All Companies")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("All Companies")}
+            >
               <BsBuildingFillAdd className="me-3" size={20} color="black" />
               <span>All Companies</span>
             </li>
 
-            <li className={titleSelection.menuSelection == "allCandidate" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("allCandidate")}>
+            <li
+              className={
+                titleSelection.menuSelection == "allCandidate"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("allCandidate")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("allCandidate")}
+            >
               <FaUsers className="me-3" size={20} color="black" />
               <span>All Candidates</span>
             </li>
-            <li className={titleSelection.menuSelection == "Skill Add/Remove" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("Skill Add/Remove")}>
+            <li
+              className={
+                titleSelection.menuSelection == "Skill Add/Remove"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Skill Add/Remove")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("Skill Add/Remove")}
+            >
               <BsDatabaseFillAdd className="me-3" size={20} color="black" />
               <span>Skills - Add/Remove</span>
             </li>
-            <li className={titleSelection.menuSelection == "Job Role Add/Remove" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("Job Role Add/Remove")}>
+            <li
+              className={
+                titleSelection.menuSelection == "Job Role Add/Remove"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Job Role Add/Remove")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("Job Role Add/Remove")}
+            >
               <BsDatabaseFillAdd className="me-3" size={20} color="black" />
               <span>Job Role - Add/Remove</span>
             </li>
 
-            <li className={titleSelection.menuSelection == "Job Approval" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={() => menuSelection("Job Approval")}>
+            <li
+              className={
+                titleSelection.menuSelection == "Job Approval"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Job Approval")}
+              style={{ cursor: "pointer" }}
+              onClick={() => menuSelection("Job Approval")}
+            >
               <BsDatabaseFillAdd className="me-3" size={20} color="black" />
               <span>Job Approval</span>
             </li>
 
-            <li className={titleSelection.menuSelection == "logout" ? 'list-group-item admin-sidebar-font list-view-onCLick' : 'list-group-item admin-sidebar-font'} style={{ cursor: 'pointer' }} onClick={logout}>
+            <li
+              className={
+                titleSelection.menuSelection == "logout"
+                  ? "list-group-item admin-sidebar-font list-view-onCLick"
+                  : "list-group-item admin-sidebar-font"
+              }
+              role="button"
+              tabIndex={0}
+              // onKeyDown={(e) => e.key === 'Enter' && menuSelection("logout")}
+              style={{ cursor: "pointer" }}
+              onClick={logout}
+            >
               <MdOutlineLogout className="me-3" size={20} color="black" />
               <span>logout</span>
             </li>
