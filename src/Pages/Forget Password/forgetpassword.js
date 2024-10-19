@@ -37,7 +37,7 @@ export default function ForgetPassword() {
 
   const [email, setemail] = useState("");
   const [getOtp, setgetOtp] = useState(false);
-  const [newPasswordInput, setnewPasswordInput] = useState(false);
+  // const [newPasswordInput, setnewPasswordInput] = useState(false);
   const [otpButtonDisabled, setotpButtonDisabled] = useState(true);
 
   const [emailErrorMessage, setEmailErrorMessage] = useState("");

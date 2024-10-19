@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { selectJobNameSelection } from "../../../Redux/Reducer/jobNameSelectionSlice";
 const Sidebar = ({ selectJob, filterData }) => {
     const [searchValue, setSearchValue] = useState("");
-    const [allJobs, setJobs] = useState([]);
+    const [allJobs, setAllJobs] = useState([]);
     const [auxJobList, setAuxJobList] = useState([]);
     const [selectedJobID, setSelectedJobID] = useState(null);
     const [isLoading, setLoading] = useState(true);
@@ -20,7 +20,7 @@ const Sidebar = ({ selectJob, filterData }) => {
         const fetchJobs = async () => {
             const JobResponse = await getClientJobs();
             if (JobResponse?.status === 200) {
-                setJobs(JobResponse.data.jobs);
+                setAllJobs(JobResponse.data.jobs);
                 setAuxJobList(JobResponse.data.jobs);
                 //default job selection
                 if (JobResponse.data.jobs.length > 0) {
@@ -35,7 +35,7 @@ const Sidebar = ({ selectJob, filterData }) => {
     }, []);
     function searchJobs(searchStr) {
         if (searchStr.length === 0) {
-            setJobs(auxJobList);
+            setAllJobs(auxJobList);
         } else {
             let temp = auxJobList;
             const filtered = temp.filter((job) => {
@@ -47,7 +47,7 @@ const Sidebar = ({ selectJob, filterData }) => {
                 }
             });
 
-            setJobs(filtered);
+            setAllJobs(filtered);
         }
     }
     if (

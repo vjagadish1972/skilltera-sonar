@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './jobsStatus.css'
 import NavBarNew from '../../Component/NavBar New/navBarNew';
-import { useState } from 'react';
 import CardJobsStatus from './Card Jobs Status/cardJobsStatus';
 
 export default function JobsStatus() {

@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import React, { useState } from 'react'
 import './referHome.css'
 import ReferSectionOneImage from '../../../Assets/referSectionone.png'
 import ReferSectionTwoImage from '../../../Assets/referSectiontwo.png'
@@ -24,7 +24,7 @@ export default function ReferHome() {
                                     <p className='refer-main-subheading'><span style={{ color: 'var(--list-item-color)' }}>Skilltera’s</span> Referral Program that rewards Approved Referrers <br /> generously for referring experienced candidates.</p>
                                 </div>
                                 <div className='refer-section-one-banner'>
-                                    <img className='img-fluid' src={ReferSectionOneImage}></img>
+                                    <img className='img-fluid' src={ReferSectionOneImage} alt=" "></img>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ export default function ReferHome() {
                         </div>
                         <div className='col-12 col-md-6 col-lg-6'>
                             <div className='refer-section-banner'>
-                                <img className='img-fluid' src={ReferSectionTwoImage}></img>
+                                <img className='img-fluid' src={ReferSectionTwoImage} alt=""></img>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@ export default function ReferHome() {
                     <div className='row'>
                         <div className='col-12 col-md-6 col-lg-6 order-2 order-md-2 order-lg-1'>
                             <div className='refer-section-banner'>
-                                <img className='img-fluid' src={ReferSectionThreeImage}></img>
+                                <img className='img-fluid' src={ReferSectionThreeImage} alt=""></img>
                             </div>
                         </div>
                         <div className='col-12 col-md-6 col-lg-6 order-1 order-md-2 order-lg-2 refer-text-section-globally'>
@@ -118,7 +118,7 @@ export default function ReferHome() {
                         </div>
                         <div className='col-12 col-md-6 col-lg-6'>
                             <div className='candidate-section-banner'>
-                                <img className='img-fluid' src={ReferSectionFourImage}></img>
+                                <img className='img-fluid' src={ReferSectionFourImage} alt=""></img>
                             </div>
                         </div>
                     </div>

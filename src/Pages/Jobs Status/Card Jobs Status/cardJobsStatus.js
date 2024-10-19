@@ -1,11 +1,9 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import ApiConstants from '../../../Services/apiconstants';
-import { useState } from 'react';
 import uesrImageDefault from "../../../Assets/profilePic.png";
 import Loading from '../../../Component/Loading/loading';
-import JobDescription from '../../All Jobs/Job Description/jobDescription';
 import JobDescriptionStatus from '../Job Description Status/jobDescriptionStatus';
 
 export default function CardJobsStatus({ jobStatusFilter }) {
@@ -46,7 +44,7 @@ export default function CardJobsStatus({ jobStatusFilter }) {
         setJobDataById(jData)
     }
     return (
-        <>
+        <div>
             {
                 !isLoading ?
                     <>
@@ -70,7 +68,7 @@ export default function CardJobsStatus({ jobStatusFilter }) {
                                                             }}
                                                                 onClick={() => jobDataPerCard(d)}>
                                                                 <div className='company-logo'>
-                                                                    <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '60px', height: '60px' }} />
+                                                                    <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '60px', height: '60px' }} alt="" />
                                                                 </div>
                                                                 <div className='company-info'>
                                                                     <div className='company-heading'>
@@ -137,6 +135,6 @@ export default function CardJobsStatus({ jobStatusFilter }) {
                     </> : <Loading />
             }
 
-        </>
+        </div>
     )
 }

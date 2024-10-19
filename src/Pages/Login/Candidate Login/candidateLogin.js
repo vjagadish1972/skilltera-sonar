@@ -1,6 +1,6 @@
 import axios from 'axios';
 import './candidateLogin.css'
-import react, { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 import { trackPromise, usePromiseTracker } from 'react-promise-tracker';
@@ -11,7 +11,7 @@ import { userContext } from '../../../Context/userContextState';
 import { Interceptor } from '../../../ErrorStatus/errorStatus';
 import ApiConstants from '../../../Services/apiconstants';
 import Mixpanel from '../../../Services/mixpanel';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import ForgetPasswordModal from '../../../Component/Forget Password Modal/forgetPasswordModal';
 import { selectSidebarMenuSelection } from '../../../Redux/Reducer/sidebarMenuSelectionSlice';
 

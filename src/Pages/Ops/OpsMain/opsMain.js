@@ -41,7 +41,7 @@ const OpsMain = () => {
 
                 <li className="nav-item class_li">
                   <span className="nav-link dropdown-toggle" data-toggle="dropdown">
-                    <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '32px', height: '32px' }} />
+                    <img src={uesrImageDefault} className="img-fluid rounded-circle" alt='user' style={{ width: '32px', height: '32px' }} />
                   </span>
                   <div className="dropdown-menu">
                     <span className="dropdown-item" onClick={logout} style={{ cursor: 'pointer' }}>
