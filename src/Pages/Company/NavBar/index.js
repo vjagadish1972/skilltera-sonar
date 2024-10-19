@@ -1,5 +1,5 @@
 import "./style.css";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 //Assets
 import { MdNotifications, MdMessage } from "react-icons/md";
 import Logo from "../../../Assets/skilltera_logo1.png";

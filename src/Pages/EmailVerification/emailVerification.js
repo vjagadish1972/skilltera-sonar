@@ -14,7 +14,7 @@ import NavBarNew from "../../Component/NavBar New/navBarNew";
 const EmailVerification = () => {
 
   const { promiseInProgress } = usePromiseTracker();
-
+  
   const { errorStatus, setErrorStatus } = useContext(ErrorContext)
 
   const {

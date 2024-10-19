@@ -7,7 +7,6 @@ import {
   BsPencil
 } from "react-icons/bs";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
-import Swal from "sweetalert2";
 import Loading from "../../../../Component/Loading/loading";
 import ApiConstants from "../../../../Services/apiconstants";
 import { DateConverterTypeSec, DateFieldShow } from "../../../../UtilitiesFunctions/utilitiesFunction";

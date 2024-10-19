@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { DateConverterTypeSec, DateFieldShow } from "../../../../../../UtilitiesFunctions/utilitiesFunction";
+import React from "react";
+import { DateConverterTypeSec } from "../../../../../../UtilitiesFunctions/utilitiesFunction";
 
 const UpdDelExpCandidate = (props) => {
   return (
