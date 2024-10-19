@@ -76,7 +76,7 @@ export default function ClientHome() {
                                 {clientButtonSelection === "login" ? (
                                     <CompanyNewLogin />
                                 ) : (
-                                    <>
+                                    <div>
                                         <p
                                             className="mt-5"
                                             style={{
@@ -95,7 +95,7 @@ export default function ClientHome() {
                                             </span>{" "}
                                             and request for your login details.
                                         </p>
-                                    </>
+                                    </div>
                                 )}
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import React, { useState } from 'react'
 import './candidateHome.css'
 import CandidateSectionOneImage from '../../../Assets/candidateSectionOne.png'
 import CandidateSectionTwoImage from '../../../Assets/candidateSectiontwo.png'
@@ -30,7 +30,7 @@ export default function CandidateHome() {
                         <div className='col-12 col-md-6 col-lg-6 candidate-section-first-half'>
                             <div className='candidate-section-left'>
                                 <div className='candidate-section-one-banner'>
-                                    <img className='img-fluid' src={CandidateSectionOneImage}></img>
+                                    <img className='img-fluid' src={CandidateSectionOneImage} alt=""></img>
                                 </div>
                                 <div className='candidate-section-rise-and-shine'>
                                     <span className='rise-and-shine'>Rise and Shine</span>
@@ -42,7 +42,7 @@ export default function CandidateHome() {
                         <div className='col-12 col-md-6 col-lg-6'>
                             <div className='candidate-login-signup-button'>
                                 <div className="candidate-group-btn" role="group" aria-label="Basic example">
-                                    <button type="button" className={candidateButtonSelection == 'login' ? "active-candidate-btn" : "candidate-btn"} onClick={() => { buttonSelection('login') }}>Login</button>
+                                    <button type="button" className={candidateButtonSelection == 'login' ? "active-candidate-btn" : "candidate-btn"} onClick={() => { buttonSelection('login') }}>Login</button>xx
                                     <button type="button" className={candidateButtonSelection == 'signup' ? "active-candidate-btn" : "candidate-btn"} onClick={() => { buttonSelection('signup') }}>Signup</button>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ export default function CandidateHome() {
                     <div className='row'>
                         <div className='col-12 col-md-6 col-lg-6 order-2 order-md-2 order-lg-1'>
                             <div className='candidate-section-banner'>
-                                <img className='img-fluid' src={CandidateSectionTwoImage}></img>
+                                <img className='img-fluid' src={CandidateSectionTwoImage} alt=""></img>
                             </div>
                         </div>
                         <div className='col-12 col-md-6 col-lg-6 order-1 order-md-2 order-lg-2 candidate-text-section-globally'>
@@ -102,7 +102,7 @@ export default function CandidateHome() {
                         </div>
                         <div className='col-12 col-md-6 col-lg-6'>
                             <div className='candidate-section-banner'>
-                                <img className='img-fluid' src={CandidateSectionThreeImage}></img>
+                                <img className='img-fluid' src={CandidateSectionThreeImage} alt=""></img>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ export default function CandidateHome() {
                     <div className='row'>
                         <div className='col-12 col-md-6 col-lg-6 order-2 order-md-2 order-lg-1'>
                             <div className='candidate-section-banner'>
-                                <img className='img-fluid' src={CandidateSectionFourImage}></img>
+                                <img className='img-fluid' src={CandidateSectionFourImage} alt=""></img>
                             </div>
                         </div>
                         <div className='col-12 col-md-6 col-lg-6 order-1 order-md-2 order-lg-2 candidate-text-section-globally'>
@@ -137,7 +137,7 @@ export default function CandidateHome() {
                         </div>
                         <div className='col-12 col-md-6 col-lg-6'>
                             <div className='candidate-section-banner'>
-                                <img className='img-fluid' src={CandidateSectionFiveImage}></img>
+                                <img className='img-fluid' src={CandidateSectionFiveImage} alt=""></img>
                             </div>
                         </div>
                     </div>

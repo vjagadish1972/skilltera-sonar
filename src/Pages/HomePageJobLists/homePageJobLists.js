@@ -10,7 +10,7 @@ import './homePageJobLists.css';
 const HomePageJobLists = () => {
 
   
-  const { promiseInProgress } = usePromiseTracker();
+  // const { promiseInProgress } = usePromiseTracker();
 
   const [searchTerm, setSearchTerm] = useState('');
   const [allJobData, setAllJobData] = useState([]);
