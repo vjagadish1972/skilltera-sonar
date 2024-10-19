@@ -14,7 +14,6 @@ const Sidebar = ({ selectJob, filterData }) => {
     const [auxJobList, setAuxJobList] = useState([]);
     const [selectedJobID, setSelectedJobID] = useState(null);
     const [isLoading, setLoading] = useState(true);
-    const [jobName, setJobName] = useState('')
     let showFilters = false;
     const dispatch = useDispatch();
     useEffect(() => {

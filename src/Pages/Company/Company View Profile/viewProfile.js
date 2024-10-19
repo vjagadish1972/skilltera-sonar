@@ -21,8 +21,6 @@ const ViewProfile = () => {
 
   const token = company_loggedin_user_data.token
 
-  const userId = company_loggedin_user_data.company._id
-
   const [candidateDataBasedOnId, setCandidateDataBasedOnId] = useState([{}]);
 
 
