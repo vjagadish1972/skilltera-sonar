@@ -5,7 +5,7 @@ import { MdLibraryAdd } from "react-icons/md";
 import ApiConstants from '../../../Services/apiconstants';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { AiOutlineCloseCircle, AiOutlineDelete } from "react-icons/ai";
 import GivenReferal from "./GivenReferal/givenReferal"
 // import ReactStars from "react-rating-stars-component";
@@ -13,13 +13,9 @@ import GivenReferal from "./GivenReferal/givenReferal"
 
 const ReferCand = () => {
 
-
-  const dispatch = useDispatch();
-
   const candidateData = JSON.parse(sessionStorage.getItem("candidate_data"));
   const token = candidateData.token;
   const userId = candidateData.candidate._id;
-  const referals = candidateData.candidate.referrals != undefined ? candidateData.candidate.referrals : [];
   const [finalSkill, SetFinalSkill] = useState([{}])
 
   const [successMsgRefer, setSuccessMsgRefer] = useState("")
@@ -28,8 +24,7 @@ const ReferCand = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-    reset,
+    formState: { },
   } = useForm();
 
 
@@ -38,27 +33,21 @@ const ReferCand = () => {
   );
 
   const [rating, setRating] = useState(0)
-  const [hover, setHover] = useState(0)
 
 
 
   const [addSkill, SetAddSkill] = useState([{}]);
 
-  const [skillTest, setSkillTest] = useState([{
-    skill: '',
-    rating: '',
-
-  }]);
 
 
-  const [newState, setNewState] = useState([{
+  const [newState] = useState([{
     skill: '',
     rating: ''
 
   }]);
 
-  const [skillQuery, setSkillQuery] = useState('');
-  const [referalStatus, setReferalStatus] = useState(false)
+  const [skillQuery] = useState('');
+  const [referalStatus] = useState(false)
 
 
 
@@ -69,7 +58,6 @@ const ReferCand = () => {
   };
 
 
-  const [successMessageAddSkill, setSuccessMessageAddSkill] = useState("")
 
   const handleRating = (rate) => {
 
