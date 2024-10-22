@@ -214,7 +214,6 @@ const JobCard = ({ selectedJobId, data, candidateId, selectionStatus, deleteCall
                 jobId: selectedJobId,
             };
 
-            const response = await postCandidateSelection(reqData);
         } else {
             setCreateChatshow({ active: !createChatShow.active, id: _candidateId, name: name });
 
