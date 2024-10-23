@@ -32,7 +32,7 @@ import { GrAddCircle } from 'react-icons/gr';
 
 const Profile = () => {
 
-  const { userData, getData, resumeData, setResumeData } = useContext(userContext)
+  const { userData, getData, setResumeData } = useContext(userContext)
 
   const [description, setDescription] = useState('');
 

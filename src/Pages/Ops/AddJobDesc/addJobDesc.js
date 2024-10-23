@@ -95,20 +95,19 @@ const AddJobDesc = () => {
     addSkill.set('key2', objToUpdate);
   }
 
-  const validateJobRole = (value) => {
-    console.log("")
-    if (!allJobRole.some((item) => item.role === value)) {
-      return 'Please select a valid job role.';
-    }
-    return true;
-  };
+  // const validateJobRole = (value) => {
+  //   if (!allJobRole.some((item) => item.role === value)) {
+  //     return 'Please select a valid job role.';
+  //   }
+  //   return true;
+  // };
 
-  const validateCompanyName = (value) => {
-    if (!companiesList.some((item) => item.companyName === value)) {
-      return 'Please select a valid company name.';
-    }
-    return true;
-  }
+  // const validateCompanyName = (value) => {
+  //   if (!companiesList.some((item) => item.companyName === value)) {
+  //     return 'Please select a valid company name.';
+  //   }
+  //   return true;
+  // }
 
   const handleRating = (idx, rate) => {
     const objToUpdate = addSkill.get(idx);
@@ -166,7 +165,7 @@ const AddJobDesc = () => {
   const onSubmitJobDesc = async (data) => {
 
     let skillData = []
-    for (const [k, v] of addSkill.entries()) {
+    for (const [v] of addSkill.entries()) {
       skillData.push(v)
     }
     SetAddSkill(new Map())
@@ -390,8 +389,9 @@ const AddJobDesc = () => {
             <h1 className="text-center m-3"> Job data</h1>
             <div className="row m-4">
               <div className="form-group col-md-6">
-                <label >CompanyName</label>
+                <label htmlFor="companyName">CompanyName</label>
                 <input type="text"
+                   id='companyName'
                    ref={companyNameInputRef}
                   className="form-control"
                   list="job-options"
@@ -405,25 +405,31 @@ const AddJobDesc = () => {
                 </datalist>
                 {errors.companyIds && <div role="alert" style={{ color: "red" }} >{errors.companyIds.message}</div>}
               </div>
+            
               <div className="form-group col-md-6">
-                <label for="inputCity">Job id</label>
-                <input type="text" className="form-control"
-                  {...register("jobId")}
-                />
-              </div>
+  <label htmlFor="inputCity">Job id</label>
+  <input
+    type="text"
+    className="form-control"
+    id="inputCity" 
+    {...register("jobId")}
+  />
+</div>
+
+
             </div>
 
             <div className="row m-4">
               <div className="form-group col-md-4">
-                <label for="inputCity">Job title</label>
-                <input type="text" className="form-control"
+                <label htmlFor="inputCity">Job title</label>
+                <input type="text" className="form-control" id="inputCity" 
                   {...register("jobTitle")}
                 />
               </div>
 
               <div className="form-group col-md-5" >
-                <label for="inputCity">Job Role</label>
-                <input type="text" className="form-control"
+                <label htmlFor="inputCity">Job Role</label>
+                <input type="text" className="form-control" id="inputCity"
 
                   placeholder="Type of Role you are looking for*"
                   ref={jobRoleInputRef}
@@ -458,16 +464,17 @@ const AddJobDesc = () => {
 
             <div className="row m-4">
               <div className="form-group col-md-4">
-                <label for="inputCity">Year Of Experience</label>
-                <input type="number" min={0} className="form-control"
+                <label htmlFor="inputCity">Year Of Experience</label>
+                <input type="number" min={0} className="form-control" id="inputCity"
                   {...register("experience")}
                 />
               </div>
 
               <div className="form-group col-md-4">
-                <label for="inputCity">Job Type</label>
+                <label htmlFor="inputCity">Job Type</label>
                 <select
                   className="form-control"
+                  id="inputCity"
                   name="jobType"
                   required
                   {...register("jobType")}
@@ -484,8 +491,8 @@ const AddJobDesc = () => {
               </div>
 
               <div className="form-group col-md-4">
-                <label for="inputCity">Travel Required</label>
-                <select className="form-control" name="travelRequired"
+                <label htmlFor="inputCity">Travel Required</label>
+                <select className="form-control" name="travelRequired" id="inputCity"
                   {...register("travelRequired")}
                 >
                   <option value="true"> Yes</option>
@@ -499,22 +506,22 @@ const AddJobDesc = () => {
 
             <div className="row m-4">
               <div className="form-group col-md-4">
-                <label for="inputCity">Country</label>
-                <input type="text" className="form-control"
+                <label htmlFor="inputCity">Country</label>
+                <input type="text" className="form-control" id="inputCity"
                   {...register("country")}
                 />
               </div>
 
 
               <div className="form-group col-md-4">
-                <label for="inputCity">State</label>
+                <label htmlFor="inputCity">State</label>
                 <input type="text" className="form-control" id="inputCity"
                   {...register("state")}
                 />
               </div>
 
               <div className="form-group col-md-4">
-                <label for="inputCity">City</label>
+                <label htmlFor="inputCity">City</label>
                 <input type="text" className="form-control" id="inputCity"
                   {...register("city")}
                 />
@@ -523,15 +530,15 @@ const AddJobDesc = () => {
 
             <div className="row m-4">
               <div className="form-group col-md-6">
-                <label for="inputCity">PostedOn</label>
-                <input type="date" className="form-control"
+                <label htmlFor="inputCity">PostedOn</label>
+                <input type="date" className="form-control" id="inputCity"
                   {...register("postedOn")}
                 />
               </div>
 
               <div className="form-group col-md-6">
-                <label for="inputCity">End Date</label>
-                <input type="date" className="form-control"
+                <label htmlFor="inputCity">End Date</label>
+                <input type="date" className="form-control" id="inputCity"
                   {...register("lastDate")}
                 />
               </div>
@@ -539,7 +546,7 @@ const AddJobDesc = () => {
 
             <div className="row m-4">
               <div className="form-group ">
-                <label for="inputCity">Job Description</label>
+                <label htmlFor="inputCity">Job Description</label>
                 {/* <textarea className="form-control" rows="5"
 
                   {...register("jobDescription")}
@@ -635,11 +642,12 @@ const AddJobDesc = () => {
             <div className="modal-body">
               <form onSubmit={onSubmitJobRole}>
                 <div className="row m-3 ">
-                  <label className="labelPos">Add Job Role </label>
+                  <label  htmlFor="addingJobRole" className="labelPos">Add Job Role </label>
                   <input
                     type="text"
                     className="form-control"
                     name="addingJobRole"
+                    id="addingJobRole"
                     value={addJobRole}
                     onChange={(event) => SetAddJobRole(event.target.value)}
                   />
@@ -690,7 +698,7 @@ const AddJobDesc = () => {
             <div className="modal-body">
               <form onSubmit={onSubmitNewSkill}>
                 <div className="row m-3 ">
-                  <label className="labelPos">Add New Skill </label>
+                  <label htmlFor="newSkill" className="labelPos">Add New Skill </label>
                   <input type="text"
                     className="form-control"
                     placeholder="Enter Skill"

@@ -12,17 +12,17 @@ export default function CardJobsStatus({ jobStatusFilter }) {
 
     if (sessionStorage.getItem('candidate_data') != null) {
         const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-        var mixpanelData = candidateDataMix.candidate.email;
+        // var mixpanelData = candidateDataMix.candidate.email;
         var token = candidateDataMix.token;
-        var userId = candidateDataMix.candidate._id;
-        var candidateEmailId = candidateDataMix.candidate.email;
+        // var userId = candidateDataMix.candidate._id;
+        // var candidateEmailId = candidateDataMix.candidate.email;
     }
     const [cardBorder, setCardBorder] = useState({
         border: '',
         id: '',
     })
 
-    const { isLoading, data, error } = useQuery(['status', jobStatusFilter], async () => {
+    const { isLoading, data } = useQuery(['status', jobStatusFilter], async () => {
         return axios.get(ApiConstants.GET_ALL_JOBS_FOR_CANDIDATE, {
             headers: {
                 Accept: "application/json",
@@ -64,7 +64,7 @@ export default function CardJobsStatus({ jobStatusFilter }) {
                                                         <>
                                                             <div className='company-card' style={{
                                                                 cursor: 'pointer',
-                                                                border: cardBorder.id == d._id ? cardBorder.border : '1px solid #dadada'
+                                                                border: cardBorder.id === d._id ? cardBorder.border : '1px solid #dadada'
                                                             }}
                                                                 onClick={() => jobDataPerCard(d)}>
                                                                 <div className='company-logo'>

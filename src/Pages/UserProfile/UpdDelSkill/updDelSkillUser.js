@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 import './updDelSkillUser.css'
 import StarRating from "../../../Component/StarRating/starRating";
 
@@ -7,8 +7,6 @@ const UpdDelSkillUser = (props) => {
   return (
     <>
       {/* skill  */}
-
-
       <div className="skill-box">
         <div className="row">
           <div className="col-6">

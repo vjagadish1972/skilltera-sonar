@@ -19,8 +19,7 @@ import NavBarNew from "../../Component/NavBar New/navBarNew";
 const Login = () => {
 
   const { promiseInProgress } = usePromiseTracker()
-  const { errorStatus, setErrorStatus } = useContext(ErrorContext)
-  const { userData, getData } = useContext(userContext)
+  const { getData } = useContext(userContext)
 
 
   const {
@@ -30,8 +29,8 @@ const Login = () => {
     reset,
   } = useForm();
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isEmailVerified, setisEmailVerified] = useState(true);
+  const [setIsSubmitting] = useState(false);
+  const [setisEmailVerified] = useState(true);
   const [disable, setDisable] = useState(true);
   const [errorMessage, SetErrorMessage] = useState("")
 

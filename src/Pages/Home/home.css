@@ -33,7 +33,7 @@
   box-sizing: border-box;
   color: #6e4dcd;
   cursor: pointer;
-  font-size: 100%;
+  /*font-size: 100%; */
   height: 62px;
   width: 225px;
   font-weight: 600;
@@ -46,11 +46,11 @@
   box-sizing: border-box;
   color: #404040;
   cursor: pointer;
-  font-size: 100%;
+ /* font-size: 100%; */
   height: 101px;
   width: 293px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 20px; 
   line-height: 24px;
 }
 .button-4 {
@@ -60,7 +60,7 @@
   box-sizing: border-box;
   color: #6e4dcd;
   cursor: pointer;
-  font-size: 100%;
+ /* font-size: 100%; */
   height: 62px;
   width: 225px;
   font-weight: 600;
@@ -296,7 +296,7 @@
     box-sizing: border-box;
     color: #6e4dcd;
     cursor: pointer;
-    font-size: 100%;
+   /* font-size: 100%; */
     height: 40px;
     width: 192px;
     font-weight: 600;
@@ -309,7 +309,7 @@
     box-sizing: border-box;
     color: #404040;
     cursor: pointer;
-    font-size: 100%;
+   /* font-size: 100%; */
     height: 40px;
     width: 192px;
     font-weight: 600;
@@ -323,7 +323,7 @@
     box-sizing: border-box;
     color: #6e4dcd;
     cursor: pointer;
-    font-size: 100%;
+   /* font-size: 100%; */
     height: 40px;
     width: 192px;
     font-weight: 600;
@@ -337,7 +337,7 @@
     box-sizing: border-box;
     color: #404040;
     cursor: pointer;
-    font-size: 100%;
+   /* font-size: 100%; */
     height: 52px;
     width: 320px;
     font-weight: 550;
@@ -555,7 +555,7 @@
     box-sizing: border-box;
     color: #404040;
     cursor: pointer;
-    font-size: 100%;
+   /* font-size: 100%; */
     height: 80px;
     width: 313px;
     font-weight: 550;
@@ -761,7 +761,7 @@
     box-sizing: border-box;
     color: #404040;
     cursor: pointer;
-    font-size: 100%;
+   /* font-size: 100%; */
     height: 80px;
     width: 313px;
     font-weight: 550;
