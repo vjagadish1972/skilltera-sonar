@@ -9,7 +9,7 @@ export const API_URL = "https://skilltera-api-eta.vercel.app";
 export const apiInstance = axios.create({
     baseURL: API_URL,
 });
-/*=========== Interceptor ================ */
+/*====== Interceptor =======*/
 apiInstance.interceptors.request.use(
     (request) => {
         request.headers = {

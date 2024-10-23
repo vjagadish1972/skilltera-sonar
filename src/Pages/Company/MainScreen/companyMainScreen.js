@@ -66,7 +66,7 @@ export default function CompanyMainScreen() {
             } else {
                 response = await getCandidateSelection(
                     localUI.viewBy,
-                    localUI.selectJobId
+                    localUI.selectJobId 
                 );
 
                 if (response.status === 200) {
@@ -76,7 +76,7 @@ export default function CompanyMainScreen() {
                         const obj2 = response.data.selections[i].candidateId
                         obj2['selectionKey'] = obj1
                         flattenedRes.push(
-                            // response.data.selections[i].candidateId
+                            response.data.selections[i].candidateId,
                             obj2
                         );
                     }
