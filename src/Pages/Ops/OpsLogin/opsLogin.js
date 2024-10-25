@@ -19,8 +19,6 @@ const OpsLogin = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const [isEmailVerified, setisEmailVerified] = useState(false);
-  let navigate = useNavigate();
 
   const onSubmit = (data) => {
 
@@ -94,9 +92,10 @@ const OpsLogin = () => {
         <h2 className="d-flex justify-content-center">Ops Sign-in</h2>
         <form onSubmit={handleSubmit(onSubmit)} ref={formRef}>
           <div className="mb-3">
-            <label className="form-label">Email address</label>
+            <label htmlFor="email" className="form-label">Email address</label>
             <input
               type="email"
+              id="email"
               className="form-control"
               placeholder="Email"
               {...register("email", {
@@ -115,9 +114,10 @@ const OpsLogin = () => {
             {/* <p style={{ 'color': 'red' }}>{errors.email?.type === 'required' && "Email is required"} </p> */}
           </div>
           <div className="mb-3">
-            <label className="form-label">Password</label>
+            <label htmlFor="password" className="form-label">Password</label>
             <input
               type="password"
+              id="password"
               className="form-control"
               placeholder="Password"
               {...register("password", {

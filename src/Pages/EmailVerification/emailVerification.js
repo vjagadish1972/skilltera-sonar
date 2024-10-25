@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker"
 import Footer from "../../Component/Footer/footer";
 import Loading from "../../Component/Loading/loading";
-import { ErrorContext } from "../../Context/errorContextState";
 import ApiConstants from "../../Services/apiconstants";
 import { Interceptor } from "../../ErrorStatus/errorStatus";
 import NavBarNew from "../../Component/NavBar New/navBarNew";
@@ -15,7 +14,6 @@ const EmailVerification = () => {
 
   const { promiseInProgress } = usePromiseTracker();
   
-  const { errorStatus, setErrorStatus } = useContext(ErrorContext)
 
   const {
     register,
@@ -24,7 +22,7 @@ const EmailVerification = () => {
     reset,
   } = useForm();
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [setIsSubmitting] = useState(false);
 
   const [disable, setDisable] = useState(true);
   const [errorMessage, SetErrorMessage] = useState("")

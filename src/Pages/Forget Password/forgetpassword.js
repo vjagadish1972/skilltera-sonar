@@ -15,7 +15,7 @@ import NavBarNew from "../../Component/NavBar New/navBarNew";
 
 export default function ForgetPassword() {
 
-  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [ setIsSubmitting] = useState(true);
 
   const { promiseInProgress } = usePromiseTracker();
   const {
@@ -37,7 +37,6 @@ export default function ForgetPassword() {
 
   const [email, setemail] = useState("");
   const [getOtp, setgetOtp] = useState(false);
-  // const [newPasswordInput, setnewPasswordInput] = useState(false);
   const [otpButtonDisabled, setotpButtonDisabled] = useState(true);
 
   const [emailErrorMessage, setEmailErrorMessage] = useState("");

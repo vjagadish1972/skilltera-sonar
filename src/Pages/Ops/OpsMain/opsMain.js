@@ -44,10 +44,11 @@ const OpsMain = () => {
                     <img src={uesrImageDefault} className="img-fluid rounded-circle" alt='user' style={{ width: '32px', height: '32px' }} />
                   </span>
                   <div className="dropdown-menu">
-                    <span className="dropdown-item" onClick={logout} style={{ cursor: 'pointer' }}>
-                      <i className="fa fa-sign-out me-2" aria-hidden="true"></i>
-                      <span>Logout</span>
-                    </span>
+                  <button onClick={logout} className="dropdown-item" style={{ cursor: 'pointer', background: 'none', border: 'none' }}>
+  <i className="fa fa-sign-out me-2" aria-hidden="true"></i>
+  <span>Logout</span>
+</button>
+
                   </div>
                 </li>
               </ul>
