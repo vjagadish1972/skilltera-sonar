@@ -6,7 +6,7 @@ import './pendingApproval.css'
 const PendingApproval = () => {
 
   const { pendingJobs } = useContext(opsContext)
-  const [jobList, setJobList] = useState(pendingJobs)
+  const [jobList] = useState(pendingJobs)
 
   const [jobDesc, setJobDesc] = useState({
     jobTitle: "",
@@ -69,7 +69,7 @@ const PendingApproval = () => {
       {jobList.length > 0 ?
         <div className='' >
           <div className='row'>
-            <div className="col-lg-5 leftcontent ">
+            {/* <div className="col-lg-5 leftcontent ">
               {jobList.length > 0 ? jobList.map((data, i) => {
 
                 return (
@@ -77,7 +77,19 @@ const PendingApproval = () => {
                 )
               })
                 : ""}
-            </div>
+            </div> */}
+
+            <div className="col-lg-5 leftcontent">
+  {jobList.length > 0
+    ? jobList.map((data) => {
+        return (
+          <JobCard key={data._id} {...data} onDataChange={() => handleJobDesc({ ...data })} />
+        );
+      })
+    : ""}
+</div>
+
+            
 
             <div className="col-lg-7  ">
               <div className='descBox'>

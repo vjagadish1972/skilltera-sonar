@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './studentCard.css'
 import ProfilePic from '../../Assets/about_pic_2.png';
 import { useDispatch, useSelector } from "react-redux";
@@ -10,15 +10,11 @@ import Swal from 'sweetalert2';
 import { Modal } from 'react-bootstrap';
 import $ from "jquery";
 import { Interceptor } from "../../ErrorStatus/errorStatus"
-import { selectSidebarMenuSelection } from '../../Redux/Reducer/sidebarMenuSelectionSlice';
 import { selectCardItemSelection } from '../../Redux/Reducer/cardItemSelectionSlice';
-
-
 
 
 export default function StudentCard(props) {
 
-    let navigate = useNavigate();
     const dispatch = useDispatch();
 
     const [handleShow, setHandleShow] = useState(false);

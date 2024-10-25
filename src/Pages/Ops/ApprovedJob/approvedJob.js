@@ -11,7 +11,7 @@ const ApprovedJob = () => {
 
   const { approvedJobs } = useContext(opsContext)
 
-  const [jobList, setJobList] = useState(approvedJobs)
+  const [jobList] = useState(approvedJobs)
 
   const [jobDesc, setJobDesc] = useState({
     jobTitle: "",

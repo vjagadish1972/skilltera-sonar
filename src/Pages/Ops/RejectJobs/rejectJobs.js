@@ -23,7 +23,7 @@ const RejectedJob = () => {
 
   const { rejectedJobs, skillList, updateSkillListData } = useContext(opsContext)
 
-  const [jobList, setJobList] = useState(rejectedJobs)
+  const [jobList] = useState(rejectedJobs)
 
   const [id, setId] = useState("");
   const [token, setToken] = useState()
@@ -50,7 +50,7 @@ const RejectedJob = () => {
   })
 
   const [addSkill, SetAddSkill] = useState([]);
-  const [skillQuery, setSkillQuery] = useState('');
+  const [skillQuery] = useState('');
 
 
 
@@ -280,9 +280,9 @@ const RejectedJob = () => {
         <div className='' >
           <div className='row'>
             <div className="col-lg-5 leftcontent ">
-              {jobList.length > 0 ? jobList.map((data, i) => {
+              {jobList.length > 0 ? jobList.map((data) => {
                 return (
-                  <JobCard key={i} {...data} onDataChange={() => handleJobDesc({ ...data })} />
+                  <JobCard key={data._id} {...data} onDataChange={() => handleJobDesc({ ...data })} />
                 )
               })
                 : ""}
@@ -310,8 +310,9 @@ const RejectedJob = () => {
                               <form className="" onSubmit={handleSubmit(onSubmit)}>
                                 <div className="row m-4">
                                   <div className="form-group col-md-6">
-                                    <label >CompanyName</label>
+                                    <label htmlFor='companyName'>CompanyName</label>
                                     <input type="text"
+                                      id="companyName" 
                                       className="form-control"
                                       name="companyName"
                                       list="job-options"
@@ -324,8 +325,9 @@ const RejectedJob = () => {
                                     </datalist> */}
                                   </div>
                                   <div className="form-group col-md-6">
-                                    <label for="inputCity">Job id</label>
+                                    <label htmlFor="jobId">Job id</label>
                                     <input type="text" className="form-control"
+                                      id="jobId"
                                       name="jobId"
                                       value={formValue.jobId}
                                       onChange={handleChange}
@@ -335,8 +337,9 @@ const RejectedJob = () => {
 
                                 <div className="row m-4">
                                   <div className="form-group col-md-6">
-                                    <label for="inputCity">Job title</label>
+                                    <label htmlFor="jobTitle">Job title</label>
                                     <input type="text" className="form-control"
+                                      id="jobTitle" 
                                       name="jobTitle"
                                       value={formValue.jobTitle}
                                       onChange={handleChange}
@@ -344,8 +347,9 @@ const RejectedJob = () => {
                                   </div>
 
                                   <div className="form-group col-md-6">
-                                    <label for="inputCity">Job Role</label>
+                                    <label htmlFor="jobRoleId">Job Role</label>
                                     <input type="text" className="form-control"
+                                      id="jobRoleId"
                                       placeholder="Type of Role you are looking for*"
                                       name='jobRoleId'
                                       list="jobRole-option"
@@ -365,8 +369,9 @@ const RejectedJob = () => {
 
                                 <div className="row m-4">
                                   <div className="form-group col-md-4">
-                                    <label for="inputCity">Year Of Experience</label>
+                                    <label htmlFor="workExperience">Year Of Experience</label>
                                     <input type="number" min={0} className="form-control"
+                                      id="workExperience"
                                       name="workExperience"
                                       value={formValue.workExperience}
                                       onChange={handleChange}
@@ -374,8 +379,9 @@ const RejectedJob = () => {
                                   </div>
 
                                   <div className="form-group col-md-4">
-                                    <label for="inputCity">Job Type</label>
+                                    <label htmlFor="jobType">Job Type</label>
                                     <select
+                                      id="jobType"
                                       className="form-control"
                                       required
                                       name="typeOfJob"
@@ -392,8 +398,9 @@ const RejectedJob = () => {
                                   </div>
 
                                   <div className="form-group col-md-4">
-                                    <label for="inputCity">Travel Required</label>
+                                    <label htmlFor="travelRequired">Travel Required</label>
                                     <select className="form-control"
+                                      id='travelRequired'
                                       name="travelRequired"
                                       value={formValue.travelRequired}
                                       onChange={handleChange}
@@ -409,8 +416,8 @@ const RejectedJob = () => {
 
                                 <div className="row m-4">
                                   <div className="form-group col-md-4">
-                                    <label for="inputCity">Country</label>
-                                    <input type="text" className="form-control"
+                                    <label htmlFor="country">Country</label>
+                                    <input type="text" className="form-control" id='country'
                                       name="country"
                                       value={formValue.country}
                                       onChange={handleChange}
@@ -418,8 +425,8 @@ const RejectedJob = () => {
                                   </div>
 
                                   <div className="form-group col-md-4">
-                                    <label for="inputCity">State</label>
-                                    <input type="text" className="form-control" id="inputCity"
+                                    <label htmlFor="state">State</label>
+                                    <input type="text" className="form-control" id="state"
                                       name="state"
                                       value={formValue.state}
                                       onChange={handleChange}
@@ -427,8 +434,8 @@ const RejectedJob = () => {
                                   </div>
 
                                   <div className="form-group col-md-4">
-                                    <label for="inputCity">City</label>
-                                    <input type="text" className="form-control" id="inputCity"
+                                    <label htmlFor="city">City</label>
+                                    <input type="text" className="form-control" id="city"
                                       name="city"
                                       value={formValue.city}
                                       onChange={handleChange}
@@ -438,27 +445,34 @@ const RejectedJob = () => {
 
                                 <div className="row m-4">
                                   <div className="form-group col-md-6">
-                                    <label for="inputCity">PostedOn</label>
-                                    <input type="date" className="form-control" name='postedOn'
+                                    <label htmlFor="postedOn">PostedOn</label>
+                                    <input type="date" className="form-control" name='postedOn' id='postedOn'
                                       onChange={handleChange} defaultValue={formValue.postedOn}
                                     />
                                   </div>
 
                                   <div className="form-group col-md-6">
-                                    <label for="inputCity">End Date</label>
-                                    <input type="date" className="form-control" name="lastDate"
-                                      onChange={handleChange} defaultValue={formValue.lastDate}
-                                    />
-                                  </div>
+  <label htmlFor="lastDate">End Date</label>
+  <input 
+    type="date" 
+    className="form-control" 
+    name="lastDate" 
+    id="lastDate"  
+    onChange={handleChange} 
+    defaultValue={formValue.lastDate}
+  />
+</div>
+
                                 </div>
 
                                 <div className="row m-4">
                                   <div className="form-group ">
-                                    <label for="inputCity">Job Description</label>
+                                    <label htmlFor="jobDescription">Job Description</label>
 
                                     <p className='p-2 border' style={{ alignContent: 'justify', textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: formValue.jobDescription }}>
                                     </p>
                                     <textarea className="form-control" rows="5"
+                                      id="jobDescription"
                                       name="jobDescription"
                                       value={formValue.jobDescription}
                                       onChange={handleChange}
@@ -492,11 +506,11 @@ const RejectedJob = () => {
                                           {...register("searchSkill")}
                                           required />
                                         <datalist id="data">
-                                          {skillList.length != 1 && skillList.slice(1, skillList.length).map((item, key) => {
+                                          {skillList.length != 1 && skillList.slice(1, skillList.length).map((item) => {
                                             if (item.skill.toUpperCase().includes(skillQuery.toUpperCase())) {
                                               return (
                                                 <>
-                                                  <option key={key} value={item.skill} />
+                                                  <option key={item.id} value={item.skill} />
 
                                                 </>
                                               )
@@ -611,8 +625,9 @@ const RejectedJob = () => {
             <div className="modal-body">
               <form onSubmit={onSubmitNewSkill}>
                 <div className="row m-3 ">
-                  <label className="labelPos">Add New Skill </label>
+                  <label htmlFor='addNewSkill' className="labelPos">Add New Skill</label>
                   <input type="text"
+                    id='addNewSkill'
                     className="form-control"
                     placeholder="Enter Skill"
                     value={newSkill}

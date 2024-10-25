@@ -12,7 +12,7 @@ import { Interceptor } from "../../ErrorStatus/errorStatus";
 import NavBarNew from "../../Component/NavBar New/navBarNew";
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [setIsSubmitting] = useState(true);
   const [disable, setDisable] = useState(true);
 
   const {
