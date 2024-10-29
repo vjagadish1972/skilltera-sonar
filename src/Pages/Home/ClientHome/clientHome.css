@@ -31,7 +31,6 @@
         padding-top: 40px;
     }
     .client-group-btn {
-        display: block;
         text-align: center;
         margin: 0 auto;
         display: flex;
@@ -145,7 +144,6 @@
         padding-top: 60px;
     }
     .client-group-btn {
-        display: block;
         text-align: center;
         margin: 0 auto;
         display: flex;
@@ -295,9 +293,6 @@
     }
 
     .client-login-section {
-       /*  padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 40px; */
         max-width: 360px;
         width: 360px;
     }
