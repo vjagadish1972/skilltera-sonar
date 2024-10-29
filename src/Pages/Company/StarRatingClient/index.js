@@ -13,9 +13,12 @@ const StarRating = ({ ratingValue, onChange }) => {
                 let active = value <= rating ? true : false;
                 return (
                     <span
+                        role="button"
+                        tabIndex="0"
                         key={value}
                         className={active ? "st__star active" : "st__star"}
                         onClick={() => handleClick(value)}
+                        
                     >
                         &#9733;
                     </span>

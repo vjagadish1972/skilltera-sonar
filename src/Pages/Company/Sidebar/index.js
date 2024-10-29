@@ -188,6 +188,8 @@ const JobCard = ({ data, onClick, selectedFlag }) => {
     const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
     return (
         <div
+            role="button"
+            tabIndex="0" 
             className={
                 selectedFlag
                     ? "company__job_card selected"

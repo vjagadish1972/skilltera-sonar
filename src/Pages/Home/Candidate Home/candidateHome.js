@@ -51,7 +51,7 @@ export default function CandidateHome() {
                                     switch (candidateButtonSelection) {
                                         case "login":
                                             return <CandidateLogin />;
-                                            break;
+                                            
                                         case "signup":
                                             return <CandidateSignup />;
                                             break;
