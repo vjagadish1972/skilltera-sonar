@@ -9,7 +9,7 @@
   .candidate-section-first-half {
     padding-top: 40px;
   }
-  .candidate-section-one-banner { 
+  .candidate-section-one-banner {
     order: 2;
   }
   .candidate-section-rise-and-shine {
@@ -17,7 +17,7 @@
     order: 1;
   }
   .rise-and-shine {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -25,10 +25,11 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.04em;
+
     color: #ff6e04;
   }
   .make-it-easy {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -37,7 +38,7 @@
     color: #444444;
   }
   .candidate-section-rise-and-shine-easy {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -58,6 +59,7 @@
     padding-top: 40px;
   }
   .candidate-group-btn {
+    display: block;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -99,18 +101,18 @@
     padding-top: 20px;
   }
   .candidate-refer {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 53px;
-    /* text-align: right; */
+    text-align: right;
     letter-spacing: 0.04em;
     color: #444444;
     text-align: center;
   }
   .dollar {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
@@ -191,7 +193,7 @@
     margin-bottom: 0px;
   }
   .rise-and-shine {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -203,7 +205,7 @@
     color: #ff6e04;
   }
   .make-it-easy {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -212,7 +214,7 @@
     color: #444444;
   }
   .candidate-section-rise-and-shine-easy {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -232,7 +234,7 @@
     padding-top: 60px;
   }
   .candidate-group-btn {
-    /* display: block; */
+    display: block;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -275,7 +277,7 @@
     justify-content: end;
   }
   .candidate-refer {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -285,7 +287,7 @@
     color: #444444;
   }
   .dollar {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
@@ -365,7 +367,7 @@
     margin-top: 28px;
   }
   .rise-and-shine {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 700;
     font-size: 42px;
@@ -374,7 +376,7 @@
     color: #ff6e04;
   }
   .make-it-easy {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-weight: 500;
     font-size: 42px;
     line-height: 51px;
@@ -382,7 +384,7 @@
     color: #444444;
   }
   .candidate-section-rise-and-shine-easy {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-weight: 700;
     font-size: 42px;
     line-height: 51px;
@@ -401,7 +403,7 @@
     padding-top: 60px;
   }
   .candidate-group-btn {
-    /* display: block; */
+    display: block;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -446,7 +448,7 @@
     justify-content: end;
   }
   .candidate-refer {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -456,7 +458,7 @@
     color: #444444;
   }
   .dollar {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka";
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
