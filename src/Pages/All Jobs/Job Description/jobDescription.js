@@ -13,12 +13,17 @@ export default function JobDescription(props) {
     const diffTime = Math.abs(date2 - today);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
+    let mixpanelData = '';
+    let token = '';
+    let userId = '';
+    let candidateEmailId = '';
+
     if (sessionStorage.getItem('candidate_data') != null) {
         const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-        var mixpanelData = candidateDataMix.candidate.email;
-        var token = candidateDataMix.token;
-        var userId = candidateDataMix.candidate._id;
-        var candidateEmailId = candidateDataMix.candidate.email;
+         mixpanelData = candidateDataMix.candidate.email;
+         token = candidateDataMix.token;
+         userId = candidateDataMix.candidate._id;
+         candidateEmailId = candidateDataMix.candidate.email;
     }
     const [applyClicked, setapplyClicked] = useState(false);
     const [jobId, setJobId] = useState('')

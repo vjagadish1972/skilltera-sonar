@@ -44,18 +44,22 @@ const Sidebar = () => {
     setResumeData,
   } = useContext(userContext);
 
+  let token = '';
+  let userId = '';
+  let candidateEmailId = '';
+
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var token = candidateDataMix.token;
-    var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+     token = candidateDataMix.token;
+     userId = candidateDataMix.candidate._id;
+     candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var token = candidateDataMix.token;
-    var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+     token = candidateDataMix.token;
+     userId = candidateDataMix.candidate._id;
+     candidateEmailId = candidateDataMix.candidate.email;
 
   }
 
@@ -383,7 +387,7 @@ const Sidebar = () => {
 
   const handleDeleteCompany = (val) => {
 
-    var index = formValueAddress.previousEmployers.indexOf(val);
+    let index = formValueAddress.previousEmployers.indexOf(val);
 
     if (index !== -1) {
       formValueAddress.previousEmployers.splice(index, 1);

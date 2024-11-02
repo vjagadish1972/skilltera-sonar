@@ -219,7 +219,7 @@ export function SelectForObjects({
                     {localOptions !== undefined && localOptions.length > 0 ? (
                         localOptions.map((option, i) => (
                             <li
-                                onClick={() => onOptionClicked(option, i)}
+                                onClick={() => onOptionClicked(option)}
                                 key={i}
                             >
                                 {option[optionName]}

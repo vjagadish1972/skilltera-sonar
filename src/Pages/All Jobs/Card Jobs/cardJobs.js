@@ -16,6 +16,11 @@ export default function CardJobs() {
     //const [jobDataById, setJobDataById] = useState(null);
     const dispatch = useDispatch();
 
+    let mixpanelData =  '';
+    let token = '' ;
+    let userId = '' ;
+    let candidateEmailId = '';
+
     const getFilterDataJobs = useSelector((state) => state.filterDataJob)
     let jobDataById = useSelector((state) => state.jobDataById)
     const [cardBorder, setCardBorder] = useState({
@@ -25,10 +30,10 @@ export default function CardJobs() {
 
     if (sessionStorage.getItem('candidate_data') != null) {
         const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-        var mixpanelData = candidateDataMix.candidate.email;
-        var token = candidateDataMix.token;
-        var userId = candidateDataMix.candidate._id;
-        var candidateEmailId = candidateDataMix.candidate.email;
+         mixpanelData = candidateDataMix.candidate.email;
+         token = candidateDataMix.token;
+         userId = candidateDataMix.candidate._id;
+         candidateEmailId = candidateDataMix.candidate.email;
     }
 
     const { isLoading, error, data, isFetching, refetch } = useQuery(['allJobs', getFilterDataJobs], async () => {

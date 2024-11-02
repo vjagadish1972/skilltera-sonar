@@ -36,8 +36,8 @@ export default function AllCandidates() {
         }
       })
       .then((response) => {
-        var dataTest = [];
-        for (var i = 0; i < Object.keys(response.data.candidate).length; i++) {
+        let dataTest = [];
+        for (let i = 0; i < Object.keys(response.data.candidate).length; i++) {
           if (Object.keys(response.data.candidate[i]).length > 8) {
             dataTest.push(response.data.candidate[i]);
           }
