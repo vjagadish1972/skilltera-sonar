@@ -24,7 +24,7 @@ import AsyncSelect from 'react-select/async';
 export const SkillCard = () => {
   const { promiseInProgress } = usePromiseTracker();
   const { userData, getData } = useContext(userContext)
-  const dispatch = useDispatch();
+  
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
@@ -44,10 +44,7 @@ export const SkillCard = () => {
   }
 
   const {
-    register,
-    handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
   const [skillData, setSkillData] = useState([{}])

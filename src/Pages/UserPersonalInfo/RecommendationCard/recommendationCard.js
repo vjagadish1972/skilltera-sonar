@@ -31,7 +31,6 @@ const RecommendationCard = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
     reset,
   } = useForm();
 
@@ -478,8 +477,9 @@ const RecommendationCard = () => {
                       <div className="col-md-12 col-sm-12 mt-3 mb-0 ">
 
                         <div className="col-md-12 col-sm-12 ">
-                          <label className="" >How do you know the Recommender ?* </label>
-                          <select className="form-control" {...register("connectionType")} required>
+                          <label htmlFor="connectionType" >How do you know the Recommender ?* </label>
+                          <select id="connectionType" className="form-control" {...register("connectionType")} required>
+
                             <option value="I know as a Colleague"> I know as a Colleague</option>
                             <option value="I know as a Manager"> I know as a Manager </option>
                             <option value="I know as a Client">I know as a Client</option>
