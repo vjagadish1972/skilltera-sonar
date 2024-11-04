@@ -3,7 +3,6 @@ import { userContext } from "../../../../Context/userContextState";
 import RecievedSection from "./RecievedSection/recievedSection";
 
 const Requested = (props ) => {
-  const { userData } = useContext(userContext)
 
   let mixpanelData = '';
   let token = '';
@@ -26,14 +25,7 @@ const Requested = (props ) => {
      candidateEmailId = candidateDataMix.candidate.email;
 
   }
-  const [recommendationData, setRecommendationData] = useState([])
 
-  const [noReceivedReccommendation, setNoReceivedRecommendation] = useState()
-  useEffect(() => {
-    // if (userData.length != 0) {
-    //   setRecommendationData(userData[0].candidate.recommendations)
-    // }
-  }, [])
 
 
   return (

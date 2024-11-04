@@ -22,7 +22,7 @@ import AsyncSelect from 'react-select/async';
 const ReferCand = () => {
   const { userData } = useContext(userContext)
 
-  const dispatch = useDispatch();
+ 
 
   let mixpanelData = '';
   let token = '';
@@ -58,7 +58,6 @@ const ReferCand = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
 
@@ -77,7 +76,6 @@ const ReferCand = () => {
   };
 
   const [addSkill, SetAddSkill] = useState([]);
-  const [skillQuery, setSkillQuery] = useState('');
 
 
 
@@ -306,8 +304,8 @@ const ReferCand = () => {
 
                         <div className="col-md-6  form-group inputControle ">
 
-                          <label  >How do you know him ? *</label>
-                          <select className="form-control"
+                          <label htmlFor="connectionType" >How do you know him ? *</label>
+                          <select id="connectionType" className="form-control"
                             {...register("connectionType", {
                               required: "Please select connection",
                             })}
@@ -420,7 +418,7 @@ const ReferCand = () => {
                           {
                             addSkill.length > 0 ? addSkill.map((e, i) => {
                               return (
-                                <div className='d-flex justify-content-between m-3 '>
+                                <div className="d-flex justify-content-between m-3" key={e.skill || i}>
                                   <div className="col-5" >
                                     <span className='same-formating'>{e.skill}</span>
                                   </div>
