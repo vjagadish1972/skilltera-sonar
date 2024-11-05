@@ -1,9 +1,8 @@
-import react, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios, { useMemo } from "axios";
 import ApiConstants from "../../../Services/apiconstants";
 import DataTable from "react-data-table-component";
 import "./allCompanies.css";
-import Swal from "sweetalert2";
 import { useSelector } from "react-redux";
 import { Interceptor } from "../../../ErrorStatus/errorStatus"
 
@@ -11,7 +10,6 @@ export default function AllCompanies() {
   const [values, setValues] = useState({
     companyData: {},
   })
-  const [searchTerm, setSearchTerm] = useState("")
   const [pending, setPending] = useState(true);
   const [columnsList, setColumnsList] = useState([]);
   const searchItem = useSelector((state) => state.searchBar);
@@ -61,8 +59,7 @@ export default function AllCompanies() {
     return () => clearTimeout(timeout);
   }, [])
 
-  const handleSearch = (searchData) => {
-  }
+
   return (
     <>
       <div className="table myTables">

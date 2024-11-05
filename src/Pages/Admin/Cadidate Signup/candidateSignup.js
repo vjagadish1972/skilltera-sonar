@@ -77,6 +77,7 @@ export default function CandidateSignup() {
           <div className="mb-3">
             <label className="form-label">Full Name</label>
             <input
+              id="fullName"
               type="text"
               className="form-control border-top-0 border-left-0 border-right-0"
               placeholder="Full Name"
@@ -92,6 +93,7 @@ export default function CandidateSignup() {
           <div className="mb-3">
             <label className="form-label">Email address</label>
             <input
+              id="email"
               type="email"
               className="form-control border-top-0 border-left-0 border-right-0"
               placeholder="Email"
@@ -111,6 +113,7 @@ export default function CandidateSignup() {
           <div className="mb-3">
             <label className="form-label">Password</label>
             <input
+              id="password"
               type="password"
               className="form-control border-top-0 border-left-0 border-right-0"
               placeholder="Password"

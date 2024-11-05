@@ -1,9 +1,7 @@
-import axios, { useMemo } from "axios";
+import axios from "axios";
 import React, { useEffect, useState, useCallback } from "react";
 import ApiConstants from "../../../Services/apiconstants";
-import Swal from "sweetalert2";
 import ShowMoreText from "react-show-more-text";
-import $ from "jquery";
 import { useSelector } from "react-redux";
 import DataTable from "react-data-table-component";
 import "./allCandidates.css";
@@ -16,8 +14,6 @@ export default function AllCandidates() {
 
   const [columnsList, setColumnsList] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [candidateId, setCandidateId] = useState("");
-  const [searchTerm, setSearchTerm] = useState("")
   const [pending, setPending] = useState(true);
   const searchItem = useSelector((state) => state.searchBar);
 
@@ -144,37 +140,34 @@ export default function AllCandidates() {
     setIsExpanded(!isExpanded);
   };
 
-  const editable = (data) => {
-    // setEditClicked(true)
-    setCandidateId(data._id);
-  };
-  return (
-    <>
-      <div className="table myTables1">
-        {Object.keys(values.candidateData).length && (
-          <DataTable
-            title='All Candidates'
-            striped
-            responsive
-            pagination
-            paginationRowsPerPageOptions={[2, 3, 5]}
-            paginationPerPage={5}
-            highlightOnHover
-            progressPending={pending}
-            columns={columnsList}
-            data={values.candidateData.filter((item) => {
-              if (searchItem.initialValue === "") {
-                return item;
-              } else if (
-                item.email.toLowerCase().includes(searchItem.initialValue.toLowerCase())
-              ) {
-                return item;
-              }
-            })}
-          />
-        )}
+    return (
+      <>
+        <div className="table myTables1">
+          {Object.keys(values.candidateData).length && (
+            <DataTable
+              title='All Candidates'
+              striped
+              responsive
+              pagination
+              paginationRowsPerPageOptions={[2, 3, 5]}
+              paginationPerPage={5}
+              highlightOnHover
+              progressPending={pending}
+              columns={columnsList}
+              data={values.candidateData.filter((item) => {
+                if (searchItem.initialValue === "") {
+                  return item;
+                } else if (
+                  item.email.toLowerCase().includes(searchItem.initialValue.toLowerCase())
+                ) {
+                  return item;
+                }
+              })}
+            />
+          )}
 
-      </div>
-    </>
-  );
-}
+        </div>
+      </>
+    );
+  }
+  
