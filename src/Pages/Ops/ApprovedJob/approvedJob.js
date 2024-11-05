@@ -74,11 +74,11 @@ const ApprovedJob = () => {
         <div className='' >
           <div className='row'>
             <div className="col-lg-5 leftcontent ">
-              {jobList.length > 0 ? jobList.map((data, i) => {
+              {jobList.length > 0 ? jobList.map((data) => {
 
                 return (
 
-                  <JobCard key={i} {...data} onDataChange={() => handleJobDesc({ ...data })} />
+                  <JobCard key={data._id}  {...data} onDataChange={() => handleJobDesc({ ...data })} />
 
                 )
               }

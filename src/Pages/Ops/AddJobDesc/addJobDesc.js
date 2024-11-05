@@ -399,8 +399,8 @@ const AddJobDesc = () => {
                   
                 />
                 <datalist id="job-options">
-                  {companiesList.length > 0 ? companiesList.map((option, index) => (
-                    <option key={index} value={option.companyName} id={option._id} data-company-id={option._id}  />
+                  {companiesList.length > 0 ? companiesList.map((option) => (
+                    <option key={option._id} value={option.companyName} id={option._id} data-company-id={option._id}  />
                   )) : ""}
                 </datalist>
                 {errors.companyIds && <div role="alert" style={{ color: "red" }} >{errors.companyIds.message}</div>}
@@ -438,10 +438,10 @@ const AddJobDesc = () => {
                 />
 
                 <datalist id="jobRole-option" >
-                  {allJobRole.map((d, i) => {
+                  {allJobRole.map((d) => {
                     return (
                       <>
-                        <option key={i} value={d.role} id={d._id} data-role-id={d._id} />
+                        <option key={d._id} value={d.role} id={d._id} data-role-id={d._id} />
                       </>
                     );
                   })}
