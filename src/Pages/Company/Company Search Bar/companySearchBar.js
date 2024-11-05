@@ -3,15 +3,13 @@ import './companySearchBar.css'
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { inputSearchBar } from '../../../Redux/Reducer/searchBarSlice';
-//import { GetAllJobList } from '../../../Redux/Reducer/jobRoleReducerSlice';
 
 export default function CompanySearchBar() {
     const dispatch = useDispatch()
     const {
         register,
         handleSubmit,
-        formState: { errors },
-        reset,
+        formState: { },
     } = useForm();
 
     const jobRoleSelection = useSelector(

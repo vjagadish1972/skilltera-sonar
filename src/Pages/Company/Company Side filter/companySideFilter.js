@@ -3,7 +3,6 @@ import './companySideFilter.css'
 import { Rating } from 'react-simple-star-rating'
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-// import ReactStars from "react-rating-stars-component";
 import { changeSkillSideFilterDataCompany } from '../../../Redux/Reducer/skillSideFilterDataCompanySlice';
 
 
@@ -15,8 +14,7 @@ export default function CompanySideFilter() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
-        reset,
+        formState: { },
     } = useForm();
 
     const skillSelection = useSelector(
@@ -24,7 +22,7 @@ export default function CompanySideFilter() {
     );
 
     const [addSkill, SetAddSkill] = useState([{}]);
-    const [skillQuery, setSkillQuery] = useState('');
+    const [skillQuery] = useState('');
     const [finalSkill, SetFinalSkill] = useState([{}]);
     const [minExp, SetMinExp] = useState(0);
     const [maxExp, SetMaxExp] = useState(0);

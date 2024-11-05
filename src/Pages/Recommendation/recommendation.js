@@ -252,8 +252,8 @@ const Recommendation = () => {
               </div>
               <div className='col'>
                 <div className="mb-3">
-                  <label className="form-label text-start">Enter OTP, Sent to you your email</label>
-                  <input type="text" className="form-control" id="exampleFormControlInput1"
+                  <label className="form-label text-start" htmlFor="otpInput" >Enter OTP, Sent to you your email</label>
+                  <input type="text" className="form-control" id="otpInput"
                     {...register("otp", {
                       required: true,
                       // pattern: {
@@ -271,8 +271,8 @@ const Recommendation = () => {
               </div>
             </div>
             <div className="mb-3">
-              <label className="form-label text-start">Your Recommendation Comments</label>
-              <textarea minLength="15" className="form-control" id="exampleFormControlTextarea1" rows="3" {...register("recommenderComments", { required: true })}></textarea>
+              <label className="form-label text-start" htmlFor="recommenderComments">Your Recommendation Comments</label>
+              <textarea minLength="15" className="form-control" id="recommenderComments" rows="3" {...register("recommenderComments", { required: true })}></textarea>
               {errors.recommenderComments?.type === 'required' && <span style={{ color: "red" }}>Your Recommendation Comments is required</span>}
             </div>
             <div className="d-flex justify-content-center m-3">

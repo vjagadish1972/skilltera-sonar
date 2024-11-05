@@ -1,6 +1,5 @@
-import react from 'react'
+import React, { useContext, useState } from "react";
 import axios from "axios";
-import { useContext, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";

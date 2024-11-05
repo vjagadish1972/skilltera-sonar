@@ -4,7 +4,7 @@ import StarRating from "../../../../Component/StarRating/starRating"
 import "./givenSection.css"
 
 const GivenSection = (props) => {
-  const [formValue, setformValue] = useState({
+  const [formValue] = useState({
     candidateName: props.candidateName,
     candidateEmail: props.candidateEmail,
     candidateLinkedInUrl: props.candidateLinkedInUrl,
