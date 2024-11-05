@@ -19,7 +19,6 @@ const JobApproval = () => {
   const {
     register,
     handleSubmit,
-    reset
   } = useForm();
 
   const token = JSON.parse(sessionStorage.getItem("ADMIN")).token;
@@ -27,12 +26,12 @@ const JobApproval = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { jobList, initialJobDesc , skillList, companiesList,allJobRole ,updateSkillListData } = useContext(jobApprovalContext);
+  const { jobList, skillList ,updateSkillListData } = useContext(jobApprovalContext);
 
   const [jobListData, setJobListData] = useState(jobList)
   const [newSkill , setNewSkill] = useState('')
 
-  const [skillQuery, setSkillQuery] = useState('');
+  const [skillQuery] = useState('');
   const [addSkill, SetAddSkill] = useState([]);
   
   const handleChangeExp = (event, idx) => {
@@ -475,68 +474,76 @@ const JobApproval = () => {
               <form className="" onSubmit={onSubmitEditForm}>
                 <div className="row m-4">
                   <div className="form-group col-md-6">
-                    <label >CompanyName</label>
-                    <input type="text"
-                      className="form-control"
-                      name="companyName"
-                      list="job-options"
-                      value={formValue.companyName}
-                      readOnly
-                    />
+                  <label htmlFor="companyName">Company Name</label>
+              <input type="text"
+                id="companyName"
+                className="form-control"
+                name="companyName"
+                list="job-options"
+                value={formValue.companyName}
+                readOnly
+              />
               
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="inputCity">Job id</label>
-                    <input type="text" className="form-control"
-                      name="jobId"
-                     value={formValue.jobId}
-                     onChange={handleChange}
-                    />
+                  <label htmlFor="jobId">Job ID</label>
+              <input type="text" 
+                id="jobId"
+                className="form-control"
+                name="jobId"
+                value={formValue.jobId}
+                onChange={handleChange}
+              />
                   </div>
                 </div>
 
                 <div className="row m-4">
                   <div className="form-group col-md-6">
-                    <label for="inputCity">Job title</label>
-                    <input type="text" className="form-control"
-                      name="jobTitle"
-                     value={formValue.jobTitle}
-                     onChange={handleChange}
-                    />
+                  <label htmlFor="jobTitle">Job Title</label>
+              <input type="text" 
+                id="jobTitle"
+                className="form-control"
+                name="jobTitle"
+                value={formValue.jobTitle}
+                onChange={handleChange}
+              />
                   </div>
 
                   <div className="form-group col-md-6">
-                    <label for="inputCity">Job Role</label>
-                    <input type="text" className="form-control"
-                      placeholder="Type of Role you are looking for*"
-                      name='jobRoleId'
-                      list="jobRole-option"
-                      value={formValue.jobRole.role}
-                     readOnly
-                    />
+                  <label htmlFor="jobRole">Job Role</label>
+              <input type="text" className="form-control"
+                id="jobRole"
+                placeholder="Type of Role you are looking for*"
+                name='jobRoleId'
+                list="jobRole-option"
+                value={formValue.jobRole.role}
+                readOnly
+              />
                   
                   </div>
                 </div>
 
                 <div className="row m-4">
                   <div className="form-group col-md-4">
-                    <label for="inputCity">Year Of Experience</label>
-                    <input type="number" min={0} className="form-control"
-                      name="workExperience"
-                     value={formValue.workExperience}
-                     onChange={handleChange}
-                    />
+                  <label htmlFor="workExperience">Year Of Experience</label>
+              <input type="number" min={0} className="form-control"
+                id="workExperience"
+                name="workExperience"
+                value={formValue.workExperience}
+                onChange={handleChange}
+              />
                   </div>
 
                   <div className="form-group col-md-4">
-                    <label for="inputCity">Job Type</label>
-                    <select
-                      className="form-control"
-                      required
-                      name="typeOfJob"
-                     value={formValue.jobType}
-                     onChange={handleChange}
-                    >
+                  <label htmlFor="jobType">Job Type</label>
+              <select
+                className="form-control"
+                id="jobType"
+                required
+                name="typeOfJob"
+                value={formValue.jobType}
+                onChange={handleChange}
+              >
                       <option value="Fulltime"> Fulltime</option>
                       <option value="C2C"> C2C </option>
                       <option value="C2H"> C2H </option>
@@ -547,12 +554,14 @@ const JobApproval = () => {
                   </div>
 
                   <div className="form-group col-md-4">
-                    <label for="inputCity">Travel Required</label>
-                    <select className="form-control"
-                      name="travelRequired"
-                     value={formValue.travelRequired}
-                     onChange={handleChange}
-                    >
+                  <label htmlFor="inputCity">Travel Required</label>
+<select
+  className="form-control"
+  name="travelRequired"
+  value={formValue.travelRequired}
+  onChange={handleChange}
+>
+
                       <option value="true"> Yes</option>
                       <option value="false"> No</option>
                     </select>
@@ -564,61 +573,85 @@ const JobApproval = () => {
 
                 <div className="row m-4">
                   <div className="form-group col-md-4">
-                    <label for="inputCity">Country</label>
-                    <input type="text" className="form-control"
-                      name="country"
-                     value={formValue.country}
-                     onChange={handleChange}
-                    />
+                  <label htmlFor="inputCountry">Country</label>
+    <input
+      type="text"
+      className="form-control"
+      name="country"
+      id="inputCountry"
+      value={formValue.country}
+      onChange={handleChange}
+    />
                   </div>
 
                   <div className="form-group col-md-4">
-                    <label for="inputCity">State</label>
-                    <input type="text" className="form-control" id="inputCity"
-                      name="state"
-                     value={formValue.state}
-                     onChange={handleChange}
-                    />
+                  <label htmlFor="inputState">State</label>
+    <input
+      type="text"
+      className="form-control"
+      id="inputState"
+      name="state"
+      value={formValue.state}
+      onChange={handleChange}
+    />
                   </div>
 
                   <div className="form-group col-md-4">
-                    <label for="inputCity">City</label>
-                    <input type="text" className="form-control" id="inputCity"
-                      name="city"
-                     value={formValue.city}
-                     onChange={handleChange}
-                    />
+                  <label htmlFor="inputCity">City</label>
+    <input
+      type="text"
+      className="form-control"
+      id="inputCity"
+      name="city"
+      value={formValue.city}
+      onChange={handleChange}
+    />
                   </div>
                 </div>
 
                 <div className="row m-4">
                   <div className="form-group col-md-6">
-                    <label for="inputCity">PostedOn</label>
-                    <input type="date" className="form-control" name='postedOn'
-                     onChange={handleChange} defaultValue={formValue.postedOn}
-                    />
+                  <label htmlFor="inputPostedOn">Posted On</label>
+    <input
+      type="date"
+      className="form-control"
+      name="postedOn"
+      id="inputPostedOn"
+      onChange={handleChange}
+      defaultValue={formValue.postedOn}
+    />
                   </div>
 
                   <div className="form-group col-md-6">
-                    <label for="inputCity">End Date</label>
-                    <input type="date" className="form-control" name="lastDate"
-                     onChange={handleChange} defaultValue={formValue.lastDate}
-                    />
+                  <label htmlFor="inputLastDate">End Date</label>
+    <input
+      type="date"
+      className="form-control"
+      name="lastDate"
+      id="inputLastDate"
+      onChange={handleChange}
+      defaultValue={formValue.lastDate}
+    />
                   </div>
                 </div>
 
                 <div className="row m-4">
-                  <div className="form-group ">
-                    <label for="inputCity">Job Description</label>
-
-                    <p className='p-2 border' style={{ alignContent: 'justify', textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: formValue.jobDescription }}>
-                    </p>
-                    <textarea className="form-control" rows="5"
-                      name="jobDescription"
-                     value={formValue.jobDescription}
-                     onChange={handleChange}
-                    />
-                  </div>
+                <div className="form-group">
+    <label htmlFor="inputJobDescription">Job Description</label>
+    <p
+      className="p-2 border"
+      style={{ alignContent: 'justify', textAlign: 'justify' }}
+      dangerouslySetInnerHTML={{ __html: formValue.jobDescription }}
+    ></p>
+    <textarea
+      className="form-control"
+      rows="5"
+      name="jobDescription"
+      id="inputJobDescription"
+      value={formValue.jobDescription}
+      onChange={handleChange}
+    />
+  </div>
                 </div>
 
 

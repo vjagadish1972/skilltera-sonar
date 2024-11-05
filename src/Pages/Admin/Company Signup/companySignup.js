@@ -75,6 +75,7 @@ export default function CompanySignup() {
           <div className="mb-3">
             <label className="form-label">Company Name</label>
             <input
+              id="companyName"              
               type="text"
               className="form-control border-top-0 border-left-0 border-right-0"
               placeholder="Company Name"
@@ -90,6 +91,7 @@ export default function CompanySignup() {
           <div className="mb-3">
             <label className="form-label">Email address</label>
             <input
+              id="email"
               type="email"
               className="form-control border-top-0 border-left-0 border-right-0"
               placeholder="Email"
@@ -109,6 +111,7 @@ export default function CompanySignup() {
           <div className="mb-3">
             <label className="form-label">Password</label>
             <input
+              id= "password"
               type="password"
               className="form-control border-top-0 border-left-0 border-right-0"
               placeholder="Password"
