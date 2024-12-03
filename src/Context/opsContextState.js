@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect, createContext, useMemo } from 'react';
 import ApiConstants from '../Services/apiconstants';
 import axios from 'axios';
 import { Interceptor } from "../ErrorStatus/errorStatus";
@@ -16,7 +16,7 @@ const [rejectedJobs , setRejectedJobs] = useState([])
 const [pendingJobs, setPendingJobs] = useState([])
  
 
-const [intiJobDesc, setJobDesc] = useState({
+const [intiJobDesc] = useState({
   jobTitle:"",
   companyId:"",
   country:"",
@@ -144,12 +144,35 @@ const getData = async () => {
     getData()
   }, [sessionStorage.getItem("ops_token")])
 
+  const contextValue = useMemo(() => ({
+    jobList,
+    intiJobDesc,
+    approvedJobs,
+    rejectedJobs,
+    pendingJobs,
+    getData,
+    companiesList,
+    allJobRole,
+    updateJobRole,
+    skillList,
+    updateSkillListData,
+  }), [
+    jobList,
+    intiJobDesc,
+    approvedJobs,
+    rejectedJobs,
+    pendingJobs,
+    getData,
+    companiesList,
+    allJobRole,
+    updateJobRole,
+    skillList,
+    updateSkillListData,
+  ]);
 
   return (
-    <>
-      <opsContext.Provider value={{jobList , intiJobDesc , approvedJobs ,rejectedJobs,pendingJobs ,getData , companiesList , allJobRole ,updateJobRole , skillList , updateSkillListData}} >
-        {props.children}
-      </opsContext.Provider>
-    </>
+    <opsContext.Provider value={contextValue}>
+      {props.children}
+    </opsContext.Provider>
   )
 }

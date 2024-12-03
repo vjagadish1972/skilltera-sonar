@@ -39,7 +39,7 @@ export default function NewCandidateAccountValidation() {
 
     useEffect(() => {
         const handleRedirect = () => {
-            window.location.href = (verify === 'Login' ? '/' : '/');
+            window.location.href = verify === 'Login' ? '/' : '/';
         };
 
         if (timer > 0) {

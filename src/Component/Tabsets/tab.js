@@ -11,7 +11,19 @@ const Tab = (props) => {
   }
 
   return (
-    <li className={className} onClick={() => onClick(label)}>
+    <li
+    className={className}
+    role="tab" // Add ARIA role
+    tabIndex={0} // Make the element focusable
+    aria-selected={activeTab === label} // Add ARIA state
+    onClick={() => onClick(label)} // Handle mouse clicks
+    onKeyDown={(e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        onClick(label); // Handle keyboard interaction
+      }
+    }}
+  >
+
       {label}
     </li>
   );

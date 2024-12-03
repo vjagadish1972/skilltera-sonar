@@ -4,7 +4,6 @@ import Logo from '../../Assets/skilltera_logo1.png'
 import { NavLink } from 'react-router-dom';
 export default function Footer() {
     return (
-        <>
             <footer style={{ 'overflowX': 'hidden' }}>
 
                 <div className='footer-body'>
@@ -73,6 +72,5 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-        </>
     );
 }

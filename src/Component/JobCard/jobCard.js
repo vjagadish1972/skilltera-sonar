@@ -1,6 +1,7 @@
 import React from "react";
 import "./jobCard.css";
 import { Rating } from "react-simple-star-rating";
+import PropTypes from "prop-types";
 
 const JobCard = (props) => {
   const isSelected = props.selectedCard === props._id;
@@ -82,6 +83,41 @@ const JobCard = (props) => {
       </div>
     </div>
   );
+};
+
+// Define PropTypes
+JobCard.propTypes = {
+  selectedCard: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired,
+  postedOn: PropTypes.string.isRequired,
+  jobTitle: PropTypes.string.isRequired,
+  companyId: PropTypes.shape({
+    companyName: PropTypes.string,
+  }),
+  country: PropTypes.string,
+  state: PropTypes.string,
+  city: PropTypes.string,
+  skillRequired: PropTypes.arrayOf(
+    PropTypes.shape({
+      skillId: PropTypes.shape({
+        id: PropTypes.string,
+        skill: PropTypes.string,
+      }),
+      rating: PropTypes.number,
+    })
+  ),
+  jobType: PropTypes.string.isRequired,
+  onDataChange: PropTypes.func.isRequired,
+  handleCardClick: PropTypes.func.isRequired,
+};
+
+// Default Props (if needed)
+JobCard.defaultProps = {
+  companyId: null,
+  country: "",
+  state: "",
+  city: "",
+  skillRequired: [],
 };
 
 export default JobCard;

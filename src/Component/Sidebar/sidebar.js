@@ -30,43 +30,38 @@ import { Interceptor } from "../../ErrorStatus/errorStatus";
 import { RxCrossCircled } from "react-icons/rx";
 import { selectSidebarMenuSelection } from "../../Redux/Reducer/sidebarMenuSelectionSlice";
 import ProfileStrengthIndicator from "../Profile Strength indicator/profileStrengthIndicator";
-import {calculateProfileStrength}  from "../../UtilitiesFunctions/utilitiesFunction"
-
+import { calculateProfileStrength } from "../../UtilitiesFunctions/utilitiesFunction";
 
 const Sidebar = () => {
+  const [ProfileStrength, setProfileStrength] = useState(0);
+  const { userData, profilePic, setProfilePic, resumeData, setResumeData } =
+    useContext(userContext);
 
-  const [ProfileStrength , setProfileStrength] = useState(0)
-  const {
-    userData,
-    profilePic,
-    setProfilePic,
-    resumeData,
-    setResumeData,
-  } = useContext(userContext);
+  let token = "";
+  let userId = "";
+  let candidateEmailId = "";
 
-  let token = '';
-  let userId = '';
-  let candidateEmailId = '';
-
-  if (sessionStorage.getItem('candidate_data') != null) {
-    const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-     token = candidateDataMix.token;
-     userId = candidateDataMix.candidate._id;
-     candidateEmailId = candidateDataMix.candidate.email;
+  if (sessionStorage.getItem("candidate_data") != null) {
+    const candidateDataMix = JSON.parse(
+      sessionStorage.getItem("candidate_data")
+    );
+    token = candidateDataMix.token;
+    userId = candidateDataMix.candidate._id;
+    candidateEmailId = candidateDataMix.candidate.email;
   }
 
-  if (sessionStorage.getItem('candidate_data_ref') != null) {
-    const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-     token = candidateDataMix.token;
-     userId = candidateDataMix.candidate._id;
-     candidateEmailId = candidateDataMix.candidate.email;
-
+  if (sessionStorage.getItem("candidate_data_ref") != null) {
+    const candidateDataMix = JSON.parse(
+      sessionStorage.getItem("candidate_data_ref")
+    );
+    token = candidateDataMix.token;
+    userId = candidateDataMix.candidate._id;
+    candidateEmailId = candidateDataMix.candidate.email;
   }
 
-
-  const mixpanelButton = (purpose, buttonName) => {
-    Mixpanel(purpose, buttonName, candidateEmailId);
-  };
+  // const mixpanelButton = (purpose, buttonName) => {
+  //   Mixpanel(purpose, buttonName, candidateEmailId);
+  // };
   // upload image  start
 
   const uploadedImage = react.useRef(null);
@@ -149,17 +144,12 @@ const Sidebar = () => {
 
   //upload image end
   const dispatch = useDispatch();
-  const menuSelection = (data) => {
-    dispatch(selectSidebarMenuSelection(data));
-  };
+  // const menuSelection = (data) => {
+  //   dispatch(selectSidebarMenuSelection(data));
+  // };
 
   const { promiseInProgress } = usePromiseTracker();
-  const {
-    register,
-    handleSubmit,
-    formState: { },
-    setValue,
-  } = useForm();
+  const { register, handleSubmit } = useForm();
 
   // get candidate data by id SECTION END
   //Address axios section start
@@ -219,7 +209,8 @@ const Sidebar = () => {
 
   // file upload
 
-  const [successMessageResumeUploaded, setSuccessMessageResumeUploaded] = useState("");
+  const [successMessageResumeUploaded, setSuccessMessageResumeUploaded] =
+    useState("");
 
   const resumeUpload = (e) => {
     const [file] = e.target.files;
@@ -324,7 +315,6 @@ const Sidebar = () => {
     );
   };
 
-
   const onSubmitMiddle = () => {
     trackPromise(
       axios
@@ -338,7 +328,7 @@ const Sidebar = () => {
             currentRole: formValueMiddle.currentRole,
             expectedRateC2CorC2H: formValueMiddle.expectedRateC2CorC2H,
             timeToJoin: formValueMiddle.timeToJoin,
-            overallExperience: formValueMiddle.overallExperience
+            overallExperience: formValueMiddle.overallExperience,
           },
           {
             headers: {
@@ -376,30 +366,25 @@ const Sidebar = () => {
   };
 
   const handleChangeMiddle = (event) => {
-
     setformValueMiddle({
       ...formValueMiddle,
       [event.target.name]: event.target.value,
-    })
-
+    });
   };
 
-
   const handleDeleteCompany = (val) => {
-
     let index = formValueAddress.previousEmployers.indexOf(val);
 
     if (index !== -1) {
       formValueAddress.previousEmployers.splice(index, 1);
     }
 
-
     trackPromise(
       axios
         .patch(
           ApiConstants.PROFILE,
           {
-            previousEmployers: formValueAddress.previousEmployers
+            previousEmployers: formValueAddress.previousEmployers,
           },
           {
             headers: {
@@ -426,10 +411,8 @@ const Sidebar = () => {
             Interceptor(error.response.status);
           }
         })
-
-    )
-  }
-
+    );
+  };
 
   const onSubmitPriviousEmp = (data) => {
     trackPromise(
@@ -437,7 +420,10 @@ const Sidebar = () => {
         .patch(
           ApiConstants.PROFILE,
           {
-            previousEmployers: [...formValueAddress.previousEmployers, data.previousEmployers]
+            previousEmployers: [
+              ...formValueAddress.previousEmployers,
+              data.previousEmployers,
+            ],
           },
           {
             headers: {
@@ -451,7 +437,7 @@ const Sidebar = () => {
           }
         )
         .then((response) => {
-          formValueAddress.previousEmployers.push(data.previousEmployers)
+          formValueAddress.previousEmployers.push(data.previousEmployers);
 
           setSuccessMessageRenameLocation("Sucecessfully Updated");
           setTimeout(() => {
@@ -466,11 +452,8 @@ const Sidebar = () => {
             Interceptor(error.response.status);
           }
         })
-
-    )
-
-  }
-
+    );
+  };
 
   // name and address edit section End
 
@@ -520,13 +503,11 @@ const Sidebar = () => {
         overallExperience: userData[0].candidate.overallExperience,
         previousEmployers: userData[0].candidate.previousEmployers,
       });
-   
-      const strengthValue = calculateProfileStrength(userData[0].candidate)
-      setProfileStrength(strengthValue)
+
+      const strengthValue = calculateProfileStrength(userData[0].candidate);
+      setProfileStrength(strengthValue);
     }
   }, [userData]);
-
-  
 
   return (
     <>
@@ -550,10 +531,16 @@ const Sidebar = () => {
               aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true"
             >
-              <div className="modal-dialog modal-dialog-centered" role="document">
+              <div
+                className="modal-dialog modal-dialog-centered"
+                role="document"
+              >
                 <div className="modal-content modalContent">
                   <div className="modal-header">
-                    <h5 className="modal-title mx-3 " id="exampleModalLongTitle">
+                    <h5
+                      className="modal-title mx-3 "
+                      id="exampleModalLongTitle"
+                    >
                       {" "}
                       Edit Name and Location
                     </h5>
@@ -570,10 +557,14 @@ const Sidebar = () => {
                     <form onSubmit={handleSubmit(onSubmitNameLocation)}>
                       {promiseInProgress === true ? <Loading /> : null}
 
-                      <div className="row m-3 ">
-                        <label className="labelPos">Name </label>
+                      {/* Name Input */}
+                      <div className="row m-3">
+                        <label className="labelPos" htmlFor="fullname">
+                          Name
+                        </label>
                         <input
                           type="text"
+                          id="fullname"
                           className="form-control"
                           value={formValue.fullname}
                           onChange={handleChange}
@@ -581,10 +572,14 @@ const Sidebar = () => {
                         />
                       </div>
 
-                      <div className="row m-3 ">
-                        <label className="labelPos">Current City </label>
+                      {/* Current City Input */}
+                      <div className="row m-3">
+                        <label className="labelPos" htmlFor="currentCity">
+                          Current City
+                        </label>
                         <input
                           type="text"
+                          id="currentCity"
                           className="form-control"
                           value={formValue.currentCity}
                           onChange={handleChange}
@@ -592,10 +587,14 @@ const Sidebar = () => {
                         />
                       </div>
 
-                      <div className="row m-3 ">
-                        <label className="labelPos">Country </label>
+                      {/* Country Input */}
+                      <div className="row m-3">
+                        <label className="labelPos" htmlFor="country">
+                          Country
+                        </label>
                         <input
                           type="text"
+                          id="country"
                           className="form-control"
                           value={formValue.country}
                           onChange={handleChange}
@@ -603,6 +602,7 @@ const Sidebar = () => {
                         />
                       </div>
 
+                      {/* Submit Button */}
                       <div className="modal-body d-flex justify-content-center">
                         <button
                           type="submit"
@@ -612,7 +612,12 @@ const Sidebar = () => {
                           Save
                         </button>
                       </div>
-                      <p className="text-center fs-6" style={{ color: "green" }}>
+
+                      {/* Success Message */}
+                      <p
+                        className="text-center fs-6"
+                        style={{ color: "green" }}
+                      >
                         {successMessageRenameLocation}
                       </p>
                     </form>
@@ -673,16 +678,12 @@ const Sidebar = () => {
               </p>
 
               <p className="text-center">
-
-                <i
-                  className="fa fa-map-marker me-2"
-                  aria-hidden="true"
-                ></i>
+                <i className="fa fa-map-marker me-2" aria-hidden="true"></i>
                 {formValue.currentCity} ,{formValue.country}
               </p>
             </div>
 
-            <ProfileStrengthIndicator   profileStrengthVal={ProfileStrength} /> 
+            <ProfileStrengthIndicator profileStrengthVal={ProfileStrength} />
 
             {/* <div className="sidebarBtnGroup">
 
@@ -750,7 +751,10 @@ const Sidebar = () => {
               aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true"
             >
-              <div className="modal-dialog modal-dialog-centered" role="document">
+              <div
+                className="modal-dialog modal-dialog-centered"
+                role="document"
+              >
                 <div className="modal-content modalContent">
                   <div className="modal-header">
                     <h5 className="modal-title mx-3" id="exampleModalLongTitle">
@@ -828,7 +832,10 @@ const Sidebar = () => {
                         </button>
                       </div>
 
-                      <p className="text-center fs-6" style={{ color: "green" }}>
+                      <p
+                        className="text-center fs-6"
+                        style={{ color: "green" }}
+                      >
                         {successMessageAddress}
                       </p>
                     </form>
@@ -856,10 +863,7 @@ const Sidebar = () => {
             <div className="row pb-2">
               <div className="col">
                 <MdEmail />
-                <span className="professional-candidate-heading">
-                  {" "}
-                  Email
-                </span>
+                <span className="professional-candidate-heading"> Email</span>
               </div>
               <div className="col" style={{ textAlign: "end" }}>
                 <span className="professional-candidate-subheading">
@@ -939,153 +943,192 @@ const Sidebar = () => {
                     </button>
                   </div>
                   <div className="modal-body">
-                    <form onSubmit={handleSubmit(onSubmitMiddle)}>
-                      {promiseInProgress === true ? <Loading /> : null}
-                      <div className="row m-3 ">
-                        <label className="labelPos">Open to relocate </label>
-                        <select
-                          className="form-control "
-                          name="relocation"
-                          onChange={handleChangeMiddle}
-                        >
-                          <option value={formValueMiddle.relocation} selected disabled > {formValueMiddle.relocation} </option>
-                          <option value="Yes">Yes</option>
-                          <option value="No">No</option>
-                        </select>
-                      </div>
+                  <form onSubmit={handleSubmit(onSubmitMiddle)}>
+  {promiseInProgress === true ? <Loading /> : null}
 
-                      <div className="row m-3 ">
-                        <label className="labelPos">
-                          Do you need Visa Sponsorship ?
-                        </label>
-                        <select
-                          className="form-control "
-                          name="needVisaSponsorship"
-                          onChange={handleChangeMiddle}
-                        >
-                          <option value={formValueMiddle.needVisaSponsorship} selected disabled > {formValueMiddle.needVisaSponsorship} </option>
-                          <option value="Yes">Yes</option>
-                          <option value="No">No</option>
-                        </select>
-                      </div>
+  <div className="row m-3 ">
+    <label className="labelPos" htmlFor="relocation">Open to relocate </label>
+    <select
+      className="form-control "
+      id="relocation" // Add an id to associate the label
+      name="relocation"
+      onChange={handleChangeMiddle}
+    >
+      <option
+        value={formValueMiddle.relocation}
+        selected
+        disabled
+      >
+        {formValueMiddle.relocation}
+      </option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
 
-                      <div className="row m-3 ">
-                        <label className="labelPos">
-                          Type of Job you want*
-                        </label>
-                        <select
-                          className="form-control "
-                          name="typeOfJob"
-                          onChange={handleChangeMiddle}
-                        >
-                          <option value={formValueMiddle.typeOfJob} selected disabled > {formValueMiddle.typeOfJob} </option>
-                          <option value="Fulltime"> Fulltime</option>
-                          <option value="C2C"> C2C </option>
-                          <option value="C2H"> C2H </option>
-                          <option value="Parttime"> Parttime </option>
-                        </select>
-                      </div>
+  <div className="row m-3 ">
+    <label className="labelPos" htmlFor="needVisaSponsorship">
+      Do you need Visa Sponsorship ?
+    </label>
+    <select
+      className="form-control "
+      id="needVisaSponsorship" // Add an id to associate the label
+      name="needVisaSponsorship"
+      onChange={handleChangeMiddle}
+    >
+      <option
+        value={formValueMiddle.needVisaSponsorship}
+        selected
+        disabled
+      >
+        {formValueMiddle.needVisaSponsorship}
+      </option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
 
-                      <div className="row m-3">
-                        <label className="labelPos">Role you want*</label>
-                        <input
-                          type="text"
-                          list="jobRoledata"
-                          className="form-control "
-                          name="interestedRole"
-                          value={formValueMiddle.interestedRole}
-                          onChange={handleChangeMiddle}
+  <div className="row m-3 ">
+    <label className="labelPos" htmlFor="typeOfJob">
+      Type of Job you want*
+    </label>
+    <select
+      className="form-control "
+      id="typeOfJob" // Add an id to associate the label
+      name="typeOfJob"
+      onChange={handleChangeMiddle}
+    >
+      <option
+        value={formValueMiddle.typeOfJob}
+        selected
+        disabled
+      >
+        {formValueMiddle.typeOfJob}
+      </option>
+      <option value="Fulltime">Fulltime</option>
+      <option value="C2C">C2C</option>
+      <option value="C2H">C2H</option>
+      <option value="Parttime">Parttime</option>
+    </select>
+  </div>
 
-                        />
-                        <datalist id="jobRoledata">
-                          {jobRoleSelection.jobRoleList.data.map((d, i) => {
-                            return (
-                              <>
-                                <option key={i} value={d.role} />
-                              </>
-                            );
-                          })}
-                        </datalist>
-                      </div>
+  <div className="row m-3">
+    <label className="labelPos" htmlFor="interestedRole">
+      Role you want*
+    </label>
+    <input
+      type="text"
+      list="jobRoledata"
+      className="form-control "
+      id="interestedRole" // Add an id to associate the label
+      name="interestedRole"
+      value={formValueMiddle.interestedRole}
+      onChange={handleChangeMiddle}
+    />
+    <datalist id="jobRoledata">
+      {jobRoleSelection.jobRoleList.data.map((d) => {
+        return (
+          <option key={d.role} value={d.role} />
+        );
+      })}
+    </datalist>
+  </div>
 
-                      <div className="row m-3 ">
-                        <label className="labelPos"> Current Role* </label>
-                        <input
-                          type="text"
-                          className="form-control "
-                          name="currentRole"
-                          value={formValueMiddle.currentRole}
-                          onChange={handleChangeMiddle}
-                        />
-                      </div>
+  <div className="row m-3 ">
+    <label className="labelPos" htmlFor="currentRole">
+      Current Role*
+    </label>
+    <input
+      type="text"
+      className="form-control "
+      id="currentRole" // Add an id to associate the label
+      name="currentRole"
+      value={formValueMiddle.currentRole}
+      onChange={handleChangeMiddle}
+    />
+  </div>
 
-                      <div className="row m-3 ">
-                        <label className="labelPos">
-                          Expected Rate for C2C/C2H (USD/per hour)
-                        </label>
+  <div className="row m-3 ">
+    <label className="labelPos" htmlFor="expectedRateC2CorC2H">
+      Expected Rate for C2C/C2H (USD/per hour)
+    </label>
+    <input
+      type="number"
+      min="0"
+      className="form-control "
+      id="expectedRateC2CorC2H" // Add an id to associate the label
+      name="expectedRateC2CorC2H"
+      value={
+        formValueMiddle.typeOfJob === "Fulltime"
+          ? ""
+          : formValueMiddle.expectedRateC2CorC2H
+      }
+      onChange={handleChangeMiddle}
+      disabled={
+        formValueMiddle.typeOfJob === "Fulltime"
+          ? true
+          : false
+      }
+    />
+  </div>
 
-                        <input
-                          type="number"
-                          min="0"
-                          className="form-control "
-                          name="expectedRateC2CorC2H"
-                          value={formValueMiddle.typeOfJob === "Fulltime" ? "" : formValueMiddle.expectedRateC2CorC2H}
-                          onChange={handleChangeMiddle}
-                          disabled={formValueMiddle.typeOfJob === "Fulltime" ? true : false}
-                        />
-                      </div>
+  <div className="row m-3 ">
+    <label className="labelPos" htmlFor="timeToJoin">
+      When can you join
+    </label>
+    <select
+      className="form-control "
+      id="timeToJoin" // Add an id to associate the label
+      name="timeToJoin"
+      onChange={handleChangeMiddle}
+    >
+      <option
+        value={formValueMiddle.timeToJoin}
+        selected
+        disabled
+      >
+        {formValueMiddle.timeToJoin}
+      </option>
+      <option value={1}>1</option>
+      <option value={2}>2</option>
+      <option value={3}>3</option>
+      <option value={4}>4</option>
+    </select>
+  </div>
 
-                      <div className="row m-3 ">
-                        <label className="labelPos">
+  <div className="row m-3 ">
+    <label className="labelPos" htmlFor="overallExperience">
+      Overall experience(Years)
+    </label>
+    <input
+      type="number"
+      min="0"
+      max="50"
+      className="form-control "
+      id="overallExperience" // Add an id to associate the label
+      name="overallExperience"
+      value={formValueMiddle.overallExperience}
+      onChange={handleChangeMiddle}
+    />
+  </div>
 
-                          When can you join
-                        </label>
-                        <select
-                          className="form-control "
-                          name="timeToJoin"
-                          onChange={handleChangeMiddle}
+  <div className="d-flex justify-content-center mt-3 mb-3">
+    <button
+      type="submit"
+      className="buttonSend me-md-2"
+      style={{ background: "var(--list-item-color)" }}
+    >
+      Save
+    </button>
+  </div>
 
-                        >
-                          <option value={formValueMiddle.timeToJoin} selected disabled >
-                            {formValueMiddle.timeToJoin}
-                          </option>
-                          <option value={1}>1 </option>
-                          <option value={2}>2 </option>
-                          <option value={3}>3 </option>
-                          <option value={4}>4 </option>
-                        </select>
-                      </div>
-
-                      <div className="row m-3 ">
-                        <label className="labelPos">
-                          Overall experience(Years)
-                        </label>
-
-                        <input
-                          type="number"
-                          min="0"
-                          max="50"
-                          className="form-control "
-                          name="overallExperience"
-                          value={formValueMiddle.overallExperience}
-                          onChange={handleChangeMiddle}
-                        />
-                      </div>
-
-                      <div className="d-flex justify-content-center mt-3 mb-3">
-                        <button
-                          type="submit"
-                          className="buttonSend me-md-2"
-                          style={{ background: "var(--list-item-color)" }}
-                        >
-                          Save
-                        </button>
-                      </div>
-
-                      <p className="text-center fs-6" style={{ color: "green" }}>
-                        {successMessageRenameLocation}
-                      </p>
-                    </form>
+  <p
+    className="text-center fs-6"
+    style={{ color: "green" }}
+  >
+    {successMessageRenameLocation}
+  </p>
+</form>
 
                   </div>
                 </div>
@@ -1130,12 +1173,15 @@ const Sidebar = () => {
               </div>
             </div>
             <div className="row pb-2">
-              <div className="col-4" style={{ paddingRight: '0px' }}>
+              <div className="col-4" style={{ paddingRight: "0px" }}>
                 <span className="professional-candidate-heading">
                   Role You Want
                 </span>
               </div>
-              <div className="col-8" style={{ textAlign: "end", paddingLeft: '0px' }}>
+              <div
+                className="col-8"
+                style={{ textAlign: "end", paddingLeft: "0px" }}
+              >
                 <span className="professional-candidate-subheading">
                   {formValueMiddle.interestedRole}
                 </span>
@@ -1161,7 +1207,9 @@ const Sidebar = () => {
               </div>
               <div className="col-3" style={{ textAlign: "end" }}>
                 <span className="professional-candidate-subheading">
-                  {formValueMiddle.typeOfJob === "Fulltime" ? "NA" : "$ " + formValueMiddle.expectedRateC2CorC2H}
+                  {formValueMiddle.typeOfJob === "Fulltime"
+                    ? "NA"
+                    : "$ " + formValueMiddle.expectedRateC2CorC2H}
                 </span>
               </div>
             </div>
@@ -1222,7 +1270,10 @@ const Sidebar = () => {
               aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true"
             >
-              <div className="modal-dialog modal-dialog-centered" role="document">
+              <div
+                className="modal-dialog modal-dialog-centered"
+                role="document"
+              >
                 <div className="modal-content modalContent">
                   <div className="modal-header">
                     <h5 className="modal-title mx-3" id="exampleModalLongTitle">
@@ -1258,7 +1309,6 @@ const Sidebar = () => {
                           Save
                         </button>
                       </div>
-
                     </form>
                     <p className="text-center fs-6" style={{ color: "green" }}>
                       {successMessageAddress}
@@ -1269,18 +1319,33 @@ const Sidebar = () => {
             </div>
           </div>
 
-
           <div className="d-flex flex-row flex-wrap">
-            {formValueAddress.previousEmployers.length > 0
-              ? formValueAddress.previousEmployers.map((val, i) => {
-                return (
-                  <div className="previous-employer-box pt-2 m-1" style={{ height: "35px", width: "auto", borderRadius: "5px" }} >
-                    <p key={i}>{val} </p> <button type="button" onClick={() => handleDeleteCompany(val)}> <RxCrossCircled /> </button>
-                  </div>
-                )
-              }) : ""}
-          </div>
+          {formValueAddress.previousEmployers.length > 0
+  ? formValueAddress.previousEmployers.map((val) => {
+      return (
+        <div
+          key={val} // Use val as the key instead of i
+          className="previous-employer-box pt-2 m-1"
+          style={{
+            height: "35px",
+            width: "auto",
+            borderRadius: "5px",
+          }}
+        >
+          <p>{val}</p>
+          <button
+            type="button"
+            onClick={() => handleDeleteCompany(val)}
+          >
+            <RxCrossCircled />
+          </button>
+        </div>
+      );
+    })
+  : ""}
 
+
+          </div>
         </div>
       </div>
     </>

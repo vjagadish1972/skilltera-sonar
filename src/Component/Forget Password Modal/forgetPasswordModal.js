@@ -9,11 +9,12 @@ import Loading from "../../Component/Loading/loading";
 import "./forgetPasswordModal.css";
 import { Interceptor } from "../../ErrorStatus/errorStatus";
 import Swal from "sweetalert2";
+import PropTypes from "prop-types";
 
 export default function ForgetPasswordModal({ disableModal, onClose }) {
-  const [isOpen, setIsOpen] = useState(disableModal);
+  const [isOpen ] = useState(disableModal);
 
-  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [ setIsSubmitting] = useState(true);
 
   const { promiseInProgress } = usePromiseTracker();
   const {
@@ -33,16 +34,16 @@ export default function ForgetPasswordModal({ disableModal, onClose }) {
     mode: "onBlur",
   });
 
-  const [email, setemail] = useState("");
-  const [getOtp, setgetOtp] = useState(false);
-  const [otpButtonDisabled, setotpButtonDisabled] = useState(true);
+  const [email, setEmail] = useState("");
+  const [getOtp, setGetOtp] = useState(false);
+  const [otpButtonDisabled, setOtpButtonDisabled] = useState(true);
 
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [passwordErrorMessage, setPasswordErrorMessage] = useState("");
   const [disable, setDisable] = useState(true);
 
   const onSubmitEmail = (data) => {
-    setemail(data.email);
+    setEmail(data.email);
 
     trackPromise(
       axios
@@ -50,7 +51,7 @@ export default function ForgetPasswordModal({ disableModal, onClose }) {
           email: data.email,
         })
         .then((response) => {
-          setgetOtp(true);
+          setGetOtp(true);
           reset();
         })
         .catch((error) => {
@@ -64,7 +65,7 @@ export default function ForgetPasswordModal({ disableModal, onClose }) {
           }
         })
     );
-    setotpButtonDisabled(false);
+    setOtpButtonDisabled(false);
     reset();
   };
 
@@ -124,7 +125,7 @@ export default function ForgetPasswordModal({ disableModal, onClose }) {
     setDisable(false);
   };
   return (
-    <>
+    
       <Modal show={isOpen} centered onHide={onClose}>
         <Modal.Header closeButton>
           <Modal.Title>Forgot Password</Modal.Title>
@@ -276,6 +277,11 @@ export default function ForgetPasswordModal({ disableModal, onClose }) {
           </div>
         </Modal.Body>
       </Modal>
-    </>
   );
 }
+
+// Define Prop Types
+ForgetPasswordModal.propTypes = {
+  disableModal: PropTypes.bool.isRequired, // Validate the `disableModal` prop as a required boolean
+  onClose: PropTypes.func.isRequired, // Validate the `onClose` prop as a required function
+};

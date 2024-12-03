@@ -210,30 +210,72 @@ export default function StudentCard(props) {
 
     return (
         <>
-            {props.data.length != 0 && props.data.map(items => {
+            {props.data.length !== 0 && props.data.map(items => {
                 return (
                     <div className='card-box mb-2'>
                         <div className='patch-card'>
                             <div className="d-flex justify-content-end menu-item-box">
-                                {titleSelection.menuSelection != 'shortlisted' && <div className='menu-item-box-hover-feature'>
-                                    <span data-toggle="tooltip" title="Shortlisted" onClick={() => cardItemSelection('shortlisted', items._id)}>
+                                {titleSelection.menuSelection !== 'shortlisted' && <div className='menu-item-box-hover-feature'>
+                                    <span
+    className="menu-item-box-hover-feature"
+    data-toggle="tooltip"
+    title="Shortlisted"
+    onClick={() => cardItemSelection('shortlisted', items._id)}
+    role="button"
+    tabindex="0"
+    aria-label="Mark as Shortlisted"
+>
                                         <span className="iconify me-2" data-icon="fluent:task-list-square-person-20-filled" style={{ fontSize: '26px' }}></span>
                                     </span>
                                 </div>}
-                                {titleSelection.menuSelection != 'rejected' && <div className='menu-item-box-hover-feature'>
-                                    <span data-toggle="tooltip" title="Rejected" onClick={() => cardItemSelection('rejected', items._id)}>
+                                {titleSelection.menuSelection !== 'rejected' && <div className='menu-item-box-hover-feature'>
+                                    <span
+    className="menu-item-box-hover-feature"
+    data-toggle="tooltip"
+    title="Rejected"
+    onClick={() => cardItemSelection('rejected', items._id)}
+    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') cardItemSelection('rejected', items._id); }}
+    role="button"
+    tabindex="0"
+    aria-label="Mark as Rejected"
+>
                                         <span className="iconify me-2" data-icon="ic:round-group-remove" style={{ fontSize: '26px' }}></span>
                                     </span>
                                 </div>}
-                                {titleSelection.menuSelection != 'interviewing' && <div className='menu-item-box-hover-feature'>
-                                    <span data-toggle="tooltip" title="Interviewing" onClick={() => cardItemSelection('interviewing', items._id)}>
-                                        <span className="iconify me-2" data-icon="fa-solid:street-view" style={{ fontSize: '26px' }}></span>
-                                    </span>
+                                {titleSelection.menuSelection !== 'interviewing' && <div className='menu-item-box-hover-feature'>
+                                    <span
+  data-toggle="tooltip"
+  title="Interviewing"
+  onClick={() => cardItemSelection('interviewing', items._id)}
+  role="button"
+  tabindex="0"
+  aria-label="Mark as Interviewing"
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      cardItemSelection('interviewing', items._id);
+    }
+  }}
+>
+  <span className="iconify me-2" data-icon="fa-solid:street-view" style={{ fontSize: '26px' }}></span>
+</span>
                                 </div>}
-                                {titleSelection.menuSelection != 'saved' && <div className='menu-item-box-hover-feature'>
-                                    <span data-toggle="tooltip" title="Saved" onClick={() => cardItemSelection('saved', items._id)}>
-                                        <span className="iconify me-2" data-icon="dashicons:cloud-saved" style={{ fontSize: '26px' }}></span>
-                                    </span>
+                                {titleSelection.menuSelection !== 'saved' && <div className='menu-item-box-hover-feature'>
+                                    <span
+  data-toggle="tooltip"
+  title="Saved"
+  onClick={() => cardItemSelection('saved', items._id)}
+  role="button"
+  tabindex="0"
+  aria-label="Mark as Saved"
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      cardItemSelection('saved', items._id);
+    }
+  }}
+>
+  <span className="iconify me-2" data-icon="dashicons:cloud-saved" style={{ fontSize: '26px' }}></span>
+</span>
+
                                 </div>}
                             </div>
                         </div>
@@ -249,14 +291,14 @@ export default function StudentCard(props) {
                                     </div>
                                     <div className='col-lg-9'>
 
-                                        {items.skills.length == 0 ? <span className='card-menu-items'>NA</span> : items.skills.map(s => {
+                                        {items.skills.length === 0 ? <span className='card-menu-items'>NA</span> : items.skills.map(s => {
                                             const starTotal = 5;
                                             const starPercentage = (s.rating / starTotal) * 100;
                                             const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
                                             return (
                                                 <>
-                                                    <span className='card-menu-items-data dyanmic-size-changed'>{s.skill}&nbsp;</span>
-                                                    <div className="stars-outer dyanmic-size-changed">
+                                                    <span key={s.skill} className='card-menu-items-data dyanmic-size-changed'>{s.skill}&nbsp;</span>
+                                                    <div key={s.skill} className="stars-outer dyanmic-size-changed">
                                                         <div className="stars-inner" style={{ width: starPercentageRounded }}></div>
                                                         &#44;&nbsp;
                                                     </div>
@@ -305,16 +347,24 @@ export default function StudentCard(props) {
                                     <div className='col-lg-3'>
                                         <span className='card-menu-items'>EDUCATION</span>
                                     </div>
-                                    {items.education.length == 0 ? <span className='col-lg-9 card-menu-items'>NA</span> : items.education.slice(0, 1).map(e => {
-                                        const endDate = new Date(e.endDate).getFullYear();
-                                        const startDate = new Date(e.startDate).getFullYear();
+                                    {items.education.length == 0 ? (
+  <span className='col-lg-9 card-menu-items'>NA</span>
+) : (
+  items.education.slice(0, 1).map(e => {
+    const endDate = new Date(e.endDate).getFullYear();
+    const startDate = new Date(e.startDate).getFullYear();
 
-                                        return (<div className='col-lg-9'>
-                                            <span className='college-degree card-menu-items-data'>{e.degree}, {e.major} &nbsp; ({startDate} - {endDate})</span><br />
-                                            <span className='sub-heading card-menu-items-data'>{e.school} </span>
-                                        </div>);
+    return (
+      <div className='col-lg-9' key={e.id}> {/* Add key prop */}
+        <span className='college-degree card-menu-items-data'>
+          {e.degree}, {e.major} &nbsp; ({startDate} - {endDate})
+        </span><br />
+        <span className='sub-heading card-menu-items-data'>{e.school}</span>
+      </div>
+    );
+  })
+)}
 
-                                    })}
                                 </div>
                             </div>
 
@@ -323,18 +373,44 @@ export default function StudentCard(props) {
                                     <div className='col'>
                                         <div className='d-flex justify-content-start view-full-profile'>
 
-                                            <span className='' onClick={() => viewFullProfile
+                                        <span
+  className="your-class-name"
+  onClick={() => viewFullProfile(items._id)}
+  role="button"
+  tabIndex="0"
+  aria-label="View Full Profile"
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      viewFullProfile(items._id);
+    }
+  }}
+>
+  View Full Profile
+</span>
 
-                                                (items._id)}>View Full Profile</span>
 
                                         </div>
                                     </div>
                                     <div className='col'>
-                                        <div className='d-flex justify-content-end start-chat'>
-                                            <span onClick={() => startChat(items._id, items.fullname)}>Start Chat</span> &nbsp;
-                                            <span className="iconify me-2" data-icon="bxs:message" style={{ color: '#6E4DCD' }}></span>
-                                        </div>
-                                    </div>
+    <div className='d-flex justify-content-end start-chat'>
+        <span
+            role="button"
+            tabIndex="0"
+            onClick={() => startChat(items._id, items.fullname)}
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    startChat(items._id, items.fullname);
+                }
+            }}
+            aria-label="Start Chat"
+        >
+            Start Chat
+        </span>
+        &nbsp;
+        <span className="iconify me-2" data-icon="bxs:message" style={{ color: '#6E4DCD' }}></span>
+    </div>
+</div>
+
                                 </div>
                             </div>
 
@@ -350,25 +426,27 @@ export default function StudentCard(props) {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="modal-body">
                         <div className="form-group">
-                            <label>Subject</label>
-                            <input type="text" className="form-control"
-                                placeholder="FrontEnd Developer"
-                                {...register('subject', {
-                                    required: true
-                                })}
-
-                            />
+                        <label htmlFor="subject">Subject</label> {/* Link label with input */}
+    <input 
+        type="text" 
+        className="form-control"
+        id="subject"  {/* Added id */}
+        placeholder="FrontEnd Developer"
+        {...register('subject', { required: true })}
+    />
                             {errors.subject?.type === 'required' && <p role="alert" style={{ color: "red" }}>Subject is required</p>}
                         </div><br />
                         <div className="form-group">
-                            <label>Messgae</label>
-                            <textarea type="textarea"
-                                rows="8"
-                                className="form-control"
-                                placeholder="Write something to the candidate..."
-                                {...register('message', {
-                                    required: true
-                                })} />
+                        <label htmlFor="message">Message</label> {/* Added htmlFor attribute */}
+    <textarea
+        id="message" {/* Added id to associate with the label */}
+        rows="8"
+        className="form-control"
+        placeholder="Write something to the candidate..."
+        {...register('message', {
+            required: true
+        })}
+    />
                             {errors.message?.type === 'required' && <p role="alert" style={{ color: "red" }}>Message is required</p>}
                         </div>
                     </div>

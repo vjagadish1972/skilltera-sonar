@@ -13,9 +13,8 @@ import { selectSidebarMenuSelection } from "../../Redux/Reducer/sidebarMenuSelec
 import "./navBarNew.css";
 
 export default function NavBarNew() {
-  const ItemSelection = useSelector((state) => {
-    return state.homeItemSelection;
-  });
+  useSelector((state) => state.homeItemSelection);
+
   const dispatch = useDispatch();
 
   const [value, setValue] = useState(0);
@@ -99,7 +98,7 @@ export default function NavBarNew() {
   const { notificationStatus } = useContext(userContext);
 
   const [candidateData, setCandidateData] = useState(false);
-  const [adminData, setAdminData] = useState(false);
+  const [setAdminData] = useState(false);
   const [companyData, setCompanyData] = useState(false);
   const [candidateDataRef, setCandidateDataRef] = useState(false);
   const [candidateAndReferal, setCandidateAndReferal] = useState(false);
@@ -174,7 +173,7 @@ export default function NavBarNew() {
                           className="nav-link"
                           onClick={() => activeClassName("profile")}
                           onKeyDown={(e) => e.key === 'Enter' && activeClassName("profile")}
-                          role="button"
+                          // role="button"
                           tabIndex="0"
                         >
                           Profile 
@@ -193,7 +192,7 @@ export default function NavBarNew() {
                           className="nav-link"
                           onClick={() => activeClassName("referral")}
                           onKeyDown={(e) => e.key === 'Enter' && activeClassName("referral")}
-                          role="button"
+                          // role="button"
                           tabIndex="0"
                         >
                           Referral
@@ -212,7 +211,7 @@ export default function NavBarNew() {
                           className="nav-link"
                           onClick={() => activeClassName("all_jobs")}
                           onKeyDown={(e) => e.key === 'Enter' && activeClassName("all_jobs")}
-                          role="button"
+                         // role="button"
                           tabIndex="0"
                         >
                           All Jobs
@@ -231,7 +230,7 @@ export default function NavBarNew() {
                           className="nav-link"
                           onClick={() => activeClassName("jobStatus")}
                           onKeyDown={(e) => e.key === 'Enter' && activeClassName("jobStatus")}
-                          role="button"
+                         // role="button"
                           tabIndex="0"
                         >
                           Status
@@ -255,7 +254,7 @@ export default function NavBarNew() {
                           className="nav-link"
                           onClick={() => activeClassName("referral")}
                           onKeyDown={(e) => e.key === 'Enter' && activeClassName("referral")}
-                          role="button"
+                         // role="button"
                           tabIndex="0"
                         >
                           Referral
@@ -275,7 +274,7 @@ export default function NavBarNew() {
                             className="nav-link"
                             onClick={() => activeClassName("profile")}
                             onKeyDown={(e) => e.key === 'Enter' && activeClassName("profile")}
-                            role="button"
+                           // role="button"
                             tabIndex="0"
                           >
                             Profile
@@ -296,7 +295,7 @@ export default function NavBarNew() {
                           className="nav-link"
                           onClick={() => activeClassName("all_jobs")}
                           onKeyDown={(e) => e.key === 'Enter' && activeClassName("all_jobs")}
-                          role="button"
+                         // role="button"
                           tabIndex="0"
                         >
                           All Jobs
@@ -315,7 +314,7 @@ export default function NavBarNew() {
                           className="nav-link"
                           onClick={() => activeClassName("recommended_jobs")}
                           onKeyDown={(e) => e.key === 'Enter' && activeClassName("recommended_jobs")}
-                          role="button"
+                         // role="button"
                           tabIndex="0"
                         >
                           Recommended Jobs
@@ -335,7 +334,7 @@ export default function NavBarNew() {
                             className="nav-link"
                             onClick={() => activeClassName("about")}
                             onKeyDown={(e) => e.key === 'Enter' && activeClassName("about")}
-                            role="button"
+                           // role="button"
                             tabIndex="0"
                           >
                             About Us

@@ -45,7 +45,7 @@ export default function AdminSidebar() {
           <ul className="list-group list-group-flush">
             <li
               className={
-                titleSelection.menuSelection == "Company Signup"
+                titleSelection.menuSelection === "Company Signup"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -62,7 +62,7 @@ export default function AdminSidebar() {
 
             <li
               className={
-                titleSelection.menuSelection == "Candidate Signup"
+                titleSelection.menuSelection === "Candidate Signup"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -78,7 +78,7 @@ export default function AdminSidebar() {
 
             <li
               className={
-                titleSelection.menuSelection == "Reset Company Password"
+                titleSelection.menuSelection === "Reset Company Password"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -94,7 +94,7 @@ export default function AdminSidebar() {
 
             <li
               className={
-                titleSelection.menuSelection == "All Companies"
+                titleSelection.menuSelection === "All Companies"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -110,7 +110,7 @@ export default function AdminSidebar() {
 
             <li
               className={
-                titleSelection.menuSelection == "allCandidate"
+                titleSelection.menuSelection === "allCandidate"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -125,7 +125,7 @@ export default function AdminSidebar() {
             </li>
             <li
               className={
-                titleSelection.menuSelection == "Skill Add/Remove"
+                titleSelection.menuSelection === "Skill Add/Remove"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -140,7 +140,7 @@ export default function AdminSidebar() {
             </li>
             <li
               className={
-                titleSelection.menuSelection == "Job Role Add/Remove"
+                titleSelection.menuSelection === "Job Role Add/Remove"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -156,7 +156,7 @@ export default function AdminSidebar() {
 
             <li
               className={
-                titleSelection.menuSelection == "Job Approval"
+                titleSelection.menuSelection === "Job Approval"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
@@ -172,7 +172,7 @@ export default function AdminSidebar() {
 
             <li
               className={
-                titleSelection.menuSelection == "logout"
+                titleSelection.menuSelection === "logout"
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }

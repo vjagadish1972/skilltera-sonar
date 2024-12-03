@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useMemo} from "react";
 import ApiConstants from "../Services/apiconstants";
 import axios from "axios";
 
@@ -146,8 +146,21 @@ const [intialJobDesc, setJobDesc] = useState({
         }
     }, [jobList]);
 
+// Memoize the value object to avoid unnecessary re-renders
+  const contextValue = useMemo(
+    () => ({
+      jobList,
+      intialJobDesc,
+      skillList,
+      companiesList,
+      allJobRole,
+      updateSkillListData,
+    }),
+    [jobList, intialJobDesc, skillList, companiesList, allJobRole]
+  );
+
     return (
-        <jobApprovalContext.Provider value={{ jobList, intialJobDesc ,skillList, companiesList,allJobRole ,updateSkillListData}}>
+        <jobApprovalContext.Provider value={contextValue}>
             {props.children}
         </jobApprovalContext.Provider>
     );
