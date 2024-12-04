@@ -20,15 +20,12 @@ export default function JobDescription(props) {
 
     if (sessionStorage.getItem('candidate_data') != null) {
         const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-         mixpanelData = candidateDataMix.candidate.email;
          token = candidateDataMix.token;
-         userId = candidateDataMix.candidate._id;
-         candidateEmailId = candidateDataMix.candidate.email;
     }
     const [applyClicked, setapplyClicked] = useState(false);
     const [jobId, setJobId] = useState('')
 
-    const { isLoading, error, data, isFetching } = useQuery(['applyJob', jobId], async () => {
+    const { isLoading } = useQuery(['applyJob', jobId], async () => {
         return await axios.post(ApiConstants.APPLY_JOBS_FOR_CANDIDATE_BY_ID + jobId, {}, {
             headers: {
                 Accept: "application/json",

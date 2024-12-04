@@ -147,14 +147,14 @@ export default function Filter() {
                                 placeholder='Company Name'
                                 onChange={handleCompanyChange}>
                                 <option value="">Company Name</option>
-                                {companyListSelection.companyList.data.map((item, key) => {
-                                    return (
-                                        <>
-                                            <option key={key} value={item.companyName}>{item.companyName}</option>
-                                        </>
-                                    );
+                                {companyListSelection.companyList.data.map((item, index) => {
+    return (
+        <option key={`${item.companyName}-${index}`} value={item.companyName}>
+            {item.companyName}
+        </option>
+    );
+})}
 
-                                })}
                             </select>
                         </div>
 

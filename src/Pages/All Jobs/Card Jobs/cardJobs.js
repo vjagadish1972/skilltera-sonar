@@ -30,13 +30,11 @@ export default function CardJobs() {
 
     if (sessionStorage.getItem('candidate_data') != null) {
         const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-         mixpanelData = candidateDataMix.candidate.email;
+         
          token = candidateDataMix.token;
-         userId = candidateDataMix.candidate._id;
-         candidateEmailId = candidateDataMix.candidate.email;
     }
 
-    const { isLoading, error, data, isFetching, refetch } = useQuery(['allJobs', getFilterDataJobs], async () => {
+    const { isLoading, error, data, refetch } = useQuery(['allJobs', getFilterDataJobs], async () => {
         return await axios.get(ApiConstants.GET_ALL_JOBS_BASED_ON_RANKING_FOR_CANDIDATE, {
             headers: {
                 Accept: "application/json",
@@ -131,11 +129,14 @@ export default function CardJobs() {
                                                     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                                                     return (
                                                         <>
-                                                            <div className='company-card' style={{
+                                                            <div className='company-card' tabIndex={0} style={{
                                                                 cursor: 'pointer',
                                                                 border: cardBorder.id == d._id ? cardBorder.border : '1px solid #dadada'
                                                             }}
                                                                 onClick={() => jobDataPerCard(d)}>
+                                                                onKeyPress={(e) => { if (e.key === 'Enter' || e.key === ' ') jobDataPerCard(d); }}
+                                                                aria-label={`View job details for ${d?.jobTitle}`}
+                                                                
                                                                 <div className='company-logo'>
                                                                     <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '60px', height: '60px' }} />
                                                                 </div>

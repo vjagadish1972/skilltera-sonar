@@ -18,7 +18,7 @@ export default function Admin() {
     reset,
     formState: { errors },
   } = useForm();
-  const [isEmailVerified, setisEmailVerified] = useState(false);
+  
 
 
   const onSubmit = (data) => {
@@ -104,8 +104,9 @@ export default function Admin() {
         <h2 className="d-flex justify-content-center">Admin Sign-in</h2>
         <form onSubmit={handleSubmit(onSubmit)} ref={formRef}>
           <div className="mb-3">
-            <label className="form-label">Email address</label>
+            <label className="form-label" htmlFor="email">Email address</label>
             <input
+              id="email"
               type="email"
               className="form-control"
               placeholder="Email"
@@ -125,8 +126,9 @@ export default function Admin() {
             {/* <p style={{ 'color': 'red' }}>{errors.email?.type === 'required' && "Email is required"} </p> */}
           </div>
           <div className="mb-3">
-            <label className="form-label">Password</label>
+            <label className="form-label" htmlFor="password">Password</label>
             <input
+              id="password"
               type="password"
               className="form-control"
               placeholder="Password"
