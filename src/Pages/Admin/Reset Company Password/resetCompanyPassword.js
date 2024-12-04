@@ -79,32 +79,36 @@ export default function ResetCompanyPassword() {
 
         <form onSubmit={handleSubmit(onSubmit)} ref={formRef}>
           <div className="mb-3">
-            <label className="form-label">Email address</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Email"
-              {...register("email", {
-                required: true,
-                pattern: {
-                  value:
-                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  message: <p>invalid email</p>,
-                },
-              })}
-            />
+          <label className="form-label" htmlFor="email">Email address</label>
+<input
+  id="email"
+  type="email"
+  className="form-control"
+  placeholder="Email"
+  {...register("email", {
+    required: true,
+    pattern: {
+      value: /^[\w-]+(\.[\w-]+)*@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/,
+      message: "Invalid email",
+    },
+  })}
+/>
+
+
             {errors.email && (
               <p style={{ color: "red" }}>Enter the valid email </p>
             )}
           </div>
           <div className="mb-3">
-            <label className="form-label">New Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="New Password"
-              {...register("password", { required: true })}
-            />
+           <label className="form-label" htmlFor="password">New Password</label>
+<input
+  id="password"
+  type="password"
+  className="form-control"
+  placeholder="New Password"
+  {...register("password", { required: true })}
+/>
+
             <p style={{ color: "red" }}>
               {errors.password?.type === "required" && "Password is required"}
             </p>

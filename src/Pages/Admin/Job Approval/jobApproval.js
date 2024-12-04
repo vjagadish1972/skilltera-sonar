@@ -680,15 +680,17 @@ const JobApproval = () => {
                          {...register("searchSkill")}
                           required />
                         <datalist id="data">
-                          {skillList.length != 1 && skillList.slice(1, skillList.length).map((item, key) => {
+                          {skillList.length !== 1 && skillList.slice(1, skillList.length).map((item) => {
                             if (item.skill.toUpperCase().includes(skillQuery.toUpperCase())) {
                               return (
                                 <>
-                                  <option key={key} value={item.skill} />
+                                 <option key={item.skill} value={item.skill} />
 
                                 </>
                               )
                             }
+                            // Return null for items that do not match the query
+                           return null;
                           })}
                         </datalist>
                         <div className="input-group-append  mx-1">
@@ -705,7 +707,7 @@ const JobApproval = () => {
                             addSkill.map((e, i) => {
 
                               return (
-                                <div className='d-flex justify-content-between m-3 '>
+                                <div className='d-flex justify-content-between m-3' key={e.skillId.skill || e.skill}>
                                   <div className="col-md-2 col-sm-2" >
                                     <span className='same-formating'> {e.skillId.skill} {e.skillName} </span>
                                   </div>
@@ -772,13 +774,16 @@ const JobApproval = () => {
             <div className="modal-body">
               <form onSubmit={onSubmitNewSkill}>
                 <div className="row m-3 ">
-                  <label className="labelPos">Add New Skill </label>
-                  <input type="text"
-                    className="form-control"
-                    placeholder="Enter Skill"
-                    value={newSkill}
-                    onChange={(e) => setNewSkill(e.target.value)}
-                  />
+                <label className="labelPos" htmlFor="newSkillInput">Add New Skill</label>
+<input
+  type="text"
+  className="form-control"
+  placeholder="Enter Skill"
+  id="newSkillInput"  // Add an id for the input field
+  value={newSkill}
+  onChange={(e) => setNewSkill(e.target.value)}
+/>
+
                 </div>
 
                 <div className="d-flex justify-content-center mt-3 mb-3">

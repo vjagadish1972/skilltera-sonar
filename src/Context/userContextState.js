@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useMemo} from "react";
 import ApiConstants from "../Services/apiconstants";
 import axios from "axios";
 
@@ -55,18 +55,20 @@ export const UserContextState = (props) => {
     useEffect(() => {
         getData();
     }, [sessionStorage.getItem("user_token")]);
-    return (
-        <userContext.Provider
-            value={{
-                userData,
-                getData,
-                profilePic,
-                setProfilePic,
-                resumeData,
-                setResumeData,
-                notificationStatus
-            }}
-        >
+
+    // Optimize the value object with useMemo
+    const contextValue = useMemo(() => ({
+        userData,
+        getData,
+        profilePic,
+        setProfilePic,
+        resumeData,
+        setResumeData,
+        notificationStatus,
+    }), [userData, profilePic, resumeData, notificationStatus]);
+
+   return (
+        <userContext.Provider value={contextValue}>
             {props.children}
         </userContext.Provider>
     );

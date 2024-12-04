@@ -72,66 +72,65 @@ export default function CompanySignup() {
 
         <h2 className="d-flex justify-content-center">Company Signup</h2>
         <form onSubmit={handleSubmit(onSubmit)} ref={formRef}>
-          <div className="mb-3">
-            <label className="form-label">Company Name</label>
-            <input
-              id="companyName"              
-              type="text"
-              className="form-control border-top-0 border-left-0 border-right-0"
-              placeholder="Company Name"
-              {...register("companyName", {
-                required: true,
-                message: <p>Invalid Company Name</p>,
-              })}
-            />
-            {errors.companyName && (
-              <p style={{ color: "red" }}>Enter the valid Company Name</p>
-            )}
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Email address</label>
-            <input
-              id="email"
-              type="email"
-              className="form-control border-top-0 border-left-0 border-right-0"
-              placeholder="Email"
-              {...register("email", {
-                required: true,
-                pattern: {
-                  value:
-                   /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                  message: <p>invalid email</p>,
-                },
-              })}
-            />
-            {errors.email && (
-              <p style={{ color: "red" }}>Enter the valid email </p>
-            )}
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input
-              id= "password"
-              type="password"
-              className="form-control border-top-0 border-left-0 border-right-0"
-              placeholder="Password"
-              {...register("password", {
-                required: true,
-                pattern: { value: /^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/ },
-              })}
-            />
-            {errors.password && (
-              <p style={{ color: "red" }}>Enter the strong password </p>
-            )}
+  <div className="mb-3">
+    <label className="form-label" htmlFor="companyName">Company Name</label>
+    <input
+      id="companyName"
+      type="text"
+      className="form-control border-top-0 border-left-0 border-right-0"
+      placeholder="Company Name"
+      {...register("companyName", {
+        required: true,
+        message: <p>Invalid Company Name</p>,
+      })}
+    />
+    {errors.companyName && (
+      <p style={{ color: "red" }}>Enter the valid Company Name</p>
+    )}
+  </div>
+  <div className="mb-3">
+    <label className="form-label" htmlFor="email">Email address</label>
+    <input
+      id="email"
+      type="email"
+      className="form-control border-top-0 border-left-0 border-right-0"
+      placeholder="Email"
+      {...register("email", {
+        required: true,
+        pattern: {
+          value:
+           /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+          message: <p>invalid email</p>,
+        },
+      })}
+    />
+    {errors.email && (
+      <p style={{ color: "red" }}>Enter the valid email </p>
+    )}
+  </div>
+  <div className="mb-3">
+    <label className="form-label" htmlFor="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      className="form-control border-top-0 border-left-0 border-right-0"
+      placeholder="Password"
+      {...register("password", {
+        required: true,
+        pattern: { value: /^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/ },
+      })}
+    />
+    {errors.password && (
+      <p style={{ color: "red" }}>Enter the strong password </p>
+    )}
+  </div>
+  <div className="row mt-2 ml-2">
+    <button type="submit" className="btn btn-primary">
+      Create
+    </button>
+  </div>
+</form>
 
-            {/* <p style={{ 'color': 'red' }}>  {errors.password?.type === 'required' && "Password is required" }  </p> */}
-          </div>
-          <div className="row mt-2 ml-2">
-            <button type="submit" className="btn btn-primary" >
-              Create
-            </button>
-          </div>
-        </form>
       </div>
     </>
   );

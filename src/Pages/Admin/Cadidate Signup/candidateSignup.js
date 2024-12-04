@@ -75,7 +75,7 @@ export default function CandidateSignup() {
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} ref={formRef}>
           <div className="mb-3">
-            <label className="form-label">Full Name</label>
+          <label className="form-label" htmlFor="fullName">Full Name</label>
             <input
               id="fullName"
               type="text"
@@ -91,7 +91,7 @@ export default function CandidateSignup() {
             )}
           </div>
           <div className="mb-3">
-            <label className="form-label">Email address</label>
+          <label className="form-label" htmlFor="email" >Email address</label>
             <input
               id="email"
               type="email"
@@ -111,7 +111,7 @@ export default function CandidateSignup() {
             )}
           </div>
           <div className="mb-3">
-            <label className="form-label">Password</label>
+          <label className="form-label" htmlFor="password" >Password</label>
             <input
               id="password"
               type="password"
@@ -119,7 +119,7 @@ export default function CandidateSignup() {
               placeholder="Password"
               {...register("password", {
                 required: true,
-                pattern: { value: /^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/ },
+                pattern: { value: /^(?=.*?[A-Za-z])(?=.*?\d).{6,}$/ },
               })}
             />
             {errors.password && (

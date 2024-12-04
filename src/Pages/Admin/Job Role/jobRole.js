@@ -1,5 +1,5 @@
 import axios from 'axios';
-import react from 'react';
+import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import DataTable from 'react-data-table-component';
@@ -18,7 +18,6 @@ export default function JobRole() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
     } = useForm();
 
     const [pending, setPending] = useState(true);
@@ -190,7 +189,7 @@ export default function JobRole() {
     return (
         <>
             {
-                Object.keys(jobRoleSelection.jobRoleList.data).length && (
+                Object.keys(jobRoleSelection.jobRoleList.data).length > 0 && (
                     <DataTable
                         title='Job Role - Add/Remove '
                         striped

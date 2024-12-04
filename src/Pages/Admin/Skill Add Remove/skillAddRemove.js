@@ -15,7 +15,6 @@ export default function SkillAddRemove() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
     } = useForm();
     const [pending, setPending] = useState(true);
     const [columnsList, setColumnsList] = useState([]);
