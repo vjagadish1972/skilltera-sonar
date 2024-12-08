@@ -137,7 +137,7 @@ export default function CardJobs() {
                                                                 aria-label={`View job details for ${d?.jobTitle}`}
                                                                 
                                                                 <div className='company-logo'>
-                                                                    <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '60px', height: '60px' }} />
+                                                                    <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '60px', height: '60px' }} alt="uesrImageDefault" />
                                                                 </div>
                                                                 <div className='company-info'>
                                                                     <div className='company-heading'>
