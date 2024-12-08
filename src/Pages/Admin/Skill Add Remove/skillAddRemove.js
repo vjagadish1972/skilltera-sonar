@@ -1,5 +1,5 @@
 import axios from 'axios';
-import react, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ApiConstants from '../../../Services/apiconstants';
 import DataTable from "react-data-table-component";
 import Swal from 'sweetalert2';
@@ -28,36 +28,36 @@ export default function SkillAddRemove() {
     );
 
 
-    const skillAdminData = () => {
-        const id = JSON.parse(sessionStorage.getItem("ADMIN")).admin._id;
-        const token = JSON.parse(sessionStorage.getItem("ADMIN")).token;
-        axios
-            .get(ApiConstants.SKILL_VIEW_ALL,
-                {
+    // const skillAdminData = () => {
+    //     const id = JSON.parse(sessionStorage.getItem("ADMIN")).admin._id;
+    //     const token = JSON.parse(sessionStorage.getItem("ADMIN")).token;
+    //     axios
+    //         .get(ApiConstants.SKILL_VIEW_ALL,
+    //             {
 
-                    headers: {
-                        Accept: "application/json",
-                        "Content-type": "application/json",
-                        token: token,
-                        id: id,
-                        "Access-Control-Allow-Origin": true,
-                        "Access-Control-Allow-Methods": "GET, POST, PATCH",
-                    }
+    //                 headers: {
+    //                     Accept: "application/json",
+    //                     "Content-type": "application/json",
+    //                     token: token,
+    //                     id: id,
+    //                     "Access-Control-Allow-Origin": true,
+    //                     "Access-Control-Allow-Methods": "GET, POST, PATCH",
+    //                 }
 
-                })
-            .then((response) => {
-                setValues({
-                    ...values,
-                    skillDataAdmin: response.data.skills,
-                });
-            })
-            .catch((error) => {
-                if ((error.response.status >= 404 && error.response.status <= 499) || (error.response.status >= 502 && error.response.status <= 599)) {
-                    Interceptor(error.response.status)
-                }
+    //             })
+    //         .then((response) => {
+    //             setValues({
+    //                 ...values,
+    //                 skillDataAdmin: response.data.skills,
+    //             });
+    //         })
+    //         .catch((error) => {
+    //             if ((error.response.status >= 404 && error.response.status <= 499) || (error.response.status >= 502 && error.response.status <= 599)) {
+    //                 Interceptor(error.response.status)
+    //             }
 
-            });
-    };
+    //         });
+    // };
 
     useEffect(() => {
         // skillAdminData();
@@ -129,7 +129,7 @@ export default function SkillAddRemove() {
                     ),
                 },
                 {
-                    name: (<>
+                    name: (
                         <form onSubmit={handleSubmit(addingSkillData)}>
                             <div className="input-group">
                                 <input type="text"
@@ -143,7 +143,7 @@ export default function SkillAddRemove() {
                                 </div>
                             </div>
                         </form>
-                    </>)
+                    )
                 },
 
             ]);

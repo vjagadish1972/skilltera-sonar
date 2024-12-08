@@ -1,7 +1,6 @@
 import React, { useState, useEffect, createContext, useMemo } from 'react';
 import ApiConstants from '../Services/apiconstants';
 import axios from 'axios';
-import { Interceptor } from "../ErrorStatus/errorStatus";
 
 export const opsContext  = createContext()
 

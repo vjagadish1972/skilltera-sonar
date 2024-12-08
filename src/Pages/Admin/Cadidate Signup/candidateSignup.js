@@ -1,9 +1,8 @@
-import react, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import ApiConstants from "../../../Services/apiconstants";
 import Swal from "sweetalert2";
-import { FcAbout } from "react-icons/fc";
 import "./candidateSignup.css";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 import Loading from "../../../Component/Loading/loading";
@@ -65,7 +64,6 @@ export default function CandidateSignup() {
     );
   };
   return (
-    <>
       <div className="main-box-admin-candidate">
         {promiseInProgress === true ? (
           <Loading />
@@ -135,6 +133,5 @@ export default function CandidateSignup() {
           </div>
         </form>
       </div>
-    </>
   );
 }

@@ -8,24 +8,22 @@ const StarRating = (props) => {
   const [hover, setHover] = useState(0);
   return (
     <div className="star-rating" style={{ pointerEvents: "none" }}>
-      {[...Array(5)].map((_, index) => {
-        index += 1; // Ensure the index starts at 1 instead of 0
-        return (
-          <button
-            type="button"
-            key={index} // Using the index is acceptable here due to the fixed nature of the list
-            className={index <= (hover || rating) ? "on" : "off"}
-            onClick={() => setRating(index)}
-            onMouseEnter={() => setHover(index)}
-            onMouseLeave={() => setHover(rating)}
-          >
-            <span className="star m-1">
-              <BsStarFill size={20} />
-            </span>
-          </button>
-        );
-      })}
-    </div>
+    {[...Array(5)].map((star, index) => {
+      const starId = `star-${index + 1}`; // Create a unique key based on the index
+      return (
+        <button
+          type="button"
+          key={starId} // Use unique key instead of the index
+          className={index + 1 <= (hover || rating) ? "on" : "off"}
+          onClick={() => setRating(index + 1)}
+          onMouseEnter={() => setHover(index + 1)}
+          onMouseLeave={() => setHover(rating)}
+        >
+          <span className="star m-1"> <BsStarFill size={20} /> </span>
+        </button>
+      );
+    })}
+  </div>
   );
 };
 

@@ -4,14 +4,13 @@ import ProfilePic from '../../Assets/about_pic_2.png';
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios'
 import ApiConstants from "../../Services/apiconstants";
-import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { Modal } from 'react-bootstrap';
 import $ from "jquery";
 import { Interceptor } from "../../ErrorStatus/errorStatus"
 import { selectCardItemSelection } from '../../Redux/Reducer/cardItemSelectionSlice';
-
+import PropTypes from 'prop-types';
 
 export default function StudentCard(props) {
 
@@ -209,7 +208,7 @@ export default function StudentCard(props) {
     }
 
     return (
-        <>
+        <div>
             {props.data.length !== 0 && props.data.map(items => {
                 return (
                     <div className='card-box mb-2'>
@@ -456,6 +455,11 @@ export default function StudentCard(props) {
                     </div>
                 </form>
             </Modal>
-        </>
+        </div>
     );
 }
+
+// Add prop validation
+YourComponent.propTypes = {
+    data: PropTypes.array.isRequired,
+};

@@ -1,9 +1,8 @@
-import react, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import ApiConstants from "../../../Services/apiconstants";
 import Swal from "sweetalert2";
-import { FcAbout } from "react-icons/fc";
 import "./companySignup.css";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 import Loading from "../../../Component/Loading/loading";
@@ -64,7 +63,6 @@ export default function CompanySignup() {
     );
   };
   return (
-    <>
       <div className="main-box-admin-company">
         {promiseInProgress === true ? (
           <Loading />
@@ -117,7 +115,7 @@ export default function CompanySignup() {
       placeholder="Password"
       {...register("password", {
         required: true,
-        pattern: { value: /^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/ },
+        pattern: { value: /^(?=.*?[A-Za-z])(?=.*?\d).{6,}$/ },
       })}
     />
     {errors.password && (
@@ -130,8 +128,6 @@ export default function CompanySignup() {
     </button>
   </div>
 </form>
-
       </div>
-    </>
   );
 }

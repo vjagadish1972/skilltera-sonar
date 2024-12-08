@@ -11,26 +11,25 @@ import {
   BsLinkedin,
   BsPencil,
 } from "react-icons/bs";
-import { MdCall, MdEmail, MdLibraryAdd, MdMessage } from "react-icons/md";
+import { MdCall, MdEmail } from "react-icons/md";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
-import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 import uesrImageDefault from "../../Assets/profilePic.png";
 import Loading from "../../Component/Loading/loading";
 import { userContext } from "../../Context/userContextState";
 import ApiConstants from "../../Services/apiconstants";
-import Mixpanel from "../../Services/mixpanel";
+// import Mixpanel from "../../Services/mixpanel";
 import {
   subString,
   picSizeValidate,
   fileSizeValidate,
+  calculateProfileStrength,
 } from "../../UtilitiesFunctions/utilitiesFunction";
 import "./sidebar.css";
 import { Interceptor } from "../../ErrorStatus/errorStatus";
 import { RxCrossCircled } from "react-icons/rx";
-import { selectSidebarMenuSelection } from "../../Redux/Reducer/sidebarMenuSelectionSlice";
+// import { selectSidebarMenuSelection } from "../../Redux/Reducer/sidebarMenuSelectionSlice";
 import ProfileStrengthIndicator from "../Profile Strength indicator/profileStrengthIndicator";
-import { calculateProfileStrength } from "../../UtilitiesFunctions/utilitiesFunction";
 
 const Sidebar = () => {
   const [ProfileStrength, setProfileStrength] = useState(0);
@@ -59,10 +58,7 @@ const Sidebar = () => {
     candidateEmailId = candidateDataMix.candidate.email;
   }
 
-  // const mixpanelButton = (purpose, buttonName) => {
-  //   Mixpanel(purpose, buttonName, candidateEmailId);
-  // };
-  // upload image  start
+ 
 
   const uploadedImage = react.useRef(null);
   const imageUploader = react.useRef(null);
@@ -143,7 +139,7 @@ const Sidebar = () => {
   };
 
   //upload image end
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const menuSelection = (data) => {
   //   dispatch(selectSidebarMenuSelection(data));
   // };

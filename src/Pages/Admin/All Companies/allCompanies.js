@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios, { useMemo } from "axios";
+import axios from "axios";
 import ApiConstants from "../../../Services/apiconstants";
 import DataTable from "react-data-table-component";
 import "./allCompanies.css";
 import { useSelector } from "react-redux";
 import { Interceptor } from "../../../ErrorStatus/errorStatus"
+
 
 export default function AllCompanies() {
   const [values, setValues] = useState({
@@ -61,7 +62,6 @@ export default function AllCompanies() {
 
 
   return (
-    <>
       <div className="table myTables">
         {Object.keys(values.companyData).length && (
           <DataTable
@@ -86,6 +86,5 @@ export default function AllCompanies() {
           />
         )}
       </div>
-    </>
   );
 }

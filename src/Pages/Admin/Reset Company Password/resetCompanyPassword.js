@@ -1,9 +1,8 @@
-import react, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import ApiConstants from "../../../Services/apiconstants";
 import Swal from "sweetalert2";
-import { FcAbout } from "react-icons/fc";
 import "./resetCompanyPassword.css";
 import { Interceptor } from "../../../ErrorStatus/errorStatus"
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
@@ -68,7 +67,6 @@ export default function ResetCompanyPassword() {
 
 
   return (
-    <>
       <div className="reset-company-password">
         {promiseInProgress === true ? (
           <Loading />
@@ -120,6 +118,5 @@ export default function ResetCompanyPassword() {
           </div>
         </form>
       </div>
-    </>
   );
 }

@@ -2,7 +2,7 @@ import axios from "axios";
 import $ from "jquery";
 import react, { useContext, useEffect, useState } from "react";
 import uesrImageDefault from "../../Assets/profilePic.png";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsFillPencilFill } from "react-icons/bs";
 import { MdLibraryAdd } from "react-icons/md";
@@ -51,9 +51,7 @@ const ReferalSidebar = () => {
 
 
   const { promiseInProgress } = usePromiseTracker();
-  // const {
-  //   formState: {  },
-  // } = useForm();
+
 
 
   // upload image  start
@@ -132,7 +130,7 @@ const ReferalSidebar = () => {
 
 
   useEffect(() => {
-    if (userData != 0) {
+    if (userData !== 0) {
       setformValue({ fullname: userData[0].candidate.fullname })
 
     }
@@ -140,7 +138,7 @@ const ReferalSidebar = () => {
 
 
   return (
-    <>
+    
       <div className="card ">
         <div className="card-body">
           <div className="d-flex justify-content-end">
@@ -258,7 +256,6 @@ const ReferalSidebar = () => {
           </div>
         </div>
       </div>
-    </>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for validation
 import Tab from './tab';
-import './style.css'
+import './style.css';
 
 const TabSet = (props) => {
   const [activeTab, setActiveTab] = useState(props.children[0].props.label);
@@ -33,6 +34,11 @@ const TabSet = (props) => {
       </div>
     </div>
   );
+};
+
+// PropTypes validation
+TabSet.propTypes = {
+  children: PropTypes.node.isRequired, // Validate that children are passed and are valid React nodes
 };
 
 export default TabSet;

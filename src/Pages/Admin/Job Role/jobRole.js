@@ -1,7 +1,5 @@
 import axios from 'axios';
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
@@ -28,36 +26,36 @@ export default function JobRole() {
     const dispatch = useDispatch()
     const jobRoleSelection = useSelector((state) => state.jobRole);
 
-    const jobRoleAdminData = () => {
-        const id = JSON.parse(sessionStorage.getItem("ADMIN")).admin._id;
-        const token = JSON.parse(sessionStorage.getItem("ADMIN")).token;
-        axios
-            .get(ApiConstants.VIEW_ALL_JOB_ROLE,
-                {
+    // const jobRoleAdminData = () => {
+    //     const id = JSON.parse(sessionStorage.getItem("ADMIN")).admin._id;
+    //     const token = JSON.parse(sessionStorage.getItem("ADMIN")).token;
+    //     axios
+    //         .get(ApiConstants.VIEW_ALL_JOB_ROLE,
+    //             {
 
-                    headers: {
-                        Accept: "application/json",
-                        "Content-type": "application/json",
-                        token: token,
-                        id: id,
-                        "Access-Control-Allow-Origin": true,
-                        "Access-Control-Allow-Methods": "GET, POST, PATCH",
-                    }
+    //                 headers: {
+    //                     Accept: "application/json",
+    //                     "Content-type": "application/json",
+    //                     token: token,
+    //                     id: id,
+    //                     "Access-Control-Allow-Origin": true,
+    //                     "Access-Control-Allow-Methods": "GET, POST, PATCH",
+    //                 }
 
-                })
-            .then((response) => {
-                setValues({
-                    ...values,
-                    jobRoleDataAdmin: response.data.roles,
-                });
-            })
-            .catch((error) => {
+    //             })
+    //         .then((response) => {
+    //             setValues({
+    //                 ...values,
+    //                 jobRoleDataAdmin: response.data.roles,
+    //             });
+    //         })
+    //         .catch((error) => {
 
-                if ((error.response.status >= 404 && error.response.status <= 499) || (error.response.status >= 502 && error.response.status <= 599)) {
-                    Interceptor(error.response.status)
-                }
-            });
-    };
+    //             if ((error.response.status >= 404 && error.response.status <= 499) || (error.response.status >= 502 && error.response.status <= 599)) {
+    //                 Interceptor(error.response.status)
+    //             }
+    //         });
+    // };
     useEffect(() => {
         //jobRoleAdminData()
 
@@ -93,7 +91,7 @@ export default function JobRole() {
                     ),
                 },
                 {
-                    name: (<>
+                    name: (
                         <form onSubmit={handleSubmit(addingJobRole)}>
                             <div className="input-group">
                                 <input type="text"
@@ -107,7 +105,7 @@ export default function JobRole() {
                                 </div>
                             </div>
                         </form>
-                    </>)
+                    )
                 },
 
             ]);

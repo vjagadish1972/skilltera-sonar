@@ -1,11 +1,10 @@
-import react, { useState } from 'react'
+import  { useState } from 'react'
 import uesrImageDefault from "../../../Assets/profilePic.png";
 import JobDescription from '../Job Description/jobDescription';
 import { useQuery } from 'react-query'
 import Loading from '../../../Component/Loading/loading'
 import ApiConstants from '../../../Services/apiconstants'
 import axios from 'axios'
-import { async } from 'q'
 import './cardJobs.css'
 import Swal from 'sweetalert2';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,10 +15,10 @@ export default function CardJobs() {
     //const [jobDataById, setJobDataById] = useState(null);
     const dispatch = useDispatch();
 
-    let mixpanelData =  '';
+    // let mixpanelData =  '';
     let token = '' ;
-    let userId = '' ;
-    let candidateEmailId = '';
+    // let userId = '' ;
+    // let candidateEmailId = '';
 
     const getFilterDataJobs = useSelector((state) => state.filterDataJob)
     let jobDataById = useSelector((state) => state.jobDataById)
@@ -111,10 +110,10 @@ export default function CardJobs() {
 
 
     return (
-        <>
+        <div>
             {
                 !isLoading ?
-                    <>
+                    <div>
                         <div className='container'>
                             <div className='row'>
                                 <div className='col-12 col-md-6 col-lg-6 card-job-cand'>
@@ -202,9 +201,9 @@ export default function CardJobs() {
                                 </div>
                             </div>
                         </div>
-                    </> : <Loading />
+                    </div> : <Loading />
             }
 
-        </>
+        </div>
     )
 }

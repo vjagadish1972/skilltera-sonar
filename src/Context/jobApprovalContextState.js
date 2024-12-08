@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createContext, useMemo} from "react";
 import ApiConstants from "../Services/apiconstants";
+import PropTypes from "prop-types"; // Import PropTypes
 import axios from "axios";
 
 export const jobApprovalContext = createContext();
@@ -9,7 +10,7 @@ const [jobList, setJobList] = useState([]);
 const [skillList ,  setSkillList] = useState([])
 const [companiesList, setCompaniesList] = useState([])
 const [allJobRole , setAllJobRole] = useState([])
-const [intialJobDesc, setJobDesc] = useState({
+const [jobDesc, setJobDesc] = useState({
         jobTitle: "",
         companyId: "",
         country: "",
@@ -150,13 +151,13 @@ const [intialJobDesc, setJobDesc] = useState({
   const contextValue = useMemo(
     () => ({
       jobList,
-      intialJobDesc,
+      jobDesc,
       skillList,
       companiesList,
       allJobRole,
       updateSkillListData,
     }),
-    [jobList, intialJobDesc, skillList, companiesList, allJobRole]
+    [jobList, jobDesc, skillList, companiesList, allJobRole]
   );
 
     return (
@@ -164,4 +165,9 @@ const [intialJobDesc, setJobDesc] = useState({
             {props.children}
         </jobApprovalContext.Provider>
     );
+};
+
+// Define prop types for the component
+JobApprovalContextState.propTypes = {
+    children: PropTypes.node.isRequired, // Validate children prop
 };

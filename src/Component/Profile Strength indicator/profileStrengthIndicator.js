@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
+import PropTypes from 'prop-types';
 
 export default function ProfileStrengthIndicator(props) {
   const settings = {
@@ -42,3 +43,9 @@ export default function ProfileStrengthIndicator(props) {
     />
   );
 }
+
+
+// Add PropType validation
+ProfileStrengthIndicator.propTypes = {
+  profileStrengthVal: PropTypes.number.isRequired, // Ensures profileStrengthVal is a required number
+};
