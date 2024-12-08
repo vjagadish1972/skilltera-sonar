@@ -70,7 +70,9 @@ export function LinearDropdown({
             unselectable
         >
             <div
-                onClick={toggling}
+             role="button"
+  tabIndex={0}
+  onClick={toggling}
                 style={{ padding: padding, color: color }}
                 className="innerDiv"
             >
@@ -97,7 +99,8 @@ export function LinearDropdown({
                         localOptions.map((option, i) => (
                             <li
                                 onClick={() => onOptionClicked(option, i)}
-                                key={i} role="option"
+                                key={option} 
+                                role="option"
                             >
                                 {option}
                             </li>

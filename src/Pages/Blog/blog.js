@@ -25,9 +25,9 @@ const Blog = () => {
               <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                 <div className="row gy-5 posts-list">
         
-                {blogsData.map((data,idx) => {
+                {blogsData.map((data) => {
                   return(
-                    <BlogCard key={idx} {...data} />
+                    <BlogCard key={data._id} {...data} />
                   )
                 })
                 }
@@ -167,18 +167,19 @@ const BlogCard = (props) => {
 
 const RecentPostCard = () => {
   return(
-    <>
-    {blogsData.map((data, idx) => {
-      return(
-       <div class="post-item mt-3"  key={idx}>
-         <img src="/logo192.png" alt="" class="flex-shrink-0"/>
-         <div>
-           <h4><a href={`/blog-details/${data._id}`} >{data.heading}</a></h4>
-           <time datetime="2020-01-01">{data.dateOfCreate}</time>
-         </div>
-       </div>
-      )})} 
-      </>
+   <div>
+  {blogsData.map((data) => (
+    <div className="post-item mt-3" key={data._id}>
+      <img src="/logo192.png" alt="" className="flex-shrink-0" />
+      <div>
+        <h4>
+          <a href={`/blog-details/${data._id}`}>{data.heading}</a>
+        </h4>
+        <time dateTime={data.dateOfCreate}>{data.dateOfCreate}</time>
+      </div>
+    </div>
+  ))}
+</div>
   )
 }
 

@@ -17,7 +17,7 @@ export default function CompanyInterviewingCandidate() {
     );
 
     const [hasLoaded, setHasLoaded] = useState();
-    const [searchTest, setSearchTest] = useState('');
+    // const [searchTest, setSearchTest] = useState('');
 
     const userData = () => {
         const company_loggedin_user_data = JSON.parse(sessionStorage.getItem("company_loggedin_user_data"))
@@ -54,24 +54,23 @@ export default function CompanyInterviewingCandidate() {
     }, [rejectionCandidate]);
 
     return (hasLoaded ?
-        <>
             <div className='row'>
-                {values.interviewingCandidateData.length == 0 && <div className='no-data' style={{ textAlign: 'center' }}>No interviewed candidate yet</div>}
+                {values.interviewingCandidateData.length === 0 && <div className='no-data' style={{ textAlign: 'center' }}>No interviewed candidate yet </div>}
                 {
                     values.interviewingCandidateData.filter((items) => {
-                        return items.candidateId._id != rejectionCandidate.itemSelectId;
-                    }).map(d => {
-                        const candidateAllData = [d.candidateId];
-                        return (
-                            <div className='col-12'>
-                                <StudentCard data={candidateAllData} />
-                            </div>
-                        )
+                        return items.candidateId._id !== rejectionCandidate.itemSelectId;
                     })
+                    .map((d) => {
+                    return (
+                        <div className='col-12' key={d.candidateId._id}>
+                            <StudentCard data={d.candidateId} />
+                        </div>
+                    )
+                })
                 }
 
             </div>
-        </>
+        
         : <p>Loading... <Loading /></p>);
 
 }

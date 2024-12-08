@@ -217,13 +217,13 @@ export default function CandidateChat() {
               <span>Messages</span>
             </div>
             <div className="chat-list-candidate">
-              {promiseInProgress == true ? (
+              {promiseInProgress  ? (
                 <Loading />
               ) : Object.keys(values.chatListData).length > 0 ? (
                 values.chatListData.map((d, index) => {
                   return (
                     <ChatItem
-                      className={styleChat == d._id ? "chat-list-st" : ""}
+                      className={styleChat === d._id ? "chat-list-st" : ""}
                       avatar={
                         d.candidateImage?.length > 0
                           ? d.candidateImage

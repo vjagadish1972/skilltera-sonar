@@ -49,7 +49,6 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Company Signup")}
               style={{ cursor: "pointer" }}
@@ -66,7 +65,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Candidate Signup")}
               style={{ cursor: "pointer" }}
@@ -82,7 +81,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Reset Company Password")}
               style={{ cursor: "pointer" }}
@@ -98,7 +97,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("All Companies")}
               style={{ cursor: "pointer" }}
@@ -114,7 +113,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("allCandidate")}
               style={{ cursor: "pointer" }}
@@ -129,7 +128,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Skill Add/Remove")}
               style={{ cursor: "pointer" }}
@@ -144,7 +143,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Job Role Add/Remove")}
               style={{ cursor: "pointer" }}
@@ -160,7 +159,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("Job Approval")}
               style={{ cursor: "pointer" }}
@@ -176,7 +175,7 @@ export default function AdminSidebar() {
                   ? "list-group-item admin-sidebar-font list-view-onCLick"
                   : "list-group-item admin-sidebar-font"
               }
-              role="button"
+             
               tabIndex={0}
               // onKeyDown={(e) => e.key === 'Enter' && menuSelection("logout")}
               style={{ cursor: "pointer" }}
